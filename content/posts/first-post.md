@@ -2,8 +2,8 @@
 title: "First Post"
 # title: "【R+SQL】データサイエンス100本ノック＋α - 公式編 R-028"
 date: '2024-12-29T22:31:23+09:00'
-# draft: false
-draft: true
+draft: false
+# draft: true
 tags: ["blog"]
 showtoc: true
 TocOpen: false
