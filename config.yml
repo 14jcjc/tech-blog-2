@@ -3,7 +3,9 @@ languageCode: ja
 defaultContentLanguage: ja
 hasCJKLanguage: true
 title: katsuのブログ
-paginate: 5
+# paginate: 5 #> 古い形式
+pagination:
+  pagerSize: 5
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -148,3 +150,6 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+  goldmark:
+    renderer:
+      unsafe: true # HTMLタグがレンダリングされるようにする

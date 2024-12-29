@@ -42,20 +42,44 @@ Visit the [Hugo](https://gohugo.io) website!
 
 ## BBB
 
-xxxxxxxxxxx
+1. aaaaaa
+2. bbbbbb
+   1. xxxxxx
+   2. yyyyyy
+3. cccccc
+
+- xxxxx
+- yyyyy
+  - aaaaaa
+  - bbbbbb
+- zzzzz
 
 ## CCC
 
+xxx  
 [link](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/)
 
-* a
+* a  
+
 <a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/" target="_blank">リンクテキスト</a>
 
-* b
-<a href="https://github.com/gingk1212/gingk1212.github.io" target="_blank">LINK</a>
-
-* c
+* b  
 
 | a    |   b   |    c |
 | :--- | :---: | ---: |
 | 1    |   2   |    3 |
+
+## DDD
+
+\*\*\_\*\_\-\-\-
+
+😃 ▶︎ ⁉︎ ☼ ☀︎ ➢　🐈　🍎　🥎 🚙 💻 🟦
+
+### DDD1
+
+aaaaa
+
+### DDD2
+
+bbbbbbb
+
