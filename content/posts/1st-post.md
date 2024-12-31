@@ -36,9 +36,9 @@ UseHugoToc: true
 
 ## AAA
 
-<a href="http://localhost:1313/tech-blog/posts/my-first-post/" target="_blank" rel="noopener noreferrer">my-first-post</a>
+<a href="posts/my-first-post/" target="_blank" rel="noopener noreferrer">my-first-post</a>
 
-<a href="http://localhost:1313/tech-blog/posts/first-post/" target="_blank" rel="noopener noreferrer">first-post</a>
+<a href="first-post" target="_blank" rel="noopener noreferrer">first-post</a>
 
 This is **bold** text, and this is *emphasized* text.
 

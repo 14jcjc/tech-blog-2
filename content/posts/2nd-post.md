@@ -24,17 +24,11 @@ description: "This is 2nd Post."
 
 ## AAA
 
-<a href="http://localhost:1313/tech-blog/posts/1st-post/" target="_blank" rel="noopener noreferrer">前回の記事</a>
-
-<a href="http://localhost:1313/tech-blog/posts/2nd-post/" target="_blank" rel="noopener noreferrer">この記事</a>
-
 <a href="../my-first-post#ccc" target="_blank" rel="noopener noreferrer">1st-ccc記事</a>
 
 <a href='{{< ref "1st-post#ccc" >}}' target="_blank" rel="noopener noreferrer">1st-ccc記事</a>
 
-<a href="../my-second-post" target="_blank" rel="noopener noreferrer">この記事</a>
-
-<a href="http://localhost:1313/tech-blog/posts/my-second-post/" target="_blank" rel="noopener noreferrer">この記事(my-second-post)</a>
+<a href="../my-second-post" target="_blank" rel="noopener noreferrer">この記事(my-second-post)</a>
 
 BBBは [こちら]({{< ref "#bbb" >}})  
 
