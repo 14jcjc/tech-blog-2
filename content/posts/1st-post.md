@@ -1,16 +1,16 @@
 ---
-title: "First Post"
+title: "1st Post"
 # title: "【R+SQL】データサイエンス100本ノック＋α - 公式編 R-028"
 date: '2024-12-29T22:31:23+09:00'
-draft: false
-# draft: true
-tags: ["blog"]
+slug: my-first-post
+# draft: false
+draft: true
+series: ["blog"]
+tags: ["hugo"]
 showtoc: true
-TocOpen: false
 hidemeta: false
 comments: false
 description: "This is First Post."
-canonicalURL: "https://canonical.url/to/page"
 # disableHLJS: true # to disable highlightjs
 disableHLJS: false
 disableShare: false
@@ -36,11 +36,28 @@ UseHugoToc: true
 
 ## AAA
 
+<a href="http://localhost:1313/tech-blog/posts/my-first-post/" target="_blank" rel="noopener noreferrer">my-first-post</a>
+
+<a href="http://localhost:1313/tech-blog/posts/first-post/" target="_blank" rel="noopener noreferrer">first-post</a>
+
 This is **bold** text, and this is *emphasized* text.
 
 Visit the [Hugo](https://gohugo.io) website!
 
-## BBB
+a  
+a  
+a  
+a  
+a  
+a  
+a  
+a  
+a  
+a  
+a  
+a
+
+## BBB {#bbb}
 
 1. aaaaaa
 2. bbbbbb
@@ -54,7 +71,7 @@ Visit the [Hugo](https://gohugo.io) website!
   - bbbbbb
 - zzzzz
 
-## CCC
+## CCC {#ccc}
 
 xxx  
 [link](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/)
@@ -73,13 +90,13 @@ xxx
 
 \*\*\_\*\_\-\-\-
 
-😃 ▶︎ ⁉︎ ☼ ☀︎ ➢　🐈　🍎　🥎 🚙 💻 🟦
+😃 ▶︎ ⁉︎ ☼ ☀︎ ➢　🐈　🍎　🥎 🚙 💻 
 
-### DDD1
+### DDD1 {id="d1"}
 
 aaaaa
 
-### DDD2
+### DDD2 {#d2}
 
 bbbbbbb
 

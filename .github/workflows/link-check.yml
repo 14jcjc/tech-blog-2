@@ -1,0 +1,28 @@
+name: Link Checker
+
+on:
+  push:
+    branches:
+      - main  # 対象ブランチ
+  pull_request:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Check links with htmltest
+        run: |
+          sudo apt-get install htmltest
+          htmltest

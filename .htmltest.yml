@@ -1,0 +1,2 @@
+DirectoryPath: "./public"  # ビルド後のサイトのパス
+CheckExternal: true       # 外部リンクもチェックする場合

@@ -3,17 +3,23 @@ languageCode: ja
 defaultContentLanguage: ja
 hasCJKLanguage: true
 title: katsuのブログ
-# paginate: 5 #> 古い形式
 pagination:
   pagerSize: 5
 theme: PaperMod
 
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
+services:
+  googleAnalytics:
+    ID: UA-123-45
 
-googleAnalytics: UA-123-45
+copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
+
+enableRobotsTXT: true
+buildDrafts: false # Include drafts when building.
+buildFuture: false # Include content with a future publication date.
+buildExpired: false # Include content already expired.
+
+capitalizeListTitles: true 
+titleCaseStyle: ap # ap, chicago, go, firstupper, or none.
 
 minify:
   disableXML: true
