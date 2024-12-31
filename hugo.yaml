@@ -11,7 +11,7 @@ services:
   googleAnalytics:
     ID: UA-123-45
 
-# copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
+copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
 
 enableRobotsTXT: true
 

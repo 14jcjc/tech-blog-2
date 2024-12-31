@@ -8,7 +8,7 @@ title: '3rd Post'
 
 ## A.33333333
 
-{{< href-target-blank url="../my-first-post#ccc" text="my-first-post#ccc" >}}
+my-first-post#ccc は {{< href-target-blank url="../my-first-post#ccc" text="こちら" >}}
 
 ### B.333333333
 
