@@ -19,6 +19,7 @@ params:
 cover:
   # image: "images/papermod-cover.png" #< /static
   image: "tree.png"
+  relative: false
   hiddenInList: true
 ---
 
