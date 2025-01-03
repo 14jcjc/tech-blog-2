@@ -9,8 +9,8 @@ pagination:
 theme: PaperMod
 
 # Include drafts when building.
-buildDrafts: false
-# buildDrafts: true
+# buildDrafts: false
+buildDrafts: true
 
 services:
   googleAnalytics:
