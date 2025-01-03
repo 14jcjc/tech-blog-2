@@ -12,14 +12,6 @@ theme: PaperMod
 # buildDrafts: false
 buildDrafts: true
 
-services:
-  googleAnalytics:
-    ID: UA-123-45
-  instagram:
-    disableInlineCSS: true
-  twitter:
-    disableInlineCSS: true
-
 copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
 
 enableRobotsTXT: true # robots.txt の生成を有効にする
@@ -46,6 +38,14 @@ outputs:
   home: ["HTML", "RSS", "JSON"]
 
 mainSections: ["100k", "aaa", "xxx", "glossary"]
+
+services:
+  googleAnalytics:
+    ID: UA-123-45
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
 
 # permalinks を設定すると, パンクズリストがきちんと表示されなくなる.
 #-> /themes/PaperMod/layouts/partials/breadcrumbs.html を修正することで解決.

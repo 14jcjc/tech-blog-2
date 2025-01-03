@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       #  katsu
-      # HUGO_VERSION: 0.137.1
+      # # hugo version に合わせる
       HUGO_VERSION: 0.140.1
     
     steps:
