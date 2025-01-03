@@ -31,3 +31,4 @@ _testmain.go
 .hugo_build.lock
 resources/_gen/
 *-bak
+*-org

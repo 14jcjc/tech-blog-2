@@ -1,16 +1,18 @@
 ---
-title: "1st Post"
-# title: "【R+SQL】データサイエンス100本ノック＋α - 公式編 R-028"
+title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
 date: '2024-12-29T22:31:23+09:00'
-slug: my-first-post
+slug: 'overview'
+weight: 2
 # draft: false
 draft: true
-series: ["blog"]
-tags: ["hugo"]
+categories: ["DS-100本ノック"]
+tags: 
+- R
+- SQL
 showtoc: true
 hidemeta: false
 comments: false
-description: "This is First Post."
+description: 'This is First Post.'
 # disableHLJS: true # to disable highlightjs
 disableHLJS: false
 disableShare: false
@@ -34,15 +36,54 @@ UseHugoToc: true
 #     appendFilePath: true # to append file path to Edit link
 ---
 
+このブロックは summary です。最初の投稿記事です。
+
+<!--more-->
+
+shortcode: {{< test-shortcode-1 >}}
+
+param.site_title : {{< param site_title >}}
+
 ## AAA
 
-<a href="posts/my-first-post/" target="_blank" rel="noopener noreferrer">my-first-post</a>
-
-<a href="first-post" target="_blank" rel="noopener noreferrer">first-post</a>
+<a href="../standard/r-028" target="_blank" rel="noopener noreferrer">R-028</a>
 
 This is **bold** text, and this is *emphasized* text.
 
 Visit the [Hugo](https://gohugo.io) website!
+
+```text
+func someFunction(s string, n int) string
+```
+
+~~foo~~  
+ABC~123~XYZ  
+++bar++  
+==baz==  
+1^st^  
+
+...  
+
+'  
+‘  
+’  
+
+--  
+
+---
+
+"  
+”  
+
+<<  
+«  
+
+>>  
+»  
+
+"  
+
+
 
 a  
 a  

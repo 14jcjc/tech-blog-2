@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy"
 url: "/privacy/"
-summary: privacy
+summary: privacy policy
 ShowBreadCrumbs: false
 disableShare: true
 # params: 

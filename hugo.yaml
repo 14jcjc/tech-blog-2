@@ -1,38 +1,70 @@
 baseURL: "https://14katsumix.github.io/tech-blog/"
 languageCode: ja
 defaultContentLanguage: ja
-hasCJKLanguage: true
+hasCJKLanguage: true # If true, auto-detect Chinese/Japanese/Korean Languages in the content.
+isCJKLanguage: true # 内容言語が日中韓系のときは true に設定します.
 title: katsuのブログ
 pagination:
-  pagerSize: 5
+  pagerSize: 10 # Default is 10
 theme: PaperMod
+
+# Include drafts when building.
+# buildDrafts: false
+buildDrafts: true
 
 services:
   googleAnalytics:
     ID: UA-123-45
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
 
 copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
 
-enableRobotsTXT: true
-
-# buildDrafts: false # Include drafts when building.
-buildDrafts: true # Include drafts when building.
+enableRobotsTXT: true # robots.txt の生成を有効にする
 
 buildFuture: false # Include content with a future publication date.
 buildExpired: false # Include content already expired.
-
+enableEmoji: true
 capitalizeListTitles: true 
 titleCaseStyle: ap # ap, chicago, go, firstupper, or none.
+
+# 各ページの .GitInfo オブジェクトを有効にします (Hugo サイトが Gitでバージョン管理されている場合）.
+# これにより、各ページの Lastmod パラメータが, そのコンテンツファイルの最後の git コミット日時で更新されます.
+# デフォルトは false です。
+enableGitInfo: true
+
+timeout: 30s # Timeout for generating page contents, specified as a duration or in seconds.
 
 minify:
   disableXML: true
   minifyOutput: true
 
+# search機能を有効にするため /public/index.json を生成する
+outputs: 
+  home: ["HTML", "RSS", "JSON"]
+
+mainSections: ["100k", "aaa", "xxx", "glossary"]
+
+# permalinks を設定すると, パンクズリストがきちんと表示されなくなる.
+#-> /themes/PaperMod/layouts/partials/breadcrumbs.html を修正することで解決.
+#   https://github.com/adityatelange/hugo-PaperMod/issues/1585
+permalinks:
+  page:
+    100k: /ds-100knocks-dp-test/:sections[1:]/:slug/
+    aaa: /aaa/:year/:month/:slug/
+    xxx: /xxx/:slug
+  section:
+    100k: /ds-100knocks-dp-test/:sections[1:]/
+    # aaa: /aaa/:year/:month/
+    xxx: /xxx/:sections[1:]/
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # subtitle: This is subtitle
   # description: katsuのブログです。
-  keywords: [Blog, R, SQL]
+  keywords: ["データサイエンス100本ノック", Blog, R, SQL, "データベース・バックエンド"]
   author: katsu # author: ["Me", "You"] #< multiple authors
     # images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "2006-01-02"
@@ -53,6 +85,9 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: false
+  mainMenu:
+    enableChildren: true
+  site_title: 'データサイエンス100本ノック＋α'
 
   # assets:
     # disableHLJS: true # to disable highlight.js
@@ -71,22 +106,32 @@ params:
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    # title: ExampleSite
-    # subtitle: "This is subtitle"
+    # enabled: true # needs to be explicitly set
+    title: 14katsumix
+    subtitle: "Blog Site"
     # imageUrl: "<img location>"
     # imageWidth: 120
     # imageHeight: 120
     # imageTitle: my image
-    # buttons:
-    #   - name: Posts
-    #     url: posts
-    #   - name: Tags
-    #     url: tags
+    buttons:
+      - name: "データサイエンス100本ノック＋α - test"
+        url: ds-100knocks-dp-test
+      - name: XXX
+        url: xxx
+      - name: Tags
+        url: tags
 
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: >
+      R言語好きのデータサイエンティストです📊  
+
+      データ分析やプログラミングの楽しさを共有することをモットーに、日々成長中✨  
+      
+      ブログでは『📘 データサイエンス100本ノック（構造化データ加工編）』をベースにした問題解説やオリジナル問題を発信中❗️ RとSQLを中心に、初心者から上級者まで楽しめるコンテンツをお届けします🚀  
+
+      Rコード実行環境のセットアップ・プログラムは [📂GitHubリポジトリ](https://github.com/14katsumix/100knocks-dp)に公開してます。
 
   socialIcons:
     - name: x
@@ -126,27 +171,79 @@ params:
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
 
-menu:
+# If you do not want Hugo to create any taxonomies: 
+# disableKinds:
+# - taxonomy
+# - term
+
+# サイトのトップレベル・セクションごとにメニュー・エントリーを自動的に定義する: 
+# sectionPagesMenu: main
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  # series: "series"
+
+menus:
   main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    - name: Archive
+      url: archives
       weight: 10
-    - identifier: archives
-      name: Archive
-      url: /archives/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
     - name: Search
-      url: /search/
-      weight: 10
-    # - identifier: example
-    #   name: example.org
-    #   url: https://example.org
-    #   weight: 30
+      url: search
+      weight: 15
+    - name: Tags
+      url: tags
+      weight: 20
+    - name: Categories
+      url: categories
+      weight: 25
+    - name: "データサイエンス100本ノック＋α - test"
+      url: ds-100knocks-dp-test
+      weight: 5
+      identifier: "DS-100knocks"
+    - name: standard
+      url: "ds-100knocks-dp-test/standard"
+      parent: "DS-100knocks"
+      weight: 1
+      identifier: standard
+    - name: advanced
+      url: "ds-100knocks-dp-test/advanced"
+      parent: "DS-100knocks"
+      weight: 2
+      identifier: advanced
+    - name: Glossary
+      url: glossary
+      weight: 30
+
+# menus:
+#   main:
+#     - name: Archive
+#       pageRef: /archives
+#       weight: 10
+#     - name: Search
+#       pageRef: /search
+#       weight: 15
+#     - name: Tags
+#       pageRef: /tags
+#       weight: 20
+#     - name: Categories
+#       pageRef: /categories
+#       weight: 25
+#     - name: "DS-100knocks"
+#       pageRef: /100k
+#       weight: 5
+#       identifier: "DS-100knocks"
+#     - name: standard
+#       pageRef: "/100k/standard"
+#       parent: "DS-100knocks"
+#       weight: 1
+#       identifier: standard
+#     - name: advanced
+#       pageRef: "/100k/advanced"
+#       parent: "DS-100knocks"
+#       weight: 2
+#       identifier: advanced
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -158,6 +255,10 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
   goldmark:
     renderer:
       unsafe: true # HTMLタグがレンダリングされるようにする
