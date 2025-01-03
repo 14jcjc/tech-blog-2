@@ -1,4 +1,5 @@
 ---
+description: 'description: 用語集です。'
 build:
   render: always
 cascade:

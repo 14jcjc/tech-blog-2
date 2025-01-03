@@ -27,13 +27,19 @@
   {{- end }}
 </header>
 
-<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+<p>当ページのレイアウトファイル: </p>
+<p>layouts/glossary/list.html</p>
+<br>
+<p>コンテンツファイルの内容: </p>
+<br>
+{{ .Content }}
+<br>
 
+<p>shortcode を .RenderString で出力: </p>
 <p>
   {{ $shortcode := printf "{{< test-shortcode-1 >}}" }}
   {{ .RenderString $shortcode }}
-  </p>
-  
+</p>
 <p>
 {{ $url := "https://example.com" }}
 {{ $text := "これはショートコード: href-target-blank" }}

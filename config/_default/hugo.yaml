@@ -183,7 +183,7 @@ params:
       {{% comment %}} 
       RとSQLを中心に、初心者から上級者まで楽しめるコンテンツをお届けします🚀  
       {{% /comment %}} 
-      
+
       Rコード実行環境のセットアップ・プログラムを [📂GitHubリポジトリ](https://github.com/14katsumix/100knocks-dp)に公開してます。
 
   socialIcons:
@@ -254,7 +254,7 @@ menus:
       weight: 25
     - name: "データサイエンス100本ノック＋α - test"
       url: ds-100knocks-dp-test
-      weight: 5
+      weight: 30
       identifier: "DS-100knocks"
     - name: standard
       url: "ds-100knocks-dp-test/standard"
