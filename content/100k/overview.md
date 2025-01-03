@@ -1,29 +1,24 @@
 ---
 title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
 date: '2024-12-29T22:31:23+09:00'
+description: 'This is First Post.'
 slug: 'overview'
 weight: 2
 # draft: false
 draft: true
 categories: ["DS-100本ノック"]
 tags: 
-- R
-- SQL
-showtoc: true
-hidemeta: false
-comments: false
-description: 'This is First Post.'
-# disableHLJS: true # to disable highlightjs
+  - R
+  - SQL
+cover:
+  image: "images/papermod-cover.png" #< /static
+  hiddenInList: true
 disableHLJS: false
 disableShare: false
 hideSummary: false
 searchHidden: false
 ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
 ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: true
 # cover:
 #     image: "<image path/url>" # image path/url
 #     alt: "<alt text>" # alt text
