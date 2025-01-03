@@ -32,8 +32,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.137.1
+      #  katsu
+      # HUGO_VERSION: 0.137.1
+      HUGO_VERSION: 0.140.1
+    
     steps:
+      # katsu
+      - name: Check Hugo version
+        run: hugo version
+      
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
@@ -50,8 +57,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      
+
       # katsu
+      # テーマをサブモジュールで管理している場合
       - name: Install submodules
         run: git submodule update --init --recursive
       
