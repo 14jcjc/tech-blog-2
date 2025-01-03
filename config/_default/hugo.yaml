@@ -128,7 +128,7 @@ params:
   ShowToc: true
   ShowPageNums: true
   TocOpen: false
-  images: ["images/twitter_card.jpg"]
+  images: ["images/twitter_card.png"] # Twitter Card (/static)
   mainMenu:
     enableChildren: true
   site_title: 'データサイエンス100本ノック＋α'
