@@ -46,13 +46,11 @@ services:
   twitter:
     disableInlineCSS: true
 
-mainsections: 
+mainSections: 
   - "100k"
-  - "100k/standard"
-  - "100k/advanced"
   - "aaa"
   - "xxx"
-  - "glossary"
+  # - "glossary"
 
 params:
   env: development
@@ -241,23 +239,23 @@ taxonomies:
 menus:
   main:
     - name: Archive
-      url: archives
+      url: /archives/
       weight: 10
     - name: Search
-      url: search
+      url: /search/
       weight: 15
     - name: Tags
-      url: tags
+      url: /tags/
       weight: 20
     - name: Categories
-      url: categories
+      url: /categories/
       weight: 25
     - name: "データサイエンス100本ノック＋α - test"
-      url: ds-100knocks-dp-test
+      url: /ds-100knocks-dp-test/
       weight: 30
       identifier: "DS-100knocks"
     - name: Glossary
-      url: glossary
+      url: /glossary/
       weight: 35
     # - name: standard
     #   url: "ds-100knocks-dp-test/standard"

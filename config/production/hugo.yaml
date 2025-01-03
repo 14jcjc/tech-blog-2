@@ -29,10 +29,8 @@ permalinks:
     # aaa: /aaa/:year/:month/
     # xxx: /xxx/:sections[1:]/
 
-mainsections: 
+mainSections: 
   - "100k"
-  - "100k/standard"
-  - "100k/advanced"
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
