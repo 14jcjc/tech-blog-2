@@ -56,14 +56,7 @@ param.site_title : {{< param site_title >}}
 
 ### details
 
-<!-- {{< 
-details 
-summary="See the details (detailsショートコード)" 
-open=false name="name" title="title" 
->}}
-This is a **bold** word.
-{{< /details >}}
- -->
+{{< details summary="See the details (detailsショートコード)" open=false name="name" title="title" >}} This is a **bold** word. {{< /details >}}
 
 ### figure
 
