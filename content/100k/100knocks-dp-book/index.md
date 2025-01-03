@@ -21,6 +21,7 @@ cover:
   image: "tree.png"
   # relative: false
   relative: true
+  hidden: false
   hiddenInList: true
 ---
 
