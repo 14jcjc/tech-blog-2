@@ -1,3 +1,6 @@
+baseURL: "https://14katsumix.github.io/tech-blog/"
+# baseURL: "https://14katsumix.github.io/"
+
 # Include drafts when building.
 # buildDrafts: false
 buildDrafts: true
@@ -5,10 +8,6 @@ buildDrafts: true
 services:
   googleAnalytics:
     ID: UA-111-11
-  instagram:
-    disableInlineCSS: true
-  twitter:
-    disableInlineCSS: true
 
 # permalinks を設定すると, パンクズリストがきちんと表示されなくなる.
 #-> /themes/PaperMod/layouts/partials/breadcrumbs.html を修正することで解決.

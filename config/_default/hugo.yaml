@@ -37,6 +37,14 @@ minify:
 outputs: 
   home: ["HTML", "RSS", "JSON"]
 
+services:
+  # googleAnalytics:
+  #   ID: UA-999-99
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
+
 params:
   env: development
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -106,10 +114,12 @@ params:
     Content: >
       R言語好きのデータサイエンティストです📊  
 
+      {{% comment %}} 
       データ分析やプログラミングの楽しさを共有することをモットーに、日々成長中✨  
+      {{% /comment %}} 
       
-      ブログでは『📘 データサイエンス100本ノック（構造化データ加工編）』をベースにした問題解説やオリジナル問題を発信中❗️ RとSQLを中心に、初心者から上級者まで楽しめるコンテンツをお届けします🚀  
-
+      ブログでは『📘 データサイエンス100本ノック（構造化データ加工編）』をベースにした問題解説やオリジナル問題を発信中✨ RとSQLを中心に、初心者から上級者まで楽しめるコンテンツをお届けします🚀  
+      
       Rコード実行環境のセットアップ・プログラムは [📂GitHubリポジトリ](https://github.com/14katsumix/100knocks-dp)に公開してます。
 
   socialIcons:

@@ -1,11 +1,3 @@
-services:
-  googleAnalytics:
-    ID: UA-999-99
-  instagram:
-    disableInlineCSS: true
-  twitter:
-    disableInlineCSS: true
-
 # permalinks を設定すると, パンクズリストがきちんと表示されなくなる.
 #-> /themes/PaperMod/layouts/partials/breadcrumbs.html を修正することで解決.
 #   https://github.com/adityatelange/hugo-PaperMod/issues/1585
