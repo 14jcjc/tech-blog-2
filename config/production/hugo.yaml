@@ -5,9 +5,16 @@ baseURL: "https://14katsumix.github.io/tech-blog/"
 # buildDrafts: false
 buildDrafts: true
 
+# enableRobotsTXT: true # robots.txt の生成を有効にする
+enableRobotsTXT: false
+
 services:
   googleAnalytics:
     ID: UA-111-11
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
 
 # permalinks を設定すると, パンクズリストがきちんと表示されなくなる.
 #-> /themes/PaperMod/layouts/partials/breadcrumbs.html を修正することで解決.
@@ -22,6 +29,11 @@ permalinks:
     # aaa: /aaa/:year/:month/
     # xxx: /xxx/:sections[1:]/
 
+mainsections: 
+  - "100k"
+  - "100k/standard"
+  - "100k/advanced"
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # mainSections: ["100k", "aaa", "xxx", "glossary"]
@@ -33,6 +45,8 @@ params:
         url: ds-100knocks-dp
       # - name: XXX
       #   url: xxx
+      - name: Archives
+        url: archives
       - name: Tags
         url: tags
 

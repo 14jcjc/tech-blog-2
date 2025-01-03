@@ -16,6 +16,10 @@ params:
   testparam: "これは params.testparam."
   testparam2: 
     nestparam: "これは nest param."
+cover:
+  # image: "images/papermod-cover.png" #< /static
+  image: "tree.png"
+  hiddenInList: true
 ---
 
 ## ショートコード
@@ -56,7 +60,11 @@ param.site_title : {{< param site_title >}}
 
 ### details
 
-{{< details summary="See the details (detailsショートコード)" open=false name="name" title="title" >}} This is a **bold** word. {{< /details >}}
+{{< details 
+summary="See the details (detailsショートコード)" 
+open=false name="name" title="title" >}} 
+This is a **bold** word. 
+{{< /details >}}
 
 ### figure
 
@@ -167,11 +175,29 @@ receipt %>%
 aaaaaa,bbbbbb,cccccc
 1,2,3
 
+### エスケープ
+
+例2： \### aaa  
+例1： \`インライン表示されなくなる`  
+
+### 引用
+
+1. 
+> aaaaaaaaaaaaaaaaaaa
+
+2. 
+> xxxxxxxxxxxxxx
+>> yyyyyyyyyyyyyyyyyy
+
+
 ---
+
+<font color="Red">カラーテキスト</font>
 
 ~~打ち消し線~~  
 ABC ~打ち消し線~ XYZ  
 **太字**  
+*斜体*  
 
 ...  
 << >>

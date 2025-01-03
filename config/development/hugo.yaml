@@ -13,8 +13,6 @@ permalinks:
 
 params:
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  mainSections: ["aaa", "xxx", "glossary"]
-
   # profile-mode
   profileMode:
     buttons:
@@ -22,5 +20,7 @@ params:
         url: ds-100knocks-dp-test
       - name: XXX
         url: xxx
+      - name: Archives
+        url: archives
       - name: Tags
         url: tags

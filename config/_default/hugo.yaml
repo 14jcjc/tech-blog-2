@@ -1,20 +1,21 @@
 baseURL: "https://14katsumix.github.io/tech-blog/"
+title: katsuのブログ
+copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
+pagination:
+  pagerSize: 10 # Default is 10
+theme: PaperMod
+
 languageCode: ja
 defaultContentLanguage: ja
 hasCJKLanguage: true # If true, auto-detect Chinese/Japanese/Korean Languages in the content.
 isCJKLanguage: true # 内容言語が日中韓系のときは true に設定します.
-title: katsuのブログ
-pagination:
-  pagerSize: 10 # Default is 10
-theme: PaperMod
 
 # Include drafts when building.
 # buildDrafts: false
 buildDrafts: true
 
-copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
-
 enableRobotsTXT: true # robots.txt の生成を有効にする
+enableInlineShortcodes: true # Markdown内でインラインショートコードを有効化する
 
 buildFuture: false # Include content with a future publication date.
 buildExpired: false # Include content already expired.
@@ -45,16 +46,61 @@ services:
   twitter:
     disableInlineCSS: true
 
+mainsections: 
+  - "100k"
+  - "100k/standard"
+  - "100k/advanced"
+  - "aaa"
+  - "xxx"
+  - "glossary"
+
 params:
   env: development
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  author: katsu # author: ["Me", "You"] #< multiple authors
+  DateFormat: "2006-01-02"
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
   # subtitle: This is subtitle
   # description: katsuのブログです。
-  mainSections: ["100k"]
-  keywords: ["データサイエンス100本ノック", Blog, R, SQL, "データベース・バックエンド"]
-  author: katsu # author: ["Me", "You"] #< multiple authors
-    # images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "2006-01-02"
+  # mainSections: ["100k"]
+  keywords: 
+    - "データサイエンス100本ノック"
+    - "データサイエンスブログ"
+    - "データ分析"
+    - "データ解析"
+    - "データ分析実践"
+    - "データサイエンス基礎"
+    - "データサイエンスノウハウ"
+    - "データサイエンスTips"
+    - "データサイエンス手法"
+    - "プログラミング"
+    - "R言語"
+    - "Rプログラミング"
+    - "SQLクエリ"
+    - "SQLデータベース操作"
+    - "データベースバックエンド"
+    - "Rデータ処理"
+    - "SQLデータ処理"
+    - "高度なデータ処理"
+    - "データサイエンス無料教材"
+    - "データサイエンス解説"
+    - "データサイエンス設問解答"
+    - "データサイエンス発展問題"
+    - "初心者向けデータサイエンス"
+    - "中級者向けデータサイエンス"
+    - "上級者向けデータサイエンス"
+    - "日本語データサイエンス"
+    - "tidyverse"
+    - "dplyr"
+    - "tidyr"
+    - "dbplyr"
+    - "DBI"
+    - "dbx"
+    - "duckdb"
+    - "magrittr"
+    - "tibble"
+    - "Data Science Blog"
+    - "SQL Processing"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
   ShowReadingTime: false
@@ -64,17 +110,31 @@ params:
   ShowCodeCopyButtons: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: true
+  # Archiveで過去の記事がすべて表示されページネーションが無くなる
+  ShowAllPagesInArchive: true
+  # Archiveで最新の記事のみが表示され, その他の記事は次ページへのリンクとして表示
+  # ShowAllPagesInArchive: false
+
+  # ShowSidebar: true
+  # customCSS: "css/custom.css"
+
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: false
+  # comments: true
   hidemeta: false
   hideSummary: false
-  showtoc: true
-  tocopen: false
+  ShowToc: true
+  ShowPageNums: true
+  TocOpen: false
+  # showPostCover: true # カバー画像を有効化(?)
   mainMenu:
     enableChildren: true
   site_title: 'データサイエンス100本ノック＋α'
+
+  # widgets: 
+  #   recentPosts: true
 
   # assets:
     # disableHLJS: true # to disable highlight.js
@@ -94,7 +154,7 @@ params:
   profileMode:
     enabled: false # needs to be explicitly set
     # enabled: true # needs to be explicitly set
-    title: 14katsumix
+    title: katsu
     subtitle: "Blog Site"
     # imageUrl: "<img location>"
     # imageWidth: 120
@@ -119,16 +179,16 @@ params:
       {{% /comment %}} 
       
       ブログでは『📘 データサイエンス100本ノック（構造化データ加工編）』をベースにした問題解説やオリジナル問題を発信中✨ RとSQLを中心に、初心者から上級者まで楽しめるコンテンツをお届けします🚀  
-      
+
       Rコード実行環境のセットアップ・プログラムは [📂GitHubリポジトリ](https://github.com/14katsumix/100knocks-dp)に公開してます。
 
   socialIcons:
     - name: x
       url: "https://x.com/14katsumix"
-    # - name: stackoverflow
-    #   url: "https://stackoverflow.com"
     - name: github
       url: "https://github.com/14katsumix"
+    # - name: stackoverflow
+    #   url: "https://stackoverflow.com"
 
   # analytics:
   #   google:
@@ -138,10 +198,10 @@ params:
   #   yandex:
   #     SiteVerificationTag: "XYZabc"
 
-  cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+  # cover:
+  #   hidden: true # hide everywhere but not in structured data
+  #   hiddenInList: true # hide on list pages and home
+  #   hiddenInSingle: true # hide on single page
 
   # editPost:
   #   URL: "https://github.com/<path_to_repo>/content"
@@ -150,15 +210,16 @@ params:
 
   # for search
   # https://fusejs.io/api/options.html
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
-    keys: ["title", "permalink", "summary", "content"]
+  # fuseOpts:
+  #   isCaseSensitive: false
+  #   shouldSort: true
+  #   location: 0
+  #   distance: 1000
+  #   # distance: 1
+  #   threshold: 0.4
+  #   minMatchCharLength: 0
+  #   limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+  #   keys: ["title", "permalink", "summary", "content"]
 
 # If you do not want Hugo to create any taxonomies: 
 # disableKinds:

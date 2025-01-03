@@ -13,4 +13,8 @@ content/100k/_index.md
 
 - 『📘 データサイエンス100本ノック（構造化データ加工編）』をベースにした問題解説やオリジナル問題です。
 
-- Rコード実行環境のセットアップ・プログラムは[GitHubリポジトリ](https://github.com/14katsumix/100knocks-dp)に公開してます。
+<!-- - Rコード実行環境のセットアップ・プログラムは[GitHubリポジトリ](https://github.com/14katsumix/100knocks-dp)に公開してます。 -->
+
+- Rコード実行環境のセットアップ・プログラムを 
+{{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="GitHubリポジトリ" >}} 
+に公開してます。
