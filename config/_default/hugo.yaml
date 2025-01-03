@@ -129,6 +129,7 @@ params:
   ShowPageNums: true
   TocOpen: false
   # showPostCover: true # カバー画像を有効化(?)
+  images: ["twitter_card.png"]
   mainMenu:
     enableChildren: true
   site_title: 'データサイエンス100本ノック＋α'

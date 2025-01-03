@@ -13,6 +13,7 @@ tags:
 cover:
   image: "images/papermod-cover.png" #< /static
   hiddenInList: true
+  # hidden: true
 disableHLJS: false
 disableShare: false
 hideSummary: false
