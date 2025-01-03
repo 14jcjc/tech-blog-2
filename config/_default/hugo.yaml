@@ -37,33 +37,12 @@ minify:
 outputs: 
   home: ["HTML", "RSS", "JSON"]
 
-mainSections: ["100k", "aaa", "xxx", "glossary"]
-
-services:
-  googleAnalytics:
-    ID: UA-123-45
-  instagram:
-    disableInlineCSS: true
-  twitter:
-    disableInlineCSS: true
-
-# permalinks を設定すると, パンクズリストがきちんと表示されなくなる.
-#-> /themes/PaperMod/layouts/partials/breadcrumbs.html を修正することで解決.
-#   https://github.com/adityatelange/hugo-PaperMod/issues/1585
-permalinks:
-  page:
-    100k: /ds-100knocks-dp-test/:sections[1:]/:slug/
-    aaa: /aaa/:year/:month/:slug/
-    xxx: /xxx/:slug
-  section:
-    100k: /ds-100knocks-dp-test/:sections[1:]/
-    # aaa: /aaa/:year/:month/
-    xxx: /xxx/:sections[1:]/
-
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: development
+  # env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # subtitle: This is subtitle
   # description: katsuのブログです。
+  mainSections: ["100k"]
   keywords: ["データサイエンス100本ノック", Blog, R, SQL, "データベース・バックエンド"]
   author: katsu # author: ["Me", "You"] #< multiple authors
     # images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -113,13 +92,13 @@ params:
     # imageWidth: 120
     # imageHeight: 120
     # imageTitle: my image
-    buttons:
-      - name: "データサイエンス100本ノック＋α - test"
-        url: ds-100knocks-dp-test
-      - name: XXX
-        url: xxx
-      - name: Tags
-        url: tags
+    # buttons:
+    #   - name: "データサイエンス100本ノック＋α - test"
+    #     url: ds-100knocks-dp-test
+    #   - name: XXX
+    #     url: xxx
+    #   - name: Tags
+    #     url: tags
 
   # home-info mode
   homeInfoParams:
