@@ -12,7 +12,8 @@ tags:
   - SQL
 cover:
   image: "images/papermod-cover.png" #< /static
-  hiddenInList: true
+  relative: false
+  hiddenInList: false
   # hidden: true
 disableHLJS: false
 disableShare: false

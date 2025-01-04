@@ -2,6 +2,7 @@
 # title: "2nd Post"
 title: '【R+SQL】データサイエンス100本ノック＋α - 環境設定'
 summary: This is summary.
+description: "This is description."
 date: '2024-12-30T22:24:00+09:00'
 slug: setup
 weight: 3
@@ -11,7 +12,11 @@ categories: ["DS-100本ノック"]
 tags: 
 - R
 - SQL
-description: "This is 2nd Post."
+cover:
+  image: "images/twitter-card.png" #< /static
+  relative: false
+  hiddenInList: false
+  # hidden: true
 
 # cover:
 #     image: "<image path/url>" # image path/url

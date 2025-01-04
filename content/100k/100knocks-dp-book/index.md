@@ -22,7 +22,7 @@ cover:
   # relative: false
   relative: true
   hidden: false
-  hiddenInList: true
+  hiddenInList: false
 ---
 
 ## ショートコード
