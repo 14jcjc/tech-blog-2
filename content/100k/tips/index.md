@@ -7,8 +7,8 @@ weight: 4
 draft: true
 categories: ["DS-100本ノック"]
 tags: 
-- R
-- SQL
+  - R
+  - SQL
 # menus:
 # - main
 # - footer

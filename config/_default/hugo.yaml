@@ -161,11 +161,12 @@ params:
   #   yandex:
   #     SiteVerificationTag: "XYZabc"
 
-  # cover:
-  #   hidden: true # hide everywhere but not in structured data
-  #   hiddenInList: true # hide on list pages and home
-  #   hiddenInSingle: true # hide on single page
-
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+    alt: "cover" # alt text
+  
   # editPost:
   #   URL: "https://github.com/<path_to_repo>/content"
   #   Text: "Suggest Changes" # edit text

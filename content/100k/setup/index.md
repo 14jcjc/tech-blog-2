@@ -16,20 +16,11 @@ cover:
   # image: "images/twitter-card.png" #< /static
   # relative: false
   image: "line.png"
-  relative: true
-  hiddenInList: false
+  alt: "cover" # alt text
+  relative: true # when using page bundles set this to true
   # hidden: true
-
-# cover:
-#     image: "<image path/url>" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: true # only hide on current single page
-# editPost:
-#     URL: "https://github.com/<path_to_repo>/content"
-#     Text: "Suggest Changes" # edit text
-#     appendFilePath: true # to append file path to Edit link
+  hiddenInList: false # hide on list pages and home
+  hiddenInSingle: false # hide on single page
 ---
 
 ## AAA

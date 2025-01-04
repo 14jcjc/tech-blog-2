@@ -7,10 +7,10 @@ slug: '100knocks-dp-guidebook'
 draft: true
 summary: 'これはsummaryです。'
 categories: 
-- "DS-100本ノック"
+  - "DS-100本ノック"
 tags: 
-- R
-- SQL
+  - R
+  - SQL
 # tags_weight: 1
 params:
   testparam: "これは params.testparam."
@@ -18,11 +18,18 @@ params:
     nestparam: "これは nest param."
 cover:
   # image: "images/papermod-cover.png" #< /static
-  image: "tree.png"
   # relative: false
-  relative: true
-  hidden: false
-  hiddenInList: false
+  image: "tree.png" # image path/url
+  alt: "cover" # alt text
+  # caption: "<text>" # display caption under cover
+  relative: true # when using page bundles set this to true
+  # hidden: true
+  hiddenInList: false # hide on list pages and home
+  hiddenInSingle: false # hide on single page
+# editPost:
+#     URL: "https://github.com/<path_to_repo>/content"
+#     Text: "Suggest Changes" # edit text
+#     appendFilePath: true # to append file path to Edit link
 ---
 
 ## ショートコード
