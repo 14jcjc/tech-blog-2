@@ -4,8 +4,8 @@ date: '2024-12-29T01:20:27+09:00'
 draft: true
 weight: 1
 slug: '100knocks-dp-guidebook'
-draft: true
 summary: 'これはsummaryです。'
+description: "This is description."
 categories: 
   - "DS-100本ノック"
 tags: 
