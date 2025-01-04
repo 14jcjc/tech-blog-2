@@ -129,8 +129,7 @@ params:
   images: ["images/twitter-card.png"] # Twitter Card (/static)
   mainMenu:
     enableChildren: true
-  site_title: 'データサイエンス100本ノック＋α'
-
+  
   # widgets: 
   #   recentPosts: true
 

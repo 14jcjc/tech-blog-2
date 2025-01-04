@@ -29,7 +29,10 @@ cover:
 
 - shortcode: {{< test-shortcode-1 >}}
 
-- huto.yaml -> param.site_title : {{< param site_title >}}
+- huto.yaml -> param.site_100knocks : {{< param site_100knocks >}}
+
+- shortcode: {{< site-100knocks >}}
+- shortcode: {{< title-100k-s >}}
 
 ### ref
 
@@ -59,7 +62,7 @@ TODO: rewrite the paragraph below.
 - {{< param testparam >}}  
 - {{< param testparam2.nestparam >}}
 
-param.site_title : {{< param site_title >}}
+param.site_100knocks : {{< param site_100knocks >}}
 
 ### details
 

@@ -38,7 +38,7 @@ ShowWordCount: true
 
 shortcode: {{< test-shortcode-1 >}}
 
-param.site_title : {{< param site_title >}}
+param.site_100knocks : {{< param site_100knocks >}}
 
 ## AAA
 
