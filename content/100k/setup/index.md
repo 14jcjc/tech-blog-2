@@ -10,8 +10,8 @@ weight: 3
 draft: true
 categories: ["DS-100本ノック"]
 tags: 
-- R
-- SQL
+  - R
+  - SQL
 cover:
   # image: "images/twitter-card.png" #< /static
   # relative: false
