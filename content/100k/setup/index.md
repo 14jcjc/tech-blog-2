@@ -15,7 +15,7 @@ tags:
 cover:
   # image: "images/twitter-card.png" #< /static
   # relative: false
-  image: "images/line.png"
+  image: "line.png"
   relative: true
   hiddenInList: false
   # hidden: true
