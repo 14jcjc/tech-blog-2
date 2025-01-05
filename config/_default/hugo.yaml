@@ -154,9 +154,9 @@ params:
       RとSQLを中心に、初心者から上級者まで楽しめるコンテンツをお届けします🚀  
       {{% /comment %}} 
 
-      Rコード実行環境のセットアップ・プログラムをGitHubに公開してます。
+      Rコード実行環境のセットアップ・プログラムをGitHubに公開してます
       → [リポジトリ📂](https://github.com/14katsumix/100knocks-dp)
-  
+
   socialIcons:
     - name: x
       url: "https://x.com/14katsumix"
