@@ -155,7 +155,7 @@ params:
       {{% /comment %}} 
 
       Rコード実行環境のセットアップ・プログラムをGitHubに公開してます
-      → [リポジトリ📂](https://github.com/14katsumix/100knocks-dp)
+      → {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="リポジトリ📂" >}}
 
   socialIcons:
     - name: x
