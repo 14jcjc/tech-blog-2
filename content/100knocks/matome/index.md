@@ -1,8 +1,9 @@
 ---
 title: まとめ
 date: '2021-03-14T01:23:23+09:00'
-draft: true
-weight: 1
+# draft: false
+# draft: true
+weight: 1000
 slug: 'matome'
 summary: 'これはsummaryです。'
 description: "This is description."

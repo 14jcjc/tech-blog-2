@@ -1,10 +1,9 @@
 ---
-# title: 100K
 title: 'データサイエンス100本ノック＋α'
 date: '2025-01-04T23:23:23+09:00'
 # type: "section"
 # draft: false
-draft: true
+# draft: true
 # categories: ["100本ノック＋α"]
 summary: '【R+SQL】データサイエンス100本ノック＋α 関連の投稿です。'
 description: '【R+SQL】データサイエンス100本ノック＋α 関連の投稿です。'
@@ -47,8 +46,6 @@ keywords:
   - "Data Science Blog"
   - "SQL Processing"
 ---
-
-content/100knocks/_index.md  
 
 - 『📘 データサイエンス100本ノック（構造化データ加工編）』をベースにした問題解説やオリジナル問題です。
 

@@ -1,8 +1,8 @@
 ---
-title: 'YYY'
+title: 'Test'
 draft: true
 ---
 
-content/xxx/yyy/_index.md  
+content/test/_index.md  
 xxxxxxxxxxxxxxx.  
 yyyyyyyyyyyyyyyyy.

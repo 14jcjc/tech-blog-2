@@ -38,6 +38,10 @@ minify:
   disableXML: true
   minifyOutput: true
 
+# sitemap: 
+  # changefreq = "monthly"
+  # priority = 0.5
+
 # search機能を有効にするため /public/index.json を生成する
 outputs: 
   home: ["HTML", "RSS", "JSON"]

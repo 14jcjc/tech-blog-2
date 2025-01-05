@@ -2,8 +2,8 @@ baseURL: "https://14katsumix.github.io/tech-blog/"
 # baseURL: "https://14katsumix.github.io/"
 
 # Include drafts when building.
-# buildDrafts: false
-buildDrafts: true
+buildDrafts: false
+# buildDrafts: true
 
 # enableRobotsTXT: true # robots.txt の生成を有効にする
 enableRobotsTXT: false
@@ -31,7 +31,7 @@ permalinks:
 
 mainSections: 
   - "100knocks"
-  - "test"
+  # - "test"
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
