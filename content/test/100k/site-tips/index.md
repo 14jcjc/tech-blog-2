@@ -1,10 +1,10 @@
 ---
 # title: '『データサイエンス100本ノック～構造化データ加工編ガイドブック』レビュー'
-title: まとめ
+title: サイト作成Tips
 date: '2024-12-29T01:20:27+09:00'
+slug: 'site-tips'
 draft: true
 weight: 1
-slug: 'matome'
 summary: 'これはsummaryです。'
 description: "This is description."
 UseHugoToc: true
@@ -42,7 +42,7 @@ cover:
 summary: の設定より優先度が高いです。
 <!--more-->
 
-## shortcodes
+## shortcodes {#shortcodes}
 
 - {{</* test-shortcode-1 */>}}: {{< test-shortcode-1 >}}
 
@@ -55,7 +55,7 @@ summary: の設定より優先度が高いです。
 - {{</* k100-site */>}}: {{< k100-site >}}
 - {{</* k100-title-s */>}}: {{< k100-title-s >}}
 
-### param
+### param {#param}
 
 - {{</* param k100_site */>}}  
   huto.yaml -> param.k100_site : {{< param k100_site >}}  
@@ -69,7 +69,7 @@ summary: の設定より優先度が高いです。
 →   
 {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="リポジトリ📂" >}}
 
-### ref
+### ref {#ref}
 
 - overview-BBB は [こちら]({{< ref "overview#bbb" >}} "overview-BBB")  
 - overview-d2 は [こちら]({{< ref "overview.md#d2" >}} "About us")  
@@ -103,12 +103,17 @@ open=false name="name" title="title" >}}
 This is a **bold** word. 
 {{< /details >}}
 
-### figure
+### figure {#figure}
+
+{{</*  
+figure 
+src="box.png" alt="代替テキスト" width="50%" link="../overview#bbb" 
+rel="noopener" target="_blank" caption="キャプション" title="Box plot" */>}}
 
 {{< 
 figure 
-src="box.png" title="Box plot" alt="代替テキスト" width="50%" link="../setup" 
-rel="noopener" target="_blank" caption="キャプション" 
+src="box.png" alt="代替テキスト" width="50%" link="../overview#bbb" 
+rel="noopener" target="_blank" caption="キャプション" title="Box plot" 
 >}}
 
 ### Data sources
@@ -121,7 +126,7 @@ read: assets/test/pets.csv
 
 ---
 
-## PaperMod
+## PaperMod {#paperod}
 
 ### Code block with PaperMod
 
@@ -191,7 +196,7 @@ textコード:
     └── index.md
 ```
 
-### Code block with Hugo's internal highlight shortcode
+### Code block with Hugo's internal highlight shortcode {#code}
 
 {{< highlight r >}}
 receipt %>% 

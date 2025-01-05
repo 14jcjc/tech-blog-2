@@ -1,11 +1,12 @@
 ---
 title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
-date: '2024-12-29T22:31:23+09:00'
+date: '2024-12-29T20:31:23+09:00'
 description: 'This is First Post.'
 slug: 'overview'
 weight: 2
 # draft: false
-draft: true
+# draft: true
+TocOpen: true
 categories: ["DS-100本ノック"]
 tags: 
   - R
@@ -35,7 +36,7 @@ ShowWordCount: true
 
 ## AAA
 
-<a href="../standard/r-028" target="_blank" rel="noopener noreferrer">R-028</a>
+<a href="../test/standard/r-028" target="_blank" rel="noopener noreferrer">R-028</a>
 
 This is **bold** text, and this is *emphasized* text.
 
@@ -87,7 +88,27 @@ a
 a  
 a
 
+## 和文A
+
+Hugo は、フロントマターのパラメータに基づいて、ページの関連コンテンツを特定するために一連の要素を使用します。これは、希望するインデックスとパラメータのセットに調整することも、Hugoのデフォルトの 関連コンテンツ設定 のままにしておくことも可能です。
+最大 5 つの関連ページ (同じ date または keyword パラメータを共有する) を一覧表示するには、シングルページのテンプレートに以下のパーシャルと同様のものを含めるだけです。
+
+## 和文B
+
+Hugo はコンテンツ内の見出しにインデックスを付け、これを使用して関連コンテンツを検索できます。 これを有効にするには、以下のように related 設定に fragments 型のインデックスを追加します。  
+
+Hugo では、関連コンテンツのデフォルトの設定を適切に行うことができますが、必要に応じて、グローバルレベルまたは言語レベルで、これを細かく設定することができます。
+
 ## BBB {#bbb}
+
+/assets/css/extended/*.css  
+ネストしたol, ul要素に不自然な margin-bottom がつくのを避ける: 
+```css
+.post-content li ol,
+.post-content li ul {
+  margin-bottom: 0;
+}
+```
 
 1. aaaaaa
 2. bbbbbb
@@ -100,6 +121,15 @@ a
   - aaaaaa
   - bbbbbb
 - zzzzz
+  - cccccccccccccc
+  - dddddddddddddd
+  - eeeeeeeeeeeeeee
+    - ffffffffffffffffff
+    - gggggggggggggggggg
+- aaaaaaaaaaaaa
+- bbbbbbbbbbbbbb
+
+あああああああああああああああああああああ
 
 ## CCC {#ccc}
 
