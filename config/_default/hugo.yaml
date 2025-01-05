@@ -122,8 +122,9 @@ params:
   profileMode:
     enabled: false # needs to be explicitly set
     # enabled: true # needs to be explicitly set
-    title: katsu
-    subtitle: "Blog Site"
+    title: 14katsumix
+    # subtitle: "100本ノックで学ぶ R とSQLの実践"
+    subtitle: "現場で役立つデータの世界 : RとSQLで学ぶ実践スキル"
     # imageUrl: "<img location>"
     # imageWidth: 120
     # imageHeight: 120
@@ -138,7 +139,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
+    # Title: "Hi there \U0001F44B"
+    Title: "14katsumix"
     Content: >
       R言語好きのデータサイエンティストです📊  
 
@@ -154,7 +156,7 @@ params:
 
       Rコード実行環境のセットアップ・プログラムをGitHubに公開してます。
       → [リポジトリ📂](https://github.com/14katsumix/100knocks-dp)
-
+  
   socialIcons:
     - name: x
       url: "https://x.com/14katsumix"

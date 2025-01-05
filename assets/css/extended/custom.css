@@ -18,3 +18,9 @@
   text-decoration: underline; /* ホバー時に下線を引く */
   color: #e74c3c; /* ホバー時にリンクテキストの色を赤に変更 */
 }
+
+/* ネストしたol, ul要素に不自然な margin-bottom がつくのを避ける */
+.post-content li ol,
+.post-content li ul {
+  margin-bottom: 0;
+}

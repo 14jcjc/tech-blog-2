@@ -63,6 +63,12 @@ summary: の設定より優先度が高いです。
 - {{</* param testparam */>}}: {{< param testparam >}}  
 - {{</* param testparam2.nestparam */>}}: {{< param testparam2.nestparam >}}
 
+### href-target-blank
+
+{{</* href-target-blank url="https://..." text="リポジトリ📂" */>}}  
+→   
+{{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="リポジトリ📂" >}}
+
 ### ref
 
 - overview-BBB は [こちら]({{< ref "overview#bbb" >}} "overview-BBB")  
