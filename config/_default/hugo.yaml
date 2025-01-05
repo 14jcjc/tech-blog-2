@@ -83,8 +83,7 @@ params:
   # Archiveで最新の記事のみが表示され, その他の記事は次ページへのリンクとして表示
   # ShowAllPagesInArchive: false
 
-  # ShowSidebar: true
-  # customCSS: "css/custom.css"
+  customCSS: "css/custom.css"
   
   disableSpecial1stPost: false
   disableScrollToTop: false
