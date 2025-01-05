@@ -1,6 +1,8 @@
 ---
 title: "Privacy Policy"
 url: "/privacy/"
+params:
+  author: " "
 summary: privacy policy
 ShowBreadCrumbs: false
 disableShare: true
@@ -11,5 +13,5 @@ disableShare: true
 
 Google アナリティクスの利用により収集されたデータは、Google のプライバシーポリシーに基づいて管理されています。Google アナリティクスの利用規約・プライバシーポリシーについては Google アナリティクスのホームページでご確認ください。
 
-- [Google アナリティクス利用規約](https://marketingplatform.google.com/about/analytics/terms/jp/)
-- [Google ポリシーと規約](https://policies.google.com/privacy?hl=ja)
+- {{< href-target-blank url="https://marketingplatform.google.com/about/analytics/terms/jp/" text="Google アナリティクス利用規約" >}}
+- {{< href-target-blank url="https://policies.google.com/privacy?hl=ja" text="Google ポリシーと規約" >}}
