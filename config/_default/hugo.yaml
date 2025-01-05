@@ -83,9 +83,9 @@ params:
     text: |
       [Privacy Policy]({{< ref "privacy" >}})
   # images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["images/twitter-card.png"] # /static
   # subtitle: This is subtitle
   # description: katsuのブログです。
-  # mainSections: ["100k"]
   defaultTheme: auto # dark, light
   disableThemeToggle: false
   ShowReadingTime: false
@@ -114,7 +114,6 @@ params:
   UseHugoToc: true
   TocOpen: false
   math: true
-  images: ["images/twitter-card.png"] # Twitter Card (/static)
   mainMenu:
     enableChildren: true
 

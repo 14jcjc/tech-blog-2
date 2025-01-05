@@ -36,7 +36,7 @@ mainSections:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # mainSections: ["100k", "aaa", "xxx", "glossary"]
-
+  
   # profile-mode
   profileMode:
     buttons:
