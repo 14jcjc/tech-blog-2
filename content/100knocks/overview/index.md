@@ -3,7 +3,8 @@ title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
 date: '2021-03-15T04:31:23+09:00'
 description: 'This is First Post.'
 slug: 'overview'
-weight: 2
+# weight: 2
+weight: 1010
 # draft: false
 # draft: true
 categories: ["DS-100本ノック"]
