@@ -215,26 +215,26 @@ menu:
     - name: Archive
       url: archives
       weight: 10
-    - name: Search
-      url: search
-      weight: 15
     - name: Tags
       url: tags
       weight: 20
     - name: Categories
       url: categories
-      weight: 25
+      weight: 30
+    - name: Search
+      url: search
+      weight: 40
     - name: "データサイエンス100本ノック＋α - test"
       # url: ds-100knocks-dp-test
       url: test/100k
-      weight: 30
+      weight: 50
       identifier: "DS-100knocks"
     - name: Glossary
       url: test/glossary
-      weight: 35
+      weight: 60
     - name: Books
       url: test/books
-      weight: 40
+      weight: 70
     # - name: standard
     #   url: "/ds-100knocks-dp-test/standard"
     #   parent: "DS-100knocks"

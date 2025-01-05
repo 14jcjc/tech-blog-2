@@ -51,10 +51,6 @@ params:
 
 menus:
   main:
-    - name: "データサイエンス100本ノック＋α"
-      url: ds-100knocks-dp
-      weight: 5
-      identifier: "DS-100knocks"
     - name: Archive
       url: archives
       weight: 10
@@ -67,6 +63,10 @@ menus:
     - name: Search
       url: search
       weight: 30
+    - name: "データサイエンス100本ノック＋α"
+      url: ds-100knocks-dp
+      weight: 35
+      identifier: "DS-100knocks"
     # - name: standard
     #   url: "ds-100knocks-dp/standard"
     #   parent: "DS-100knocks"
