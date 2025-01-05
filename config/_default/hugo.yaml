@@ -1,6 +1,6 @@
 baseURL: "https://14katsumix.github.io/tech-blog/"
 title: katsuのブログ
-copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
+# copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
 pagination:
   pagerSize: 10 # Default is 10
 theme: PaperMod
@@ -79,6 +79,9 @@ params:
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
   author: katsu # author: ["Me", "You"] #< multiple authors
   DateFormat: "2006-01-02"
+  footer:
+    text: |
+      [Privacy Policy]({{< ref "privacy" >}})
   # images: ["<link or path of image for opengraph, twitter-cards>"]
   # subtitle: This is subtitle
   # description: katsuのブログです。
