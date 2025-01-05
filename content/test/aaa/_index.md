@@ -1,5 +1,6 @@
 ---
 title: 'AAA'
+# type: "test/aaa"
 draft: true
 ---
 

@@ -17,11 +17,15 @@ buildDrafts: true
 enableRobotsTXT: true # robots.txt の生成を有効にする
 enableInlineShortcodes: true # Markdown内でインラインショートコードを有効化する
 
+# シンボリックリンクを有効化する
+enableSymlinksIfOwnerMatch: true
+
 buildFuture: false # Include content with a future publication date.
 buildExpired: false # Include content already expired.
 enableEmoji: true
 capitalizeListTitles: true 
 titleCaseStyle: ap # ap, chicago, go, firstupper, or none.
+# summaryLength: 50
 
 # 各ページの .GitInfo オブジェクトを有効にします (Hugo サイトが Gitでバージョン管理されている場合）.
 # これにより、各ページの Lastmod パラメータが, そのコンテンツファイルの最後の git コミット日時で更新されます.
@@ -47,9 +51,9 @@ services:
     disableInlineCSS: true
 
 mainSections: 
-  - "100k"
-  - "aaa"
-  - "xxx"
+  - "100knocks"
+  - "test"
+  # - "books"
   # - "glossary"
 
 params:
@@ -77,8 +81,7 @@ params:
 
   # ShowSidebar: true
   # customCSS: "css/custom.css"
-
-  UseHugoToc: true
+  
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: false
@@ -87,7 +90,10 @@ params:
   hideSummary: false
   ShowToc: true
   ShowPageNums: true
+  hideFooter: false
+  UseHugoToc: true
   TocOpen: false
+  math: true
   images: ["images/twitter-card.png"] # Twitter Card (/static)
   mainMenu:
     enableChildren: true
@@ -166,7 +172,7 @@ params:
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
     alt: "cover" # alt text
-  
+
   # editPost:
   #   URL: "https://github.com/<path_to_repo>/content"
   #   Text: "Suggest Changes" # edit text
@@ -187,8 +193,8 @@ params:
 
 # If you do not want Hugo to create any taxonomies: 
 # disableKinds:
-# - taxonomy
-# - term
+#   - taxonomy
+#   - term
 
 # サイトのトップレベル・セクションごとにメニュー・エントリーを自動的に定義する: 
 # sectionPagesMenu: main
@@ -198,31 +204,35 @@ taxonomies:
   category: "categories"
   # series: "series"
 
-menus:
+menu:
   main:
     - name: Archive
-      url: /archives/
+      url: archives
       weight: 10
     - name: Search
-      url: /search/
+      url: search
       weight: 15
     - name: Tags
-      url: /tags/
+      url: tags
       weight: 20
     - name: Categories
-      url: /categories/
+      url: categories
       weight: 25
     - name: "データサイエンス100本ノック＋α - test"
-      url: /ds-100knocks-dp-test/
+      # url: ds-100knocks-dp-test
+      url: test/100k
       weight: 30
       identifier: "DS-100knocks"
     - name: Glossary
-      url: /glossary/
+      url: test/glossary
       weight: 35
+    - name: Books
+      url: test/books
+      weight: 40
     # - name: standard
-    #   url: "ds-100knocks-dp-test/standard"
+    #   url: "/ds-100knocks-dp-test/standard"
     #   parent: "DS-100knocks"
-    #   weight: 1
+    #   # weight: 1
     #   identifier: standard
     # - name: advanced
     #   url: "ds-100knocks-dp-test/advanced"
@@ -264,10 +274,11 @@ pygmentsUseClasses: true
 markup:
   highlight:
     noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
+    anchorLineNos: false
+    codeFences: true
     # guessSyntax: true
-    # lineNos: true
+    lineNos: true
+    hl_inline: false
     # style: monokai
   tableOfContents:
     endLevel: 3
@@ -276,3 +287,22 @@ markup:
   goldmark:
     renderer:
       unsafe: true # HTMLタグがレンダリングされるようにする
+    parser:
+      attribute:
+        block: true
+        title: true
+      # 独立した画像要素に属性を適用するには、デフォルトの折り返し動作を無効にする
+      wrapStandAloneImageWithinParagraph: false
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
+

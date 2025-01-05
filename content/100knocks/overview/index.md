@@ -1,6 +1,6 @@
 ---
 title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
-date: '2024-12-29T22:31:23+09:00'
+date: '2021-03-15T04:31:23+09:00'
 description: 'This is First Post.'
 slug: 'overview'
 weight: 2
@@ -33,17 +33,9 @@ ShowWordCount: true
 #     appendFilePath: true # to append file path to Edit link
 ---
 
-このブロックは summary です。最初の投稿記事です。
-
-<!--more-->
-
-shortcode: {{< test-shortcode-1 >}}
-
-param.site_100knocks : {{< param site_100knocks >}}
-
 ## AAA
 
-<a href="../standard/r-028" target="_blank" rel="noopener noreferrer">R-028</a>
+<a href="../test/standard/r-028" target="_blank" rel="noopener noreferrer">R-028</a>
 
 This is **bold** text, and this is *emphasized* text.
 

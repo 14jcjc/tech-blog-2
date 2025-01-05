@@ -46,12 +46,13 @@
 {{ $shortcode := printf "{{< href-target-blank url=\"%s\" text=\"%s\" >}}" $url $text }}
 {{ .RenderString $shortcode }}
 </p>
+<br>
 
 <dl>
   {{ range .Pages }}
     <dt>{{ .Title }}</dt>
     <dd>{{ .Content }}</dd>
   {{ end }}
-</dl>
+</dl> 
 
 {{- end }}{{- /* end main */ -}}

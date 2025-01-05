@@ -1,15 +1,18 @@
 # permalinks を設定すると, パンクズリストがきちんと表示されなくなる.
 #-> /themes/PaperMod/layouts/partials/breadcrumbs.html を修正することで解決.
 #   https://github.com/adityatelange/hugo-PaperMod/issues/1585
-permalinks:
-  page:
-    100k: /ds-100knocks-dp-test/:sections[1:]/:slug/
-    aaa: /aaa/:year/:month/:slug/
-    xxx: /xxx/:slug
-  section:
-    100k: /ds-100knocks-dp-test/:sections[1:]/
-    # aaa: /aaa/:year/:month/
-    xxx: /xxx/:sections[1:]/
+# permalinks:
+#   page:
+#     # test/100k: /ds-100knocks-dp-test/:sections[1:]/:slug/
+#     # test/aaa: /aaa/:year/:month/:slug/
+#     # test/xxx: /xxx/:slug
+#     test/xxx: /xxx/:sections[1:]/:slug
+#     # xxx: /xxx/:sections[1:]/:slug
+#   section:
+#     # test/100k: /ds-100knocks-dp-test/:sections[1:]/
+#     ## aaa: /aaa/:year/:month/
+#     test/xxx: /xxx/:sections[1:]/
+#     # xxx: /xxx/:sections[1:]/
 
 params:
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.

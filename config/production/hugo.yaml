@@ -21,11 +21,11 @@ services:
 #   https://github.com/adityatelange/hugo-PaperMod/issues/1585
 permalinks:
   page:
-    100k: /ds-100knocks-dp/:sections[1:]/:slug/
+    100knocks: /ds-100knocks-dp/:sections[1:]/:slug/
     # aaa: /aaa/:year/:month/:slug/
     # xxx: /xxx/:slug
   section:
-    100k: /ds-100knocks-dp/:sections[1:]/
+    100knocks: /ds-100knocks-dp/:sections[1:]/
     # aaa: /aaa/:year/:month/
     # xxx: /xxx/:sections[1:]/
 
@@ -51,19 +51,19 @@ params:
 menus:
   main:
     - name: Archive
-      url: /archives/
+      url: archives
       weight: 10
     - name: Search
-      url: /search/
+      url: search
       weight: 15
     - name: Tags
-      url: /tags/
+      url: tags
       weight: 20
     - name: Categories
-      url: /categories/
+      url: categories
       weight: 25
     - name: "データサイエンス100本ノック＋α"
-      url: /ds-100knocks-dp/
+      url: ds-100knocks-dp
       weight: 30
       identifier: "DS-100knocks"
     # - name: standard

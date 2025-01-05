@@ -1,10 +1,13 @@
-k100_site: 'データサイエンス100本ノック＋α'
-k100_rsql: '【R+SQL】'
-k100_suffix_s: '標準編'
-k100_suffix_a: '発展編'
-k100_category_s: 'DS-100本ノック＋α（標準編）'
-k100_category_a: 'DS-100本ノック＋α（発展編）'
-
+---
+# title: 100K
+title: 'データサイエンス100本ノック＋α'
+date: '2025-01-04T23:23:23+09:00'
+# type: "section"
+# draft: false
+draft: true
+# categories: ["100本ノック＋α"]
+summary: '【R+SQL】データサイエンス100本ノック＋α 関連の投稿です。'
+description: '【R+SQL】データサイエンス100本ノック＋α 関連の投稿です。'
 keywords: 
   - "データサイエンス100本ノック"
   - "データサイエンスブログ"
@@ -43,3 +46,14 @@ keywords:
   - "tibble"
   - "Data Science Blog"
   - "SQL Processing"
+---
+
+content/100knocks/_index.md  
+
+- 『📘 データサイエンス100本ノック（構造化データ加工編）』をベースにした問題解説やオリジナル問題です。
+
+<!-- - Rコード実行環境のセットアップ・プログラムは[GitHubリポジトリ](https://github.com/14katsumix/100knocks-dp)に公開してます。 -->
+
+- Rコード実行環境のセットアップ・プログラムを 
+{{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="GitHubリポジトリ" >}} 
+に公開してます。
