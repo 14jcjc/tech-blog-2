@@ -30,7 +30,8 @@ permalinks:
     # xxx: /xxx/:sections[1:]/
 
 mainSections: 
-  - "100k"
+  - "100knocks"
+  - "test"
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.

@@ -20,9 +20,11 @@ params:
   profileMode:
     buttons:
       - name: "データサイエンス100本ノック＋α - test"
-        url: ds-100knocks-dp-test
+        # url: ds-100knocks-dp-test
+        url: test/100k
       - name: XXX
-        url: xxx
+        # url: xxx
+        url: test/xxx
       - name: Archives
         url: archives
       - name: Tags
