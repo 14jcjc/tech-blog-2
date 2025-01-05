@@ -83,7 +83,7 @@ params:
   # Archiveで最新の記事のみが表示され, その他の記事は次ページへのリンクとして表示
   # ShowAllPagesInArchive: false
 
-  customCSS: "css/custom.css"
+  # customCSS: "css/extended/custom.css"
   
   disableSpecial1stPost: false
   disableScrollToTop: false
@@ -152,7 +152,8 @@ params:
       RとSQLを中心に、初心者から上級者まで楽しめるコンテンツをお届けします🚀  
       {{% /comment %}} 
 
-      Rコード実行環境のセットアップ・プログラムを [📂GitHubリポジトリ](https://github.com/14katsumix/100knocks-dp)に公開してます。
+      Rコード実行環境のセットアップ・プログラムをGitHubに公開してます。
+      → [リポジトリ📂](https://github.com/14katsumix/100knocks-dp)
 
   socialIcons:
     - name: x
