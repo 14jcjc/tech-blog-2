@@ -43,8 +43,22 @@ minify:
   # priority = 0.5
 
 # search機能を有効にするため /public/index.json を生成する
-outputs: 
-  home: ["HTML", "RSS", "JSON"]
+# outputs: 
+#   home: ["HTML", "RSS", "JSON"]
+outputs:
+  home:
+  - html
+  - rss
+  - JSON
+  section:
+  - html
+  - rss
+  taxonomy:
+  - html
+  - rss
+  term:
+  - html
+  - rss
 
 services:
   # googleAnalytics:
