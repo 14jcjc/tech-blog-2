@@ -159,9 +159,10 @@ params:
     # Title: "Hi there \U0001F44B"
     Title: "14katsumix"
     Content: >
-      R言語好きのデータサイエンティストです📊  
-
+      R言語好きのデータサイエンティストです👨‍💻  
+      
       {{% comment %}} 
+      📈📊🔍👾🖥️💻⚙️🧠🌐🚀🪐🤖
       データ分析やプログラミングの楽しさを共有することをモットーに、日々成長中✨  
       {{% /comment %}} 
       
@@ -192,8 +193,12 @@ params:
 
   cover:
     hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    # hide on list pages and home: 
+    # hiddenInList: true
+    hiddenInList: false
+    # hide on single page: 
+    # hiddenInSingle: true
+    hiddenInSingle: false
     alt: "cover" # alt text
 
   social:
