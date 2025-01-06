@@ -1,20 +1,24 @@
 ---
 title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
+draft: true
 date: '2024-12-29T20:31:23+09:00'
+# draft: false
+# date: '2021-04-01T02:20:27+09:00'
+# weight: 1010
 description: 'This is First Post.'
 slug: 'overview'
 weight: 2
-# draft: false
-draft: true
 TocOpen: true
 categories: ["DS-100本ノック"]
 tags: 
   - R
   - SQL
 cover:
-  image: "images/papermod-cover.png" #< /static
+  # image: "images/papermod-cover.png" #< /static
+  image: "images/100knocks/twitter-card-100k-standard.png" #< /static
   relative: false
   hiddenInList: false
+  hiddenInSingle: false # hide on single page
   # hidden: true
 disableHLJS: false
 disableShare: false

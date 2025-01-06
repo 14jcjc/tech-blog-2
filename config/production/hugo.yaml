@@ -83,7 +83,9 @@ menus:
 
 module:
   mounts:
-  - excludeFiles: test/books/**
+  - excludeFiles: 
+      - test/books/**
+      # - docs/**
     source: content
     target: content
   - source: static

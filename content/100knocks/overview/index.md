@@ -1,21 +1,24 @@
 ---
 title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
-date: '2021-03-15T04:31:23+09:00'
+# draft: true
+# date: '2024-12-29T20:31:23+09:00'
+draft: false
+date: '2021-04-01T02:20:27+09:00'
+weight: 1010
 description: 'This is First Post.'
 slug: 'overview'
-# weight: 2
-weight: 1010
-# draft: false
-# draft: true
+weight: 2
 TocOpen: true
 categories: ["DS-100本ノック"]
 tags: 
   - R
   - SQL
 cover:
-  image: "images/papermod-cover.png" #< /static
+  # image: "images/papermod-cover.png" #< /static
+  image: "images/100knocks/twitter-card-100k-standard.png" #< /static
   relative: false
   hiddenInList: false
+  hiddenInSingle: false # hide on single page
   # hidden: true
 disableHLJS: false
 disableShare: false
@@ -91,6 +94,8 @@ a
 
 ## 和文A
 
+Hugoは、サイトを構築するときに、静的ディレクトリ内のすべてをpublishDirのルート（通常はpublic）にコピーすることを覚えておいてください。
+
 Hugo は、フロントマターのパラメータに基づいて、ページの関連コンテンツを特定するために一連の要素を使用します。これは、希望するインデックスとパラメータのセットに調整することも、Hugoのデフォルトの 関連コンテンツ設定 のままにしておくことも可能です。
 最大 5 つの関連ページ (同じ date または keyword パラメータを共有する) を一覧表示するには、シングルページのテンプレートに以下のパーシャルと同様のものを含めるだけです。
 
@@ -101,6 +106,15 @@ Hugo はコンテンツ内の見出しにインデックスを付け、これを
 Hugo では、関連コンテンツのデフォルトの設定を適切に行うことができますが、必要に応じて、グローバルレベルまたは言語レベルで、これを細かく設定することができます。
 
 ## BBB {#bbb}
+
+/assets/css/extended/*.css  
+ネストしたol, ul要素に不自然な margin-bottom がつくのを避ける: 
+```css
+.post-content li ol,
+.post-content li ul {
+  margin-bottom: 0;
+}
+```
 
 1. aaaaaa
 2. bbbbbb
