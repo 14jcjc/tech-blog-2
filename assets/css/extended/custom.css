@@ -24,3 +24,37 @@
 .post-content li ul {
   margin-bottom: 0;
 }
+
+/* アラート全体のスタイル */
+/* 
+blockquote.alert {
+  padding: 1em;
+  margin: 1em 0;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.5;
+} */
+
+/* 各アラートタイプに応じた border-left のスタイル */
+.alert-note {
+  border-left: 5px solid #2196f3 !important; /* 青 */
+}
+
+.alert-warning {
+  border-left: 5px solid #ff9800 !important; /* オレンジ */
+}
+
+.alert-important {
+  /* border-left: 5px solid #8352E0 !important; */
+  border-left: 5px solid #9560F0 !important;
+}
+
+.alert-caution {
+  border-left: 5px solid #ff5722 !important; /* サーモン */
+}
+
+.alert-tip {
+  /* border-left: 5px solid #8bc34a !important; */
+  border-left: 5px solid #AFC300 !important;
+}

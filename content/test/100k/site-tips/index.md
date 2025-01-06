@@ -140,7 +140,7 @@ summary: の設定より優先度が高いです。
 
   → [lang="ja" はこちら]({{< relref path="overview" lang="ja" >}})  
 
-### comment  
+### comment {#comment}
 
 {{% comment %}} 
 TODO: rewrite the paragraph below. 
@@ -199,7 +199,7 @@ read: assets/test/pets.csv
 
 ### Code block with PaperMod
 
-#### Rコード
+#### Rコード {#r}
 
 ```r {linenos=true,lineNoStart=1,hl_lines=[2,"7-8"]}
 receipt %>% 
@@ -299,6 +299,8 @@ receipt %>%
 
 ### Markdown attributes
 
+#### paragraph (段落)
+
 ``` {lineNos=false}
 This is a paragraph.
 {class="foo bar" id="baz"}
@@ -320,18 +322,18 @@ Rendered:
 <p class="foo bar" id="baz">This is a paragraph.</p>
 ```
 
+#### blockquote {#blockquote}
+
+1. 
 ``` {lineNos=false}
-\> This is a blockquote.
+> This is a blockquote.
 {class="foo bar"}
 ```
+→ 
 
-\> This is a blockquote.
+> This is a blockquote.
 {class="foo bar"}
 <!-- {class="foo bar" hidden=hidden} -->
-→ 
-<blockquote class="foo bar">
-  <p>This is a blockquote.</p>
-</blockquote>
 
 Rendered: 
 ```html {lineNos=false}
@@ -339,6 +341,71 @@ Rendered:
   <p>This is a blockquote.</p>
 </blockquote>
 ```
+
+### 引用 (\>, \>>)
+
+#### 出典を明記しない引用
+
+> *ブロック引用符内*でマークダウン構文を使用できることに**注意してください**。
+
+```html {lineNos=false}
+> aaaaaaaaaaaaaaaaaaaaa
+>> bbbbbbbbbbbbbbbbbbbbbbbb
+```
+→ 
+> aaaaaaaaaaaaaaaaaaaaa
+>> bbbbbbbbbbbbbbbbbbbbbbbb
+
+#### 出典を明記した引用
+
+```html {lineNos=false}
+> Don't communicate by sharing memory, share memory by communicating.
+>
+> — <cite>Rob Pike[^3]</cite>
+```
+→ 
+> Don't communicate by sharing memory, share memory by communicating.
+> 
+> — <cite>Rob Pike[^3]</cite>
+
+[^3]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+
+#### footerを明記した引用
+
+```html {lineNos=false}
+> Don't communicate by sharing memory, share memory by communicating.
+> <footer>Rob Pike</footer>
+```
+→ 
+> Don't communicate by sharing memory, share memory by communicating.
+> <footer>Rob Pike</footer>
+
+### アラート (Alerts) {#alerts}
+
+定義ファイル:
+- layouts/_default/_markup/render-blockquote.html
+- i18n/ja.yaml
+
+1. 
+> [!NOTE]
+> この blockquote レンダリング フックは、アラート指定子が存在する場合は多言語アラートをレンダリングし、
+> それ以外の場合は あCommonMark 仕様に従って blockquote をレンダリングします。
+
+2. 
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+3. 
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+4. 
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+5. 
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
 
 ### 注釈
 
@@ -369,33 +436,88 @@ aaaaaa,bbbbbb,cccccc
 例2： \### aaa  
 例1： \`インライン表示されなくなる`  
 
-### 引用
-
-1. 
-> aaaaaaaaaaaaaaaaaaa
-
-2. 
-> xxxxxxxxxxxxxx
->> yyyyyyyyyyyyyyyyyy
-
-
 ---
+
+### 段落
+
+テキストの行間に空白行を残すことで、新しい段落を作成できる.
+
+### 改行
+
+末尾にバックスラッシュ(\\)かスペース2つを含める: \
+aaaaaaaaaaaaaaaaaa\
+bbbbbbbbbbbbbbbbbbbbbb
+
+### フォント
 
 ```html {linenos=false,anchorLineNos=false}
 <font color="Red">カラーテキスト</font>
 ```
 → <font color="Red">カラーテキスト</font>
 
+\~ or ~~: \
 ~~打ち消し線~~  
 ABC ~打ち消し線~ XYZ  
-**太字**  
+
+\*, **, ***: \
 *斜体*  
+**太字**  
+***太字と斜体***
+
+\<ins>: \
+これは<ins>下線付きの文章</ins>です。
+
+\<sub> :\
+これは下付き<sub>テキスト</sub>です。
+
+\<sup>: \
+これは上付き<sup>テキスト</sup>です。
+
+\<mark>: \
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+\<kbd>: \
+Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+
+### リスト
+
+1. 1111111111
+   - aaaaaaaaaa
+   - bbbbbbbbbbb
+   - ccccccccccccc
+     - ddddddddddddd
+     - eeeeeeeeeeeeee
+2. 2222222222
+     * fffffffffff
+     + gggggggggggg
+       - hhhhhhhhhhhh
+       - iiiiiiiiiiiii
+
+### タスクリスト
+
+- [x] aaaaaaaaaaaaaaaaa
+- [ ] bbbbbbbbbbbbbbbbbb
+- [x] cccccccccccccccccccc 
+
+
+### 記号
 
 ...  
 << >>  
 '  ‘  ’  "  ”  
 
 --  
+
+### 見出し
+
+#### H4 見出し4
+本文本文本文本文本文本文本文本文本文本文本文。
+
+##### H5 見出し5
+本文本文本文本文本文本文本文本文本文本文本文。
+
+###### H6 見出し6
+本文本文本文本文本文本文本文本文本文本文本文。
 
 ### Mathematics in Markdown
 
