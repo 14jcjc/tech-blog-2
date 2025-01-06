@@ -1,5 +1,5 @@
-baseURL: "https://14katsumix.github.io/tech-blog/"
-# baseURL: "https://14katsumix.github.io/"
+# baseURL: "https://14katsumix.github.io/tech-blog/"
+baseURL: "https://14katsumix.github.io/"
 
 # Include drafts when building.
 buildDrafts: false
