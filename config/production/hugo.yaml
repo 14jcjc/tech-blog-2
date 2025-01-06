@@ -36,7 +36,7 @@ mainSections:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # mainSections: ["100k", "aaa", "xxx", "glossary"]
-  
+
   # profile-mode
   profileMode:
     buttons:
@@ -80,3 +80,21 @@ menus:
     # - name: Glossary
     #   url: glossary
     #   weight: 30
+
+module:
+  mounts:
+  - excludeFiles: test/books/**
+    source: content
+    target: content
+  - source: static
+    target: static
+  - source: layouts
+    target: layouts
+  - source: data
+    target: data
+  - source: assets
+    target: assets
+  - source: i18n
+    target: i18n
+  - source: archetypes
+    target: archetypes

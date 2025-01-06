@@ -327,7 +327,6 @@ Rendered:
 
 #### blockquote {#blockquote}
 
-1. 
 ``` {lineNos=false}
 > This is a blockquote.
 {class="foo bar"}
