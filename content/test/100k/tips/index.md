@@ -5,6 +5,11 @@ slug: tips
 weight: 4
 # draft: false
 draft: true
+cover:
+  # image: "images/100knocks/cover-100k-standard.png" #< /static
+  relative: false
+  hiddenInList: false
+  hiddenInSingle: false # hide on single page
 categories: ["DS-100本ノック"]
 tags: 
   - R

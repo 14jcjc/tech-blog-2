@@ -84,7 +84,7 @@ params:
     text: |
       [Privacy Policy]({{< ref "privacy" >}})
   # images: ["<link or path of image for opengraph, twitter-cards>"]
-  images: ["images/twitter-card.png"] # /static
+  images: ["images/cover-100k.png"] # /static
   # subtitle: This is subtitle
   # description: katsuのブログです。
   defaultTheme: auto # dark, light
