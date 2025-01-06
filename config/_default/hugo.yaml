@@ -195,6 +195,9 @@ params:
     hiddenInSingle: true # hide on single page
     alt: "cover" # alt text
 
+  social:
+    twitter: 14katsumix
+  
   # editPost:
   #   URL: "https://github.com/<path_to_repo>/content"
   #   Text: "Suggest Changes" # edit text
