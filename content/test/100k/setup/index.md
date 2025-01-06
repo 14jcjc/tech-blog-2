@@ -4,12 +4,12 @@ title: '【R+SQL】データサイエンス100本ノック＋α - 環境設定'
 draft: true
 date: '2024-12-30T22:24:00+09:00'
 weight: 3
+slug: setup
 # draft: false
 # date: '2021-04-01T05:20:27+09:00'
 # weight: 1020
 summary: This is summary.
 description: "This is description."
-slug: setup
 categories: ["DS-100本ノック"]
 tags: 
   - R
