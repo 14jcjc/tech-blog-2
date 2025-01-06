@@ -225,7 +225,7 @@ receipt %>%
 
 #### SQL
 
-```sql {linenos=true,lineNoStart=1,hl_lines=["3-4","9-11"]}
+```sql {linenos=false,lineNoStart=1,hl_lines=["3-4","9-11"]}
 with customer_amount as (
   select
     customer_id, 
