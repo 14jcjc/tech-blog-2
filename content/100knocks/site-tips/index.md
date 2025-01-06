@@ -4,7 +4,7 @@ title: サイト作成Tips
 date: '2021-04-01T00:20:27+09:00'
 slug: 'site-tips'
 # draft: true
-weight: 1
+weight: 1000
 summary: 'これはsummaryです。'
 description: "This is description."
 UseHugoToc: true
