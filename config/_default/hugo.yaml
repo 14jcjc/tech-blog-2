@@ -295,16 +295,24 @@ menu:
 pygmentsUseClasses: true
 markup:
   highlight:
-    noClasses: false
+    # noClasses: false
     anchorLineNos: false
     codeFences: true
-    # guessSyntax: true
+    guessSyntax: false
     lineNos: true
+    lineNoStart: 1
+    lineNumbersInTable: true
     hl_inline: false
+    hl_Lines: ""
+    lineAnchors: ""
+    noHl: false
     # style: monokai
+    # tabWidth: 2
+    # wrapperClass: highlight
+
   tableOfContents:
-    endLevel: 3
     ordered: false
+    endLevel: 3
     startLevel: 2
   goldmark:
     renderer:

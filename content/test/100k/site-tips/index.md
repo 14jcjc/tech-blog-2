@@ -44,50 +44,101 @@ summary: の設定より優先度が高いです。
 
 ## shortcodes {#shortcodes}
 
-- {{</* test-shortcode-1 */>}}: {{< test-shortcode-1 >}}
+```html {linenos=false,anchorLineNos=false}
+{{</* test-shortcode-1 */>}}
+```
+→ {{< test-shortcode-1 >}}
 
 ### .Page を使用
 
-- {{</* page-title */>}}: {{< page-title >}}
+```html {linenos=false,anchorLineNos=false}
+{{</* page-title */>}}
+```
+» {{< page-title >}}
 
 ### .Site.Params. を使用
 
-- {{</* k100-site */>}}: {{< k100-site >}}
-- {{</* k100-title-s */>}}: {{< k100-title-s >}}
+```html {linenos=false,anchorLineNos=false}
+{{</* k100-site */>}}
+```
+➡️ {{< k100-site >}}
+
+```html {linenos=false,anchorLineNos=false}
+{{</* k100-title-s */>}}
+```
+→ {{< k100-title-s >}}
 
 ### param {#param}
 
-- {{</* param k100_site */>}}  
-  huto.yaml -> param.k100_site : {{< param k100_site >}}  
-  <br>
-- {{</* param testparam */>}}: {{< param testparam >}}  
-- {{</* param testparam2.nestparam */>}}: {{< param testparam2.nestparam >}}
+- huto.yaml -> param.k100_site
+
+  ```html {linenos=false,anchorLineNos=false}
+  {{</* param k100_site */>}}  
+  ```
+  → {{< param k100_site >}}  
+
+- content内のparams
+
+  ```html {linenos=false,anchorLineNos=false}
+  {{</* param testparam */>}}
+  ```
+  → {{< param testparam >}}  
+
+  ```html {linenos=false,anchorLineNos=false}
+  {{</* param testparam2.nestparam */>}}
+  ```
+  → {{< param testparam2.nestparam >}}
 
 ### href-target-blank
 
-{{</* href-target-blank url="https://..." text="リポジトリ📂" */>}}  
+```html {linenos=false,anchorLineNos=false}
+{{</* href-target-blank url="https://..." text="リポジトリ📂" */>}}
+```
 →   
 {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="リポジトリ📂" >}}
 
 ### ref {#ref}
 
-- overview-BBB は [こちら]({{< ref "overview#bbb" >}} "overview-BBB")  
-- overview-d2 は [こちら]({{< ref "overview.md#d2" >}} "About us")  
+- overview#bbb へのリンク
+
+  ```html {linenos=false,anchorLineNos=false}
+  [overview-BBB はこちら]({{</* ref "overview#bbb" */>}} "overview-BBB")
+  ```
+  → [overview-BBB はこちら]({{< ref "overview#bbb" >}} "overview-BBB")
+
+- overview.md#d2 へのリンク
+
+  ```html {linenos=false,anchorLineNos=false}
+   [overview-d2 はこちら]({{</* ref "overview.md#d2" */>}} "About us")
+  ```
+  → [overview-d2 はこちら]({{< ref "overview.md#d2" >}} "About us")
+
   Rendered:
-  ``` html
-  <a href="http://example.org/overview/#bbb">こちら</a>
+  ``` html {lineNos=false}
+  <a href="http://example.org/overview/#bbb" title="About us">こちら</a>
   ```
   xxxxxxxxxxxxxxxxxx
 
 ### relref
 
-- overview-d2 は [こちら]({{< relref "overview#d2" >}} "About us")  
+- overview#d2 へのリンク
+
+  ```html {linenos=false,anchorLineNos=false}
+  [overview-d2 はこちら]({{</* relref "overview#d2" */>}} "About us")
+  ```
+  → [overview-d2 はこちら]({{< relref "overview#d2" >}} "About us")  
   Rendered:
-  ``` html
-  <a href="overview/#bbb">こちら</a>
+  ``` html {lineNos=false}
+  <a href="overview/#bbb" title="About us">こちら</a>
   ```
 
-- lang="ja" は  [こちら]({{< relref path="overview" lang="ja" >}})  
+- lang="ja"
+
+  ```html {linenos=false,anchorLineNos=false}
+  [lang="ja" はこちら]({{</* relref path="overview" lang="ja" */>}})
+  ```
+
+  → [lang="ja" はこちら]({{< relref path="overview" lang="ja" >}})  
 
 ### comment  
 
@@ -97,6 +148,14 @@ TODO: rewrite the paragraph below.
 
 ### details
 
+```html {linenos=false,anchorLineNos=false}
+{{</* details 
+summary="See the details (detailsショートコード)" 
+open=false name="name" title="title" */>}} 
+This is a **bold** word. 
+{{</* /details */>}}
+```
+⬇️
 {{< details 
 summary="See the details (detailsショートコード)" 
 open=false name="name" title="title" >}} 
@@ -105,24 +164,34 @@ This is a **bold** word.
 
 ### figure {#figure}
 
-{{</*  
-figure 
-src="box.png" alt="代替テキスト" width="50%" link="../overview#bbb" 
-rel="noopener" target="_blank" caption="キャプション" title="Box plot" */>}}
-
 {{< 
 figure 
 src="box.png" alt="代替テキスト" width="50%" link="../overview#bbb" 
 rel="noopener" target="_blank" caption="キャプション" title="Box plot" 
 >}}
 
+```html {linenos=false,anchorLineNos=false}
+{{</* figure 
+   src="box.png" 
+   alt="代替テキスト" 
+   width="50%" 
+   link="../overview#bbb" 
+   rel="noopener" 
+   target="_blank" 
+   caption="キャプション" 
+   title="Box plot" 
+*/>}}
+```
+
 ### Data sources
 
-{{</* csv-to-table "test/pets.csv" */>}}: 
-
-{{< csv-to-table "test/pets.csv" >}}
-
 read: assets/test/pets.csv
+
+```html {linenos=false,anchorLineNos=false}
+{{</* csv-to-table "test/pets.csv" */>}}
+```
+⬇️  
+{{< csv-to-table "test/pets.csv" >}}
 
 ---
 
@@ -130,7 +199,8 @@ read: assets/test/pets.csv
 
 ### Code block with PaperMod
 
-Rコード: 
+#### Rコード
+
 ```r {linenos=true,lineNoStart=1,hl_lines=[2,"7-8"]}
 receipt %>% 
   summarise(amount = sum(amount), .by = "sales_ymd") %>% 
@@ -142,7 +212,7 @@ receipt %>%
   arrange(sales_ymd) # コメント
 ```
 
-```r {linenos=inline,lineNoStart=14,hl_lines=[2,"6-8"]}
+```r {linenos=inline,lineNoStart=14,hl_lines=[2,"6-8"],anchorLineNos=true}
 receipt %>% 
   summarise(amount = sum(amount), .by = "sales_ymd") %>% 
   mutate(
@@ -153,7 +223,8 @@ receipt %>%
   arrange(sales_ymd) # コメント
 ```
 
-SQL: 
+#### SQL
+
 ```sql {linenos=true,lineNoStart=1,hl_lines=["3-4","9-11"]}
 with customer_amount as (
   select
@@ -173,8 +244,9 @@ order by
   total_amount DESC
 ```
 
-textコード: 
-```text {linenos=true,lineNoStart=1,hl_lines=["3-4",23]}
+#### textコード
+
+```text {linenos=true,lineNoStart=1,hl_lines=["3-4",23], anchorLineNos=true}
 100k
 ├── matome
 │   ├── _index.md
@@ -209,7 +281,7 @@ receipt %>%
   arrange(sales_ymd) # コメント
 {{< /highlight >}}
 
-{{< highlight go-html-template >}}
+{{< highlight html >}}
 {{ range .Pages }}
   <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
 {{ end }}
@@ -227,31 +299,55 @@ receipt %>%
 
 ### Markdown attributes
 
+``` {lineNos=false}
+This is a paragraph.
+{class="foo bar" id="baz"}
+```
+→  
 This is a paragraph.
 {class="foo bar" id="baz"}
 
+``` {lineNos=false}
+This is a paragraph.
+{.foo .bar #baz}
+```
+→  
 This is a paragraph.
 {.foo .bar #baz}
 
 Rendered: 
-```html
+```html {lineNos=false}
 <p class="foo bar" id="baz">This is a paragraph.</p>
+```
+
+``` {lineNos=false}
+\> This is a blockquote.
+{class="foo bar"}
 ```
 
 \> This is a blockquote.
 {class="foo bar"}
 <!-- {class="foo bar" hidden=hidden} -->
+→ 
+<blockquote class="foo bar">
+  <p>This is a blockquote.</p>
+</blockquote>
 
 Rendered: 
-```html
-<blockquote class="foo bar" hidden="hidden">
+```html {lineNos=false}
+<blockquote class="foo bar">
   <p>This is a blockquote.</p>
 </blockquote>
 ```
 
 ### 注釈
 
-テキスト[^1]
+テキスト[^1]  
+テキスト[^2]
+
+[^1]: 注釈1の内容
+
+[^2]: 注釈2の内容
 
 ### Inline Code
 
@@ -265,10 +361,10 @@ Rendered:
 
 ### convert Markdown table to CSV
 
-aaaaaa,bbbbbb,cccccc
+aaaaaa,bbbbbb,cccccc  
 1,2,3
 
-### エスケープ
+### エスケープ (\\)
 
 例2： \### aaa  
 例1： \`インライン表示されなくなる`  
@@ -285,7 +381,10 @@ aaaaaa,bbbbbb,cccccc
 
 ---
 
+```html {linenos=false,anchorLineNos=false}
 <font color="Red">カラーテキスト</font>
+```
+→ <font color="Red">カラーテキスト</font>
 
 ~~打ち消し線~~  
 ABC ~打ち消し線~ XYZ  
@@ -293,13 +392,10 @@ ABC ~打ち消し線~ XYZ
 *斜体*  
 
 ...  
-<< >>
-
+<< >>  
 '  ‘  ’  "  ”  
 
 --  
-
-[^1]: 注釈1の内容
 
 ### Mathematics in Markdown
 
@@ -336,11 +432,11 @@ JS(\hat{y} || y) &= \frac{1}{2}(KL(y||\frac{y+\hat{y}}{2}) + KL(\hat{y}||\frac{y
 
 -  math contexts の外では$をダブルエスケープする: 
 
-```text
+```text {lineNos=false}
 A \\$5 bill _saved_ is a \\$5 bill _earned_.
 ```
 
-=> A \\$5 bill _saved_ is a \\$5 bill _earned_.
+→  A \\$5 bill _saved_ is a \\$5 bill _earned_.
 
 - Chemistry
 
@@ -369,7 +465,13 @@ $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 
 ### twitter
 
+```html {linenos=false,anchorLineNos=false}
+{{</* twitter user="0149ph_leonardo" id="807218695550472196" */>}}
+```
+→ 
 {{< twitter user="0149ph_leonardo" id="807218695550472196" >}}
+
+---
 
 ### instagram
 
@@ -377,14 +479,32 @@ $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 <!-- {{< instagram CxOWiQNP2MO >}} -->
 
 <!-- https://www.instagram.com/p/C9Tq0qdPSTF -->
+
+```html {linenos=false,anchorLineNos=false}
+{{</* instagram C9Tq0qdPSTF */>}}
+```
+→ 
 {{< instagram C9Tq0qdPSTF >}}
+
+---
 
 ### youtube
 
-<!-- https://www.youtube.com/watch?v=0RKpf3rK57I -->
+```html {linenos=false,anchorLineNos=false}
+{{</* youtube id="0RKpf3rK57I" autoplay=false */>}}
+```
+→ 
 {{< youtube id="0RKpf3rK57I" autoplay=false >}}
+<!-- https://www.youtube.com/watch?v=0RKpf3rK57I -->
+
+---
 
 ### vimeo
 
-<!-- https://vimeo.com/channels/staffpicks/55073825 -->
+```html {linenos=false,anchorLineNos=false}
+{{</* vimeo 55073825 */>}}
+```
+→ 
 {{< vimeo 55073825 >}}
+<!-- https://vimeo.com/channels/staffpicks/55073825 -->
+
