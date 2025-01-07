@@ -56,10 +56,11 @@ summary: の設定より優先度が高いです。
 📖 📒 🗒️ - ノート  
 📘 📙 📕 📚 - 本  
 ⚠️ - 警告サイン, 最も一般的な注意や警告を示す絵文字  
-❗ - 赤い感嘆符, 強い注意や緊急性を示す  
+❗ - 強い注意や緊急性を示す  
 🔑 - 鍵、重要なポイントや核心を象徴します  
 ✔️ ☑️ ✅ - チェックマーク  
 ℹ️ - 情報  
+➡️ ⬅️ ⬆️ ⬇️ 👉  
 
 ## shortcodes {#shortcodes}
 
@@ -99,17 +100,17 @@ summary: の設定より優先度が高いです。
 
 ### 部分テンプレートを使用 (partial)
 
-1. text を渡さない場合はデフォルトが適用される
-```html {linenos=false,anchorLineNos=false}
-{{</* k100/afilink-book-amazon */>}}
-```
-→ {{< k100/afilink-book-amazon >}}
+- text を渡さない場合はデフォルトが適用される
+  ```html {linenos=false,anchorLineNos=false}
+  {{</* k100/afilink-book-amazon */>}}
+  ```
+  → {{< k100/afilink-book-amazon >}}
 
-2. text を渡す場合
-```html {linenos=false,anchorLineNos=false}
-{{</* k100/afilink-book-amazon text="こちら📘" */>}}
-```
-→ {{< k100/afilink-book-amazon text="こちら📘" >}}
+- text を渡す場合
+  ```html {linenos=false,anchorLineNos=false}
+  {{</* k100/afilink-book-amazon text="こちら📘" */>}}
+  ```
+  → {{< k100/afilink-book-amazon text="こちら📘" >}}
 
 ### param {#param}
 
