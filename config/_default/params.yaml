@@ -1,9 +1,34 @@
-k100_site: 'データサイエンス100本ノック＋α'
-k100_rsql: '【R+SQL】'
-k100_suffix_s: '標準編'
-k100_suffix_a: '発展編'
-k100_category_s: 'DS-100本ノック＋α（標準編）'
-k100_category_a: 'DS-100本ノック＋α（発展編）'
+### params.yaml
+# サイト: データサイエンス100本ノック＋α
+k100: 
+  git: 
+    account: 14katsumix
+    url: "https://github.com/14katsumix/100knocks-dp"
+  site: 
+    title: 'データサイエンス100本ノック＋α'
+    edition: 
+      s: '標準編' # standard
+      a: '発展編' # advanced
+    rsql: '【R+SQL】'
+    category: 
+      edition_s: 'DS-100本ノック＋α（標準編）'
+      edition_a: 'DS-100本ノック＋α（発展編）'
+  afiurl: 
+    book: 
+      amazon: "https://amzn.to/3Pmq47H"
+  url: 
+    book: 
+      amazon: "https://amzn.to/3Pmq47H"
+# 本家
+k100dp: 
+  title: "データサイエンス100本ノック（構造化データ加工編）"
+  book: 
+    title: "データサイエンス100本ノック～構造化データ加工編ガイドブック"
+  git: 
+    url: |
+      "https://github.com/The-Japan-DataScientist-Society/100knocks-preprocess"
+  # "データサイエンティスト協会"
+  # "データサイエンティスト協会スキル定義委員会"
 
 keywords: 
   - "データサイエンス100本ノック"

@@ -25,7 +25,7 @@ params:
   testparam2: 
     nestparam: "これは testparam2.nestparam."
 # images:
-# - images/papermod-cover.png
+# - papermod-cover.png
 cover:
   # image: "images/papermod-cover.png" #< /static
   # relative: false
@@ -47,6 +47,20 @@ cover:
 summary: の設定より優先度が高いです。
 <!--more-->
 
+## 絵文字
+
+🧑‍💻 👨‍💻 👾 🤖  
+📈 📊 🔍 ⌨️ 🖥️ 💻 ⚙️ 🧠 🌐 🚀 🪐  
+📂 - フォルダ、リポジトリ  
+📝 - メモ  
+📖 📒 🗒️ - ノート  
+📘 📙 📕 📚 - 本  
+⚠️ - 警告サイン, 最も一般的な注意や警告を示す絵文字  
+❗ - 赤い感嘆符, 強い注意や緊急性を示す  
+🔑 - 鍵、重要なポイントや核心を象徴します  
+✔️ ☑️ ✅ - チェックマーク  
+ℹ️ - 情報  
+
 ## shortcodes {#shortcodes}
 
 ```html {linenos=false,anchorLineNos=false}
@@ -64,23 +78,47 @@ summary: の設定より優先度が高いです。
 ### .Site.Params. を使用
 
 ```html {linenos=false,anchorLineNos=false}
-{{</* k100-site */>}}
+{{</* k100/title */>}}
 ```
-➡️ {{< k100-site >}}
+➡️ {{< k100/title >}}
 
 ```html {linenos=false,anchorLineNos=false}
-{{</* k100-title-s */>}}
+{{</* k100/title "s" */>}}
 ```
-→ {{< k100-title-s >}}
+→ {{< k100/title "s" >}}
+
+```html {linenos=false,anchorLineNos=false}
+{{</* k100/title "a" */>}}
+```
+→ {{< k100/title "a" >}}
+
+```html {linenos=false,anchorLineNos=false}
+{{</* k100/git-url */>}}
+```
+→ {{< k100/git-url >}}
+
+### 部分テンプレートを使用 (partial)
+
+1. text を渡さない場合はデフォルトが適用される
+```html {linenos=false,anchorLineNos=false}
+{{</* k100/afilink-book-amazon */>}}
+```
+→ {{< k100/afilink-book-amazon >}}
+
+2. text を渡す場合
+```html {linenos=false,anchorLineNos=false}
+{{</* k100/afilink-book-amazon text="こちら📘" */>}}
+```
+→ {{< k100/afilink-book-amazon text="こちら📘" >}}
 
 ### param {#param}
 
-- huto.yaml -> param.k100_site
+- huto.yaml -> param.k100site.title
 
   ```html {linenos=false,anchorLineNos=false}
-  {{</* param k100_site */>}}  
+  {{</* param k100.site.title */>}}  
   ```
-  → {{< param k100_site >}}  
+  → {{< param k100.site.title >}}  
 
 - content内のparams
 
@@ -329,7 +367,6 @@ Rendered:
 
 #### blockquote {#blockquote}
 
-1. 
 ``` {lineNos=false}
 > This is a blockquote.
 {class="foo bar"}

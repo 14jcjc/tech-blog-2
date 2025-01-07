@@ -78,23 +78,47 @@ summary: の設定より優先度が高いです。
 ### .Site.Params. を使用
 
 ```html {linenos=false,anchorLineNos=false}
-{{</* k100-site */>}}
+{{</* k100/title */>}}
 ```
-➡️ {{< k100-site >}}
+➡️ {{< k100/title >}}
 
 ```html {linenos=false,anchorLineNos=false}
-{{</* k100-title-s */>}}
+{{</* k100/title "s" */>}}
 ```
-→ {{< k100-title-s >}}
+→ {{< k100/title "s" >}}
+
+```html {linenos=false,anchorLineNos=false}
+{{</* k100/title "a" */>}}
+```
+→ {{< k100/title "a" >}}
+
+```html {linenos=false,anchorLineNos=false}
+{{</* k100/git-url */>}}
+```
+→ {{< k100/git-url >}}
+
+### 部分テンプレートを使用 (partial)
+
+1. text を渡さない場合はデフォルトが適用される
+```html {linenos=false,anchorLineNos=false}
+{{</* k100/afilink-book-amazon */>}}
+```
+→ {{< k100/afilink-book-amazon >}}
+
+2. text を渡す場合
+```html {linenos=false,anchorLineNos=false}
+{{</* k100/afilink-book-amazon text="こちら📘" */>}}
+```
+→ {{< k100/afilink-book-amazon text="こちら📘" >}}
 
 ### param {#param}
 
-- huto.yaml -> param.k100_site
+- huto.yaml -> param.k100site.title
 
   ```html {linenos=false,anchorLineNos=false}
-  {{</* param k100_site */>}}  
+  {{</* param k100.site.title */>}}  
   ```
-  → {{< param k100_site >}}  
+  → {{< param k100.site.title >}}  
 
 - content内のparams
 

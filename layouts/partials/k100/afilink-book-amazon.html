@@ -1,0 +1,14 @@
+{{ $context := .context }}
+{{ $url := $context.Site.Params.k100.afiurl.book.amazon }}
+{{ $bt := $context.Site.Params.k100dp.book.title }}
+<a href="{{ $url }}" target="_blank" rel="noopener noreferrer">
+  {{ with .text }}
+    {{- if ne (trim . "") "" -}}
+      {{ . }}
+    {{ else }}
+      {{ $bt }}
+    {{ end }}
+  {{ else }}
+    {{ $bt }}
+  {{ end }}
+</a>
