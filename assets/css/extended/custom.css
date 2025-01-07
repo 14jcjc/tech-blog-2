@@ -1,3 +1,27 @@
+/* PaperMod の配色変更 */
+/* :root { */
+  /* --code-bg: rgb(245, 245, 245); */
+  /* --code-bg: #F5F5F5; */
+  /* --code-bg: #E5F5FF; */
+  /* --primary: rgb(30, 30, 30); */
+  /* --primary: rgb(70, 20, 0); */
+  /* --content: rgb(31, 31, 31); */
+/*   
+  --entry: #fbf7ef;
+  --primary: rgba(113, 103, 91, 1.00);
+  --secondary: rgba(113, 103, 91, 0.95);
+  --tertiary: rgba(113, 103, 91, 0.50);
+  --content: rgba(113, 103, 91, 0.85);
+  --hljs-bg: #34231B;
+  --border: #fdfaf5;
+  --theme: #fbf7ef; */
+
+/* } */
+
+/* 
+.dark {
+} */
+
 .not-found {
   position: absolute;
   left: 0;

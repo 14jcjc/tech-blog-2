@@ -1,5 +1,6 @@
 ---
 draft: true
+section: page
 description: 'description: 用語集です。'
 build:
   render: always # glossary ページが常にレンダリングされることを保証する

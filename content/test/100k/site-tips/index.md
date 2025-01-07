@@ -62,6 +62,8 @@ summary: の設定より優先度が高いです。
 ℹ️ - 情報  
 ➡️ ⬅️ ⬆️ ⬇️ 👉  
 
+---
+
 ## shortcodes {#shortcodes}
 
 ```html {linenos=false,anchorLineNos=false}
@@ -100,38 +102,38 @@ summary: の設定より優先度が高いです。
 
 ### 部分テンプレートを使用 (partial)
 
-- text を渡さない場合はデフォルトが適用される
-  ```html {linenos=false,anchorLineNos=false}
-  {{</* k100/afilink-book-amazon */>}}
-  ```
-  → {{< k100/afilink-book-amazon >}}
+1. text を渡さない場合はデフォルトが適用される
+   ```html {linenos=false,anchorLineNos=false}
+   {{</* k100/afilink-book-amazon */>}}
+   ```
+   → {{< k100/afilink-book-amazon >}}
 
-- text を渡す場合
-  ```html {linenos=false,anchorLineNos=false}
-  {{</* k100/afilink-book-amazon text="こちら📘" */>}}
-  ```
-  → {{< k100/afilink-book-amazon text="こちら📘" >}}
+2. text を渡す場合
+   ```html {linenos=false,anchorLineNos=false}
+   {{</* k100/afilink-book-amazon text="こちら📘" */>}}
+   ```
+   → {{< k100/afilink-book-amazon text="こちら📘" >}}
 
 ### param {#param}
 
-- huto.yaml -> param.k100site.title
+1. huto.yaml -> param.k100site.title
 
-  ```html {linenos=false,anchorLineNos=false}
-  {{</* param k100.site.title */>}}  
-  ```
-  → {{< param k100.site.title >}}  
+   ```html {linenos=false,anchorLineNos=false}
+   {{</* param k100.site.title */>}}  
+   ```
+   → {{< param k100.site.title >}}  
 
-- content内のparams
+2. content内のparams
 
-  ```html {linenos=false,anchorLineNos=false}
-  {{</* param testparam */>}}
-  ```
-  → {{< param testparam >}}  
+   ```html {linenos=false,anchorLineNos=false}
+   {{</* param testparam */>}}
+   ```
+   → {{< param testparam >}}  
 
-  ```html {linenos=false,anchorLineNos=false}
-  {{</* param testparam2.nestparam */>}}
-  ```
-  → {{< param testparam2.nestparam >}}
+   ```html {linenos=false,anchorLineNos=false}
+   {{</* param testparam2.nestparam */>}}
+   ```
+   → {{< param testparam2.nestparam >}}
 
 ### href-target-blank
 
@@ -209,9 +211,7 @@ This is a **bold** word.
 ### figure {#figure}
 
 {{< 
-figure 
-src="box.png" alt="代替テキスト" width="50%" link="../overview#bbb" 
-rel="noopener" target="_blank" caption="キャプション" title="Box plot" 
+figure src="box.png" alt="代替テキスト" width="50%" link="../overview#bbb" rel="noopener" target="_blank" caption="キャプション" title="Box plot" 
 >}}
 
 ```html {linenos=false,anchorLineNos=false}
@@ -392,12 +392,14 @@ Rendered:
 > *ブロック引用符内*でマークダウン構文を使用できることに**注意してください**。
 
 ```html {lineNos=false}
-> aaaaaaaaaaaaaaaaaaaaa
->> bbbbbbbbbbbbbbbbbbbbbbbb
+> - aaaaaaaaaaaaaaaaaaaaa
+> - bbbbbbbbbbbbbbbbbbbbb
+>> xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 → 
-> aaaaaaaaaaaaaaaaaaaaa
->> bbbbbbbbbbbbbbbbbbbbbbbb
+> - aaaaaaaaaaaaaaaaaaaaa
+> - bbbbbbbbbbbbbbbbbbbbb
+>> xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 #### 出典を明記した引用
 
