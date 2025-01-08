@@ -2,7 +2,7 @@
 title: '【R+SQL】データサイエンス100本ノック＋α - Tips'
 date: '2024-12-31T00:56:30+09:00'
 slug: tips
-weight: 4
+weight: 41
 # draft: false
 draft: true
 cover:

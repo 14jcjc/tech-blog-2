@@ -1,11 +1,11 @@
 /* PaperMod の配色変更 */
 /* :root { */
-  /* --code-bg: rgb(245, 245, 245); */
-  /* --code-bg: #F5F5F5; */
-  /* --code-bg: #E5F5FF; */
-  /* --primary: rgb(30, 30, 30); */
-  /* --primary: rgb(70, 20, 0); */
-  /* --content: rgb(31, 31, 31); */
+/* --code-bg: rgb(245, 245, 245); */
+/* --code-bg: #F5F5F5; */
+/* --code-bg: #E5F5FF; */
+/* --primary: rgb(30, 30, 30); */
+/* --primary: rgb(70, 20, 0); */
+/* --content: rgb(31, 31, 31); */
 /*   
   --entry: #fbf7ef;
   --primary: rgba(113, 103, 91, 1.00);
@@ -71,7 +71,7 @@ blockquote.alert {
 
 .alert-important {
   /* border-left: 5px solid #8352E0 !important; */
-  border-left: 5px solid #9560F0 !important;
+  border-left: 5px solid #9560f0 !important;
 }
 
 .alert-caution {
@@ -80,5 +80,5 @@ blockquote.alert {
 
 .alert-tip {
   /* border-left: 5px solid #8bc34a !important; */
-  border-left: 5px solid #AFC300 !important;
+  border-left: 5px solid #afc300 !important;
 }

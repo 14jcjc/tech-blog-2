@@ -2,7 +2,7 @@
 title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
 draft: true
 date: '2024-12-29T20:31:23+09:00'
-weight: 2
+weight: 21
 # draft: false
 # date: '2021-04-01T02:20:27+09:00'
 # weight: 1010
