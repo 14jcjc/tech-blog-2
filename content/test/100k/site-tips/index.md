@@ -65,8 +65,6 @@ summary: の設定より優先度が高いです。
 ➡️ ⬅️ ⬆️ ⬇️ 👉  
 :see_no_evil: :hear_no_evil: :speak_no_evil:
 
----
-
 ## shortcodes {#shortcodes}
 
 ### {{</* shortcode */>}} と {{%/* shortcode */%}} の違い
@@ -253,8 +251,6 @@ read: assets/test/pets.csv
 ⬇️  
 {{< csv-to-table "test/pets.csv" >}}
 
----
-
 ## PaperMod {#paperod}
 
 ### Code block with PaperMod
@@ -399,8 +395,6 @@ receipt %>%
 {{ end }}
 {{< /highlight >}}
 
----
-
 ## Markdown
 
 ### Markdown attributes
@@ -501,7 +495,7 @@ Rendered:
 1. 
 > [!NOTE]
 > この blockquote レンダリング フックは、アラート指定子が存在する場合は多言語アラートをレンダリングし、
-> それ以外の場合は あCommonMark 仕様に従って blockquote をレンダリングします。
+> それ以外の場合は CommonMarkdown の仕様に従って blockquote をレンダリングします。
 
 2. 
 > [!TIP]
@@ -547,8 +541,6 @@ aaaaaa,bbbbbb,cccccc
 
 例2： \### aaa  
 例1： \`インライン表示されなくなる`  
-
----
 
 ### 段落
 
@@ -678,8 +670,6 @@ A \\$5 bill _saved_ is a \\$5 bill _earned_.
 
 $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 
----
-
 ## Diagrams
 
 ### GoAT diagrams (ASCII) 
@@ -694,8 +684,6 @@ $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
  1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
 
 ```
-
----
 
 ## shortcodes (SNS)
 
