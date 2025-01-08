@@ -69,36 +69,38 @@ summary: の設定より優先度が高いです。
 
 ## shortcodes {#shortcodes}
 
-```html {linenos=false,anchorLineNos=false}
-{{</* test-shortcode-1 */>}}
-```
-→ {{< test-shortcode-1 >}}
+### {{</* shortcode */>}} と {{%/* shortcode */%}} の違い
+
+{{< href-target-blank url="https://gohugo.io/methods/page/rendershortcodes/" text="https://gohugo.io/methods/page/rendershortcodes/" >}}
+<br></br>
+PAGE.RenderShortcodes は、コンテンツファイル内のショートコードをレンダリングするが、
+Markdown は保持されることに注意。
 
 ### .Page を使用
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* page-title */>}}
 ```
 » {{< page-title >}}
 
 ### .Site.Params. を使用
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/title */>}}
 ```
 ➡️ {{< k100/title >}}
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/title "s" */>}}
 ```
 → {{< k100/title "s" >}}
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/title "a" */>}}
 ```
 → {{< k100/title "a" >}}
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/git-url */>}}
 ```
 → {{< k100/git-url >}}
@@ -106,13 +108,13 @@ summary: の設定より優先度が高いです。
 ### 部分テンプレートを使用 (partial)
 
 1. text を渡さない場合はデフォルトが適用される
-   ```html {linenos=false,anchorLineNos=false}
+   ```go-html-template {linenos=false,anchorLineNos=false}
    {{</* k100/afilink-book-amazon */>}}
    ```
    → {{< k100/afilink-book-amazon >}}
 
 2. text を渡す場合
-   ```html {linenos=false,anchorLineNos=false}
+   ```go-html-template {linenos=false,anchorLineNos=false}
    {{</* k100/afilink-book-amazon text="こちら📘" */>}}
    ```
    → {{< k100/afilink-book-amazon text="こちら📘" >}}
@@ -121,26 +123,26 @@ summary: の設定より優先度が高いです。
 
 1. huto.yaml -> param.k100site.title
 
-   ```html {linenos=false,anchorLineNos=false}
+   ```go-html-template {linenos=false,anchorLineNos=false}
    {{</* param k100.site.title */>}}  
    ```
    → {{< param k100.site.title >}}  
 
 2. content内のparams
 
-   ```html {linenos=false,anchorLineNos=false}
+   ```go-html-template {linenos=false,anchorLineNos=false}
    {{</* param testparam */>}}
    ```
    → {{< param testparam >}}  
 
-   ```html {linenos=false,anchorLineNos=false}
+   ```go-html-template {linenos=false,anchorLineNos=false}
    {{</* param testparam2.nestparam */>}}
    ```
    → {{< param testparam2.nestparam >}}
 
 ### href-target-blank
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* href-target-blank url="https://..." text="リポジトリ📂" */>}}
 ```
 →   
@@ -148,22 +150,26 @@ summary: の設定より優先度が高いです。
 
 ### ref {#ref}
 
+- ref: コンテンツディレクトリ (通常content/) のルートからの相対パスを指定
+- relref: 現在のページからの相対パスを指定
+<br></br>
+
 - overview#bbb へのリンク
 
-  ```html {linenos=false,anchorLineNos=false}
+  ```md {linenos=false,anchorLineNos=false}
   [overview-BBB はこちら]({{</* ref "overview#bbb" */>}} "overview-BBB")
   ```
   → [overview-BBB はこちら]({{< ref "overview#bbb" >}} "overview-BBB")
 
 - overview.md#d2 へのリンク
 
-  ```html {linenos=false,anchorLineNos=false}
+  ```md {linenos=false,anchorLineNos=false}
    [overview-d2 はこちら]({{</* ref "overview.md#d2" */>}} "About us")
   ```
   → [overview-d2 はこちら]({{< ref "overview.md#d2" >}} "About us")
 
   Rendered:
-  ``` html {lineNos=false}
+  ```html {lineNos=false}
   <a href="http://example.org/overview/#bbb" title="About us">こちら</a>
   ```
   xxxxxxxxxxxxxxxxxx
@@ -172,7 +178,7 @@ summary: の設定より優先度が高いです。
 
 - overview#d2 へのリンク
 
-  ```html {linenos=false,anchorLineNos=false}
+  ```md {linenos=false,anchorLineNos=false}
   [overview-d2 はこちら]({{</* relref "overview#d2" */>}} "About us")
   ```
   → [overview-d2 はこちら]({{< relref "overview#d2" >}} "About us")  
@@ -183,13 +189,19 @@ summary: の設定より優先度が高いです。
 
 - lang="ja"
 
-  ```html {linenos=false,anchorLineNos=false}
+  ```md {linenos=false,anchorLineNos=false}
   [lang="ja" はこちら]({{</* relref path="overview" lang="ja" */>}})
   ```
 
   → [lang="ja" はこちら]({{< relref path="overview" lang="ja" >}})  
 
 ### comment {#comment}
+
+```go-html-template {linenos=false,anchorLineNos=false}
+{{%/* comment */%}} 
+TODO: rewrite the paragraph below. 
+{{%/* /comment */%}}
+```
 
 {{% comment %}} 
 TODO: rewrite the paragraph below. 
@@ -292,6 +304,52 @@ order by
   total_amount DESC
 ```
 
+#### go-html-template コード
+
+```go-html-template {linenos=false,anchorLineNos=false}
+<div><p>xxxxxxxxxxxxxxxxxxxxxx</p></div>
+{{ if eq .Type "alert" }}
+  <blockquote class="alert alert-{{ .AlertType }}">
+    <p class="alert-heading">
+      {{ transform.Emojify (index $emojis .AlertType) }}
+      {{ with .AlertTitle }}
+        {{ . }}
+      {{ else }}
+        {{ or (i18n .AlertType) (title .AlertType) }}
+      {{ end }}
+    </p>
+    {{ .Text }}
+  </blockquote>
+{{ else }}
+  <blockquote>
+    {{ .Text }}
+  </blockquote>
+{{ end }}
+```
+
+#### go-text-template コード
+
+```go-text-template {linenos=false,anchorLineNos=false}
+<div><p>xxxxxxxxxxxxxxxxxxxxxx</p></div>
+{{ if eq .Type "alert" }}
+  <blockquote class="alert alert-{{ .AlertType }}">
+    <p class="alert-heading">
+      {{ transform.Emojify (index $emojis .AlertType) }}
+      {{ with .AlertTitle }}
+        {{ . }}
+      {{ else }}
+        {{ or (i18n .AlertType) (title .AlertType) }}
+      {{ end }}
+    </p>
+    {{ .Text }}
+  </blockquote>
+{{ else }}
+  <blockquote>
+    {{ .Text }}
+  </blockquote>
+{{ end }}
+```
+
 #### textコード
 
 ```text {linenos=true,lineNoStart=1,hl_lines=["3-4",23], anchorLineNos=true}
@@ -349,7 +407,7 @@ receipt %>%
 
 #### paragraph (段落)
 
-``` {lineNos=false}
+```md {lineNos=false}
 This is a paragraph.
 {class="foo bar" id="baz"}
 ```
@@ -395,7 +453,7 @@ Rendered:
 
 > *ブロック引用符内*でマークダウン構文を使用できることに**注意してください**。
 
-```html {lineNos=false}
+``` {lineNos=false}
 > - aaaaaaaaaaaaaaaaaaaaa
 > - bbbbbbbbbbbbbbbbbbbbb
 >> xxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -407,7 +465,7 @@ Rendered:
 
 #### 出典を明記した引用
 
-```html {lineNos=false}
+```htm {lineNos=false}
 > Don't communicate by sharing memory, share memory by communicating.
 >
 > — <cite>Rob Pike[^3]</cite>
@@ -434,6 +492,11 @@ Rendered:
 定義ファイル:
 - layouts/_default/_markup/render-blockquote.html
 - i18n/ja.yaml
+
+```text {lineNos=false}
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+```
 
 1. 
 > [!NOTE]
