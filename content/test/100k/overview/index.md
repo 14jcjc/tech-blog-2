@@ -1,5 +1,6 @@
 ---
-robotsNoIndex: true # To hide a particular page from indexing by search engines
+# robotsNoIndex: true # To hide a particular page from indexing by search engines (?)
+hiddenInHomelist: true
 title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
 draft: true
 date: '2024-12-29T20:31:23+09:00'

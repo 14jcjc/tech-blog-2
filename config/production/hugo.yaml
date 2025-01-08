@@ -4,8 +4,8 @@ baseURL: "https://14katsumix.github.io/tech-blog/"
 buildDrafts: false
 # buildDrafts: true
 
-enableRobotsTXT: true # robots.txt の生成を有効にする
-# enableRobotsTXT: false
+# enableRobotsTXT: true # robots.txt の生成を有効にする
+enableRobotsTXT: false
 
 services:
   googleAnalytics:
