@@ -8,12 +8,13 @@
 /* --code-bg: #ECF6FF; */
 --code-bg: #F0F8FF;
 /* --primary: rgb(30, 30, 30); */
-/* --primary: rgb(40, 10, 0); */
-/* --primary: rgb(47, 25, 0); */
 /* --primary: rgb(52, 25, 0); */
---primary: rgb(10, 10, 50);
-/* --primary: rgb(0, 0, 70); */
+/* --primary: rgb(20, 20, 70); */
+/* --primary: rgb(60, 60, 100); */
+  --primary: rgb(80, 80, 110);
 /* --content: rgb(31, 31, 31); */
+/* --content: rgb(70, 70, 70); */
+--content: rgb(100, 100, 100);
 /*   
   --entry: #fbf7ef;
   --primary: rgba(113, 103, 91, 1.00);
