@@ -6,7 +6,7 @@
 <html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 
 <head>
-    {{- partial "head.html" . }}
+    {{- partial "head.html" . -}}
     <!-- katsu -->
     {{ if .Param "math" }}
       {{ partialCached "math.html" . }}

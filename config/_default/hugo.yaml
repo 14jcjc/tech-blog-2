@@ -126,16 +126,24 @@ params:
   # widgets: 
   #   recentPosts: true
 
-  # assets:
+  assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true # アセットのサブリソースの整合性を無効にする
     # theme_color: "0000FF" # To set custom meta theme-color
     # msapplication_TileColor: "0000FF"
-    # # favicon: "<link / abs url>"
+    # favicon: "<link / abs url>"
     # favicon16x16: "<link / abs url>"
     # favicon32x32: "<link / abs url>"
     # apple_touch_icon: "<link / abs url>"
     # safari_pinned_tab: "<link / abs url>"
+    favicon: "images/Emoji-Favicons-alien-monster/favicon.ico"
+    favicon16x16: "images/Emoji-Favicons-alien-monster/favicon-16x16.png"
+    favicon32x32: "images/Emoji-Favicons-alien-monster/favicon-32x32.png"
+    apple_touch_icon: "images/Emoji-Favicons-alien-monster/apple-touch-icon.png"
+    android_chrome192x192: > 
+      "images/Emoji-Favicons-alien-monster/android-chrome-192x192.png"
+    android_chrome512x512: > 
+      "images/Emoji-Favicons-alien-monster/android-chrome-512x512.png"
 
   # label:
     # text: "Home" # To display different label text other than title
@@ -184,6 +192,8 @@ params:
   socialIcons:
     - name: x
       url: "https://x.com/14katsumix"
+    - name: instagram
+      url: "https://www.instagram.com/14katsumix/"
     - name: github
       url: "https://github.com/14katsumix"
     # - name: stackoverflow
