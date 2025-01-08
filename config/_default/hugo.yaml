@@ -50,7 +50,7 @@ outputs:
   home:
   - html
   - rss
-  - JSON
+  - JSON # necessary for search
   section:
   - html
   - rss
@@ -127,7 +127,8 @@ params:
   #   recentPosts: true
 
   assets:
-    # disableHLJS: true # to disable highlight.js
+    # Hugo の構文ハイライト「chroma」を使用する (disable highlight.js): 
+    disableHLJS: true
     # disableFingerprinting: true # アセットのサブリソースの整合性を無効にする
     # theme_color: "0000FF" # To set custom meta theme-color
     # msapplication_TileColor: "0000FF"
@@ -136,14 +137,15 @@ params:
     # favicon32x32: "<link / abs url>"
     # apple_touch_icon: "<link / abs url>"
     # safari_pinned_tab: "<link / abs url>"
-    favicon: "images/Emoji-Favicons-alien-monster/favicon.ico"
-    favicon16x16: "images/Emoji-Favicons-alien-monster/favicon-16x16.png"
-    favicon32x32: "images/Emoji-Favicons-alien-monster/favicon-32x32.png"
-    apple_touch_icon: "images/Emoji-Favicons-alien-monster/apple-touch-icon.png"
-    android_chrome192x192: > 
-      "images/Emoji-Favicons-alien-monster/android-chrome-192x192.png"
-    android_chrome512x512: > 
-      "images/Emoji-Favicons-alien-monster/android-chrome-512x512.png"
+    favicon: "images/favicon/favicon.ico"
+    favicon16x16: "images/favicon/favicon-16x16.png"
+    favicon32x32: "images/favicon/favicon-32x32.png"
+    apple_touch_icon: "images/favicon/apple-touch-icon.png"
+    # safari_pinned_tab: 
+    # android_chrome192x192: > 
+    #   "images/favicon/android-chrome-192x192.png"
+    # android_chrome512x512: > 
+    #   "images/favicon/android-chrome-512x512.png"
 
   # label:
     # text: "Home" # To display different label text other than title
@@ -157,10 +159,10 @@ params:
     title: 14katsumix
     # subtitle: "100本ノックで学ぶ R とSQLの実践"
     subtitle: "現場で役立つデータの世界 : RとSQLで学ぶ実践スキル"
-    # imageUrl: "<img location>"
-    # imageWidth: 120
-    # imageHeight: 120
-    # imageTitle: "my image"
+    imageUrl: "images/profile-mode/profile.png"
+    imageTitle: "14katsumix"
+    imageWidth: 200
+    imageHeight: 200
     buttons:
       - name: "データサイエンス100本ノック＋α - test"
         url: ds-100knocks-dp-test
@@ -322,10 +324,10 @@ menu:
 pygmentsUseClasses: true
 markup:
   highlight:
-    # noClasses: false
+    noClasses: false
     anchorLineNos: false
     codeFences: true
-    guessSyntax: false
+    guessSyntax: true
     lineNos: true
     lineNoStart: 1
     lineNumbersInTable: true
@@ -333,7 +335,7 @@ markup:
     hl_Lines: ""
     lineAnchors: ""
     noHl: false
-    # style: monokai
+    style: monokai
     # tabWidth: 2
     # wrapperClass: highlight
 

@@ -36,6 +36,8 @@ cover:
   # hidden: true
   hiddenInList: false # hide on list pages and home
   hiddenInSingle: true # hide on single page
+# Edit Link for Posts
+# 投稿のファイルパスを使用して編集先にリンクし, 変更を提案するボタンを追加する: 
 # editPost:
 #     URL: "https://github.com/<path_to_repo>/content"
 #     Text: "Suggest Changes" # edit text
@@ -211,14 +213,11 @@ This is a **bold** word.
 
 ### figure {#figure}
 
-{{< 
-figure src="box.png" alt="代替テキスト" width="50%" link="../overview#bbb" rel="noopener" target="_blank" caption="キャプション" title="Box plot" 
->}}
-
 ```html {linenos=false,anchorLineNos=false}
 {{</* figure 
    src="box.png" 
    alt="代替テキスト" 
+   align="center" 
    width="50%" 
    link="../overview#bbb" 
    rel="noopener" 
@@ -227,6 +226,10 @@ figure src="box.png" alt="代替テキスト" width="50%" link="../overview#bbb"
    title="Box plot" 
 */>}}
 ```
+👉  
+{{< 
+figure src="box.png" alt="代替テキスト" align="center"  width="50%" link="../overview#bbb" rel="noopener" target="_blank" caption="キャプション" title="Box plot" 
+>}}
 
 ### Data sources
 
