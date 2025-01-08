@@ -1,9 +1,9 @@
 ---
 # title: '『データサイエンス100本ノック～構造化データ加工編ガイドブック』レビュー'
-title: サイト作成Tips
+# title: サイト作成Tips
 # draft: true
 # date: '2024-12-29T01:20:27+09:00'
-# weight: 1
+# weight: 11
 draft: false
 date: '2021-04-01T00:20:27+09:00'
 weight: 1000
@@ -31,11 +31,13 @@ cover:
   # relative: false
   image: "tree.png" # image path/url
   alt: "cover" # alt text
-  # caption: "<text>" # display caption under cover
+  caption: "This is caption" # display caption under cover
   relative: true # when using page bundles set this to true
   # hidden: true
   hiddenInList: false # hide on list pages and home
   hiddenInSingle: true # hide on single page
+# Edit Link for Posts
+# 投稿のファイルパスを使用して編集先にリンクし, 変更を提案するボタンを追加する: 
 # editPost:
 #     URL: "https://github.com/<path_to_repo>/content"
 #     Text: "Suggest Changes" # edit text
@@ -49,50 +51,54 @@ summary: の設定より優先度が高いです。
 
 ## 絵文字
 
-🧑‍💻 👨‍💻 👾 🤖  
+🧑‍💻 👨‍💻 👤 👾 🤖  
 📈 📊 🔍 ⌨️ 🖥️ 💻 ⚙️ 🧠 🌐 🚀 🪐  
-📂 - フォルダ、リポジトリ  
-📝 - メモ  
+📁 📂 - フォルダ、リポジトリ  
+📝 ✍️ - メモ  
 📖 📒 🗒️ - ノート  
 📘 📙 📕 📚 - 本  
 ⚠️ - 警告サイン, 最も一般的な注意や警告を示す絵文字  
-❗ - 赤い感嘆符, 強い注意や緊急性を示す  
+❗ - 強い注意や緊急性を示す  
 🔑 - 鍵、重要なポイントや核心を象徴します  
 ✔️ ☑️ ✅ - チェックマーク  
 ℹ️ - 情報  
+➡️ ⬅️ ⬆️ ⬇️ 👉  
+:see_no_evil: :hear_no_evil: :speak_no_evil:
 
 ## shortcodes {#shortcodes}
 
-```html {linenos=false,anchorLineNos=false}
-{{</* test-shortcode-1 */>}}
-```
-→ {{< test-shortcode-1 >}}
+### {{</* shortcode */>}} と {{%/* shortcode */%}} の違い
+
+{{< href-target-blank url="https://gohugo.io/methods/page/rendershortcodes/" text="https://gohugo.io/methods/page/rendershortcodes/" >}}
+<br></br>
+PAGE.RenderShortcodes は、コンテンツファイル内のショートコードをレンダリングするが、
+Markdown は保持されることに注意。
 
 ### .Page を使用
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* page-title */>}}
 ```
 » {{< page-title >}}
 
 ### .Site.Params. を使用
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/title */>}}
 ```
 ➡️ {{< k100/title >}}
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/title "s" */>}}
 ```
 → {{< k100/title "s" >}}
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/title "a" */>}}
 ```
 → {{< k100/title "a" >}}
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/git-url */>}}
 ```
 → {{< k100/git-url >}}
@@ -100,41 +106,41 @@ summary: の設定より優先度が高いです。
 ### 部分テンプレートを使用 (partial)
 
 1. text を渡さない場合はデフォルトが適用される
-```html {linenos=false,anchorLineNos=false}
-{{</* k100/afilink-book-amazon */>}}
-```
-→ {{< k100/afilink-book-amazon >}}
+   ```go-html-template {linenos=false,anchorLineNos=false}
+   {{</* k100/afilink-book-amazon */>}}
+   ```
+   → {{< k100/afilink-book-amazon >}}
 
 2. text を渡す場合
-```html {linenos=false,anchorLineNos=false}
-{{</* k100/afilink-book-amazon text="こちら📘" */>}}
-```
-→ {{< k100/afilink-book-amazon text="こちら📘" >}}
+   ```go-html-template {linenos=false,anchorLineNos=false}
+   {{</* k100/afilink-book-amazon text="こちら📘" */>}}
+   ```
+   → {{< k100/afilink-book-amazon text="こちら📘" >}}
 
 ### param {#param}
 
-- huto.yaml -> param.k100site.title
+1. huto.yaml -> param.k100site.title
 
-  ```html {linenos=false,anchorLineNos=false}
-  {{</* param k100.site.title */>}}  
-  ```
-  → {{< param k100.site.title >}}  
+   ```go-html-template {linenos=false,anchorLineNos=false}
+   {{</* param k100.site.title */>}}  
+   ```
+   → {{< param k100.site.title >}}  
 
-- content内のparams
+2. content内のparams
 
-  ```html {linenos=false,anchorLineNos=false}
-  {{</* param testparam */>}}
-  ```
-  → {{< param testparam >}}  
+   ```go-html-template {linenos=false,anchorLineNos=false}
+   {{</* param testparam */>}}
+   ```
+   → {{< param testparam >}}  
 
-  ```html {linenos=false,anchorLineNos=false}
-  {{</* param testparam2.nestparam */>}}
-  ```
-  → {{< param testparam2.nestparam >}}
+   ```go-html-template {linenos=false,anchorLineNos=false}
+   {{</* param testparam2.nestparam */>}}
+   ```
+   → {{< param testparam2.nestparam >}}
 
 ### href-target-blank
 
-```html {linenos=false,anchorLineNos=false}
+```go-html-template {linenos=false,anchorLineNos=false}
 {{</* href-target-blank url="https://..." text="リポジトリ📂" */>}}
 ```
 →   
@@ -142,22 +148,26 @@ summary: の設定より優先度が高いです。
 
 ### ref {#ref}
 
+- ref: コンテンツディレクトリ (通常content/) のルートからの相対パスを指定
+- relref: 現在のページからの相対パスを指定
+<br></br>
+
 - overview#bbb へのリンク
 
-  ```html {linenos=false,anchorLineNos=false}
+  ```md {linenos=false,anchorLineNos=false}
   [overview-BBB はこちら]({{</* ref "overview#bbb" */>}} "overview-BBB")
   ```
   → [overview-BBB はこちら]({{< ref "overview#bbb" >}} "overview-BBB")
 
 - overview.md#d2 へのリンク
 
-  ```html {linenos=false,anchorLineNos=false}
+  ```md {linenos=false,anchorLineNos=false}
    [overview-d2 はこちら]({{</* ref "overview.md#d2" */>}} "About us")
   ```
   → [overview-d2 はこちら]({{< ref "overview.md#d2" >}} "About us")
 
   Rendered:
-  ``` html {lineNos=false}
+  ```html {lineNos=false}
   <a href="http://example.org/overview/#bbb" title="About us">こちら</a>
   ```
   xxxxxxxxxxxxxxxxxx
@@ -166,7 +176,7 @@ summary: の設定より優先度が高いです。
 
 - overview#d2 へのリンク
 
-  ```html {linenos=false,anchorLineNos=false}
+  ```md {linenos=false,anchorLineNos=false}
   [overview-d2 はこちら]({{</* relref "overview#d2" */>}} "About us")
   ```
   → [overview-d2 はこちら]({{< relref "overview#d2" >}} "About us")  
@@ -177,13 +187,19 @@ summary: の設定より優先度が高いです。
 
 - lang="ja"
 
-  ```html {linenos=false,anchorLineNos=false}
+  ```md {linenos=false,anchorLineNos=false}
   [lang="ja" はこちら]({{</* relref path="overview" lang="ja" */>}})
   ```
 
   → [lang="ja" はこちら]({{< relref path="overview" lang="ja" >}})  
 
 ### comment {#comment}
+
+```go-html-template {linenos=false,anchorLineNos=false}
+{{%/* comment */%}} 
+TODO: rewrite the paragraph below. 
+{{%/* /comment */%}}
+```
 
 {{% comment %}} 
 TODO: rewrite the paragraph below. 
@@ -207,16 +223,11 @@ This is a **bold** word.
 
 ### figure {#figure}
 
-{{< 
-figure 
-src="box.png" alt="代替テキスト" width="50%" link="../overview#bbb" 
-rel="noopener" target="_blank" caption="キャプション" title="Box plot" 
->}}
-
 ```html {linenos=false,anchorLineNos=false}
 {{</* figure 
    src="box.png" 
    alt="代替テキスト" 
+   align="center" 
    width="50%" 
    link="../overview#bbb" 
    rel="noopener" 
@@ -225,6 +236,10 @@ rel="noopener" target="_blank" caption="キャプション" title="Box plot"
    title="Box plot" 
 */>}}
 ```
+👉  
+{{< 
+figure src="box.png" alt="代替テキスト" align="center"  width="50%" link="../overview#bbb" rel="noopener" target="_blank" caption="キャプション" title="Box plot" 
+>}}
 
 ### Data sources
 
@@ -235,8 +250,6 @@ read: assets/test/pets.csv
 ```
 ⬇️  
 {{< csv-to-table "test/pets.csv" >}}
-
----
 
 ## PaperMod {#paperod}
 
@@ -285,6 +298,52 @@ where
   total_amount >= (select AVG(total_amount) from customer_amount)
 order by
   total_amount DESC
+```
+
+#### go-html-template コード
+
+```go-html-template {linenos=false,anchorLineNos=false}
+<div><p>xxxxxxxxxxxxxxxxxxxxxx</p></div>
+{{ if eq .Type "alert" }}
+  <blockquote class="alert alert-{{ .AlertType }}">
+    <p class="alert-heading">
+      {{ transform.Emojify (index $emojis .AlertType) }}
+      {{ with .AlertTitle }}
+        {{ . }}
+      {{ else }}
+        {{ or (i18n .AlertType) (title .AlertType) }}
+      {{ end }}
+    </p>
+    {{ .Text }}
+  </blockquote>
+{{ else }}
+  <blockquote>
+    {{ .Text }}
+  </blockquote>
+{{ end }}
+```
+
+#### go-text-template コード
+
+```go-text-template {linenos=false,anchorLineNos=false}
+<div><p>xxxxxxxxxxxxxxxxxxxxxx</p></div>
+{{ if eq .Type "alert" }}
+  <blockquote class="alert alert-{{ .AlertType }}">
+    <p class="alert-heading">
+      {{ transform.Emojify (index $emojis .AlertType) }}
+      {{ with .AlertTitle }}
+        {{ . }}
+      {{ else }}
+        {{ or (i18n .AlertType) (title .AlertType) }}
+      {{ end }}
+    </p>
+    {{ .Text }}
+  </blockquote>
+{{ else }}
+  <blockquote>
+    {{ .Text }}
+  </blockquote>
+{{ end }}
 ```
 
 #### textコード
@@ -336,15 +395,13 @@ receipt %>%
 {{ end }}
 {{< /highlight >}}
 
----
-
 ## Markdown
 
 ### Markdown attributes
 
 #### paragraph (段落)
 
-``` {lineNos=false}
+```md {lineNos=false}
 This is a paragraph.
 {class="foo bar" id="baz"}
 ```
@@ -390,17 +447,19 @@ Rendered:
 
 > *ブロック引用符内*でマークダウン構文を使用できることに**注意してください**。
 
-```html {lineNos=false}
-> aaaaaaaaaaaaaaaaaaaaa
->> bbbbbbbbbbbbbbbbbbbbbbbb
+``` {lineNos=false}
+> - aaaaaaaaaaaaaaaaaaaaa
+> - bbbbbbbbbbbbbbbbbbbbb
+>> xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 → 
-> aaaaaaaaaaaaaaaaaaaaa
->> bbbbbbbbbbbbbbbbbbbbbbbb
+> - aaaaaaaaaaaaaaaaaaaaa
+> - bbbbbbbbbbbbbbbbbbbbb
+>> xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 #### 出典を明記した引用
 
-```html {lineNos=false}
+```htm {lineNos=false}
 > Don't communicate by sharing memory, share memory by communicating.
 >
 > — <cite>Rob Pike[^3]</cite>
@@ -428,10 +487,15 @@ Rendered:
 - layouts/_default/_markup/render-blockquote.html
 - i18n/ja.yaml
 
+```text {lineNos=false}
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+```
+
 1. 
 > [!NOTE]
 > この blockquote レンダリング フックは、アラート指定子が存在する場合は多言語アラートをレンダリングし、
-> それ以外の場合は あCommonMark 仕様に従って blockquote をレンダリングします。
+> それ以外の場合は CommonMarkdown の仕様に従って blockquote をレンダリングします。
 
 2. 
 > [!TIP]
@@ -478,8 +542,6 @@ aaaaaa,bbbbbb,cccccc
 例2： \### aaa  
 例1： \`インライン表示されなくなる`  
 
----
-
 ### 段落
 
 テキストの行間に空白行を残すことで、新しい段落を作成できる.
@@ -491,6 +553,8 @@ aaaaaaaaaaaaaaaaaa\
 bbbbbbbbbbbbbbbbbbbbbb
 
 ### フォント
+
+<pre>これはPlainテキスト。</pre>
 
 ```html {linenos=false,anchorLineNos=false}
 <font color="Red">カラーテキスト</font>
@@ -606,8 +670,6 @@ A \\$5 bill _saved_ is a \\$5 bill _earned_.
 
 $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 
----
-
 ## Diagrams
 
 ### GoAT diagrams (ASCII) 
@@ -622,8 +684,6 @@ $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
  1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
 
 ```
-
----
 
 ## shortcodes (SNS)
 
