@@ -1,8 +1,9 @@
 ---
+robotsNoIndex: true # To hide a particular page from indexing by search engines
 title: '【R+SQL】データサイエンス100本ノック＋α - 概要'
 draft: true
 date: '2024-12-29T20:31:23+09:00'
-weight: 21
+weight: 12
 # draft: false
 # date: '2021-04-01T02:20:27+09:00'
 # weight: 1010
@@ -26,7 +27,11 @@ hideSummary: false
 searchHidden: false
 ShowReadingTime: true
 ShowWordCount: true
+ShowPostNavLinks: false
+# UseHugoToc: true
+# ShowBreadCrumbs: false
 # cover:
+#   caption: "This is caption" # display caption under cover
 #     image: "<image path/url>" # image path/url
 #     alt: "<alt text>" # alt text
 #     caption: "<text>" # display caption under cover

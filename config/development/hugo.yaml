@@ -29,3 +29,5 @@ params:
         url: archives
       - name: Tags
         url: tags
+      - name: Github
+        url: "https://github.com/14katsumix/100knocks-dp"

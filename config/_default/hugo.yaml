@@ -90,7 +90,11 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false
   ShowReadingTime: false
+
   ShowShareButtons: true
+  # To customize which share buttons to be enabled on page: 
+  # ShareButtons: [“x”, "linkedin"] #> 効かない
+  
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
@@ -100,19 +104,20 @@ params:
   ShowAllPagesInArchive: true
   # Archiveで最新の記事のみが表示され, その他の記事は次ページへのリンクとして表示
   # ShowAllPagesInArchive: false
+  # ShowFullTextinRSS: 
 
-  # customCSS: "css/extended/custom.css"
-  
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: false
-  # comments: true
+  # comments: true # To show/hide comments
+
+  # To Hide meta elements : date, read-time, author and available-translations for page: 
   hidemeta: false
-  hideSummary: false
+  hideSummary: false # To Hide summary being shown in list pages
   ShowToc: true
   ShowPageNums: true
   hideFooter: false
-  UseHugoToc: true
+  UseHugoToc: true # To use Hugo’s default Toc instead of custom
   TocOpen: false
   math: true
   mainMenu:
@@ -123,17 +128,19 @@ params:
 
   # assets:
     # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    # favicon: "<link / abs url>"
+    # disableFingerprinting: true # アセットのサブリソースの整合性を無効にする
+    # theme_color: "0000FF" # To set custom meta theme-color
+    # msapplication_TileColor: "0000FF"
+    # # favicon: "<link / abs url>"
     # favicon16x16: "<link / abs url>"
     # favicon32x32: "<link / abs url>"
     # apple_touch_icon: "<link / abs url>"
     # safari_pinned_tab: "<link / abs url>"
 
   # label:
-  #   text: "Home"
-  #   icon: /apple-touch-icon.png
-  #   iconHeight: 35
+    # text: "Home" # To display different label text other than title
+    # icon: /apple-touch-icon.png # To display a logo image in label
+    # iconHeight: 35
 
   # profile-mode
   profileMode:
@@ -145,15 +152,15 @@ params:
     # imageUrl: "<img location>"
     # imageWidth: 120
     # imageHeight: 120
-    # imageTitle: my image
-    # buttons:
-    #   - name: "データサイエンス100本ノック＋α - test"
-    #     url: ds-100knocks-dp-test
-    #   - name: XXX
-    #     url: xxx
-    #   - name: Tags
-    #     url: tags
-
+    # imageTitle: "my image"
+    buttons:
+      - name: "データサイエンス100本ノック＋α - test"
+        url: ds-100knocks-dp-test
+      - name: XXX
+        url: xxx
+      - name: Tags
+        url: tags
+  
   # home-info mode
   homeInfoParams:
     # Title: "Hi there \U0001F44B"
@@ -162,7 +169,6 @@ params:
       R言語好きのデータサイエンティストです👨‍💻
       
       {{% comment %}} 
-      📈📊🔍👾🖥️💻⚙️🧠🌐🚀🪐🤖
       データ分析やプログラミングの楽しさを共有することをモットーに、日々成長中✨
       {{% /comment %}} 
       
@@ -173,7 +179,7 @@ params:
       {{% /comment %}}
 
       Rコード実行環境のセットアップ・プログラムをGitHubに公開してます
-      → {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="リポジトリ📂" >}}
+      → {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="リポジトリ📁" >}}
 
   socialIcons:
     - name: x
@@ -192,7 +198,7 @@ params:
   #     SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
+    # hidden: true # hide everywhere but not in structured data
     # hide on list pages and home: 
     # hiddenInList: true
     hiddenInList: false
@@ -200,6 +206,8 @@ params:
     # hiddenInSingle: true
     hiddenInSingle: false
     alt: "cover" # alt text
+    responsiveImages: true # To enable/disable generation of responsive cover images
+    # linkFullImages: true # To open full size cover images on click on cover
 
   social:
     twitter: 14katsumix

@@ -1,9 +1,10 @@
 ---
 title: "Privacy Policy"
 url: "/privacy/"
-params:
+params: 
   author: " "
 summary: privacy policy
+searchHidden: true # Hide page from search
 ShowBreadCrumbs: false
 disableShare: true
 # params: 

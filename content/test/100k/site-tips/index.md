@@ -31,7 +31,7 @@ cover:
   # relative: false
   image: "tree.png" # image path/url
   alt: "cover" # alt text
-  # caption: "<text>" # display caption under cover
+  caption: "This is caption" # display caption under cover
   relative: true # when using page bundles set this to true
   # hidden: true
   hiddenInList: false # hide on list pages and home
@@ -49,10 +49,10 @@ summary: の設定より優先度が高いです。
 
 ## 絵文字
 
-🧑‍💻 👨‍💻 👾 🤖  
+🧑‍💻 👨‍💻 👤 👾 🤖  
 📈 📊 🔍 ⌨️ 🖥️ 💻 ⚙️ 🧠 🌐 🚀 🪐  
-📂 - フォルダ、リポジトリ  
-📝 - メモ  
+📁 📂 - フォルダ、リポジトリ  
+📝 ✍️ - メモ  
 📖 📒 🗒️ - ノート  
 📘 📙 📕 📚 - 本  
 ⚠️ - 警告サイン, 最も一般的な注意や警告を示す絵文字  
@@ -61,6 +61,7 @@ summary: の設定より優先度が高いです。
 ✔️ ☑️ ✅ - チェックマーク  
 ℹ️ - 情報  
 ➡️ ⬅️ ⬆️ ⬇️ 👉  
+:see_no_evil: :hear_no_evil: :speak_no_evil:
 
 ---
 
@@ -494,6 +495,8 @@ aaaaaaaaaaaaaaaaaa\
 bbbbbbbbbbbbbbbbbbbbbb
 
 ### フォント
+
+<pre>これはPlainテキスト。</pre>
 
 ```html {linenos=false,anchorLineNos=false}
 <font color="Red">カラーテキスト</font>
