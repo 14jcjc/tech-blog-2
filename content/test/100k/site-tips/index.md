@@ -635,11 +635,17 @@ Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the ses
 
 --  
 
-## H2 見出し2
+For example, the base template below calls the [partial](https://gohugo.io/functions/partials/include/) function to include partial templates for the `head`, `header`, and `footer` elements of each page, and it uses the [block](https://gohugo.io/functions/go-template/block/) function to include `home`, `single`, `section`, `taxonomy`, and `term` templates within the `main` element of each page.
+
+A home template renders your site’s home page. For a single page site this is the only required template. For example, the home template below inherits the site’s shell from the base template, and renders the home page content with a list of pages.
+
+ショートコードの定義方法に応じて、引数は名前付き、位置指定、またはその両方になりますが、1 回の呼び出しで引数タイプを混在させることはできません。
+
+### H2 見出し2 ショートコードは、組み込みテンプレートまたはカスタムテンプレートを呼び出すコンテンツファイル内のシンプルなスニペット
 
 Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
 
-### H3 見出し3
+### H3 見出し3 ショートコードは、組み込みテンプレートまたはカスタムテンプレートを呼び出すコンテンツファイル内のシンプルなスニペット
 
 Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。
 
@@ -653,7 +659,7 @@ TODO: rewrite the paragraph below.
 
 ショートコードの定義方法に応じて、引数は名前付き、位置指定、またはその両方になりますが、1 回の呼び出しで引数タイプを混在させることはできません。名前付き引数の形式は、 という形式の HTML の形式をモデルにしていますname="value"。
 
-#### H4 見出し4
+#### H4 見出し4 ショートコードは、組み込みテンプレートまたはカスタムテンプレートを呼び出すコンテンツファイル内のシンプルなスニペット
 
 Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。
 
