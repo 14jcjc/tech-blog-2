@@ -205,14 +205,15 @@ blockquote.alert {
   border-radius: 8px;
 }
 .related-posts h2 {
-  font-size: 18pt;
-  margin-bottom: 18pt;
+  font-size: 16pt;
+  margin-bottom: 16pt;
 }
 .related-posts ul {
   list-style-type: none;
   padding-left: 0;
 }
 .related-posts li {
+  font-size: 14pt;
   margin-bottom: 0.5em;
 }
 
