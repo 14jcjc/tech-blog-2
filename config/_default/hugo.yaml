@@ -75,6 +75,53 @@ mainSections:
   # - "books"
   # - "glossary"
 
+# 関連ページ (See also)
+related:
+  # 0～100. 値が低いほど一致は多くなるが, 関連性は低くなる可能性がある: 
+  threshold: 20
+  # 関連コンテンツ・リストに現在のページよりも新しいページを含める. 
+  # これにより, 新しい関連コンテンツが追加されると, 古い投稿の出力が変わる可能性がある: 
+  includeNewer: true
+  toLower: false # インデックスとクエリの両方でキーワードを小文字にする
+  indices:
+    # 検索結果に特定のフィルターを適用する. これは現在, fragmentsタイプにのみ使用される.
+    - applyFilter: false
+      cardinalityThreshold: 0
+      name: tags
+      pattern: "" # これは現在, 日付にのみ関連している
+      toLower: false
+      type: basic # basic(デフォルト) or fragments
+      weight: 100
+    # - name: "categories"
+    #   weight: 80
+    - applyFilter: false
+      cardinalityThreshold: 0
+      name: keywords
+      pattern: ""
+      toLower: false
+      type: basic
+      weight: 0
+    - applyFilter: false
+      cardinalityThreshold: 0
+      name: date
+      pattern: ""
+      toLower: false
+      type: basic
+      weight: 0
+    # - applyFilter: true
+    #   name: fragmentrefs
+    #   type: fragments
+    #   weight: 80
+    # include:
+    # - regular # 通常の記事のみ対象
+    # - section # セクションページも対象
+  # exclude:
+    # - "archives"
+    # - "taxonomy"  # タクソノミーページを除外
+    # - "books"
+    # - "privacy" # ドラフト記事を除外
+    # - "taxonomy"  # タクソノミーページを除外
+
 params:
   env: development
   # env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -88,6 +135,9 @@ params:
   # subtitle: This is subtitle
   # description: katsuのブログです。
   defaultTheme: auto # dark, light
+  related:
+    limit: 5 # 関連コンテンツを最大 N件まで表示
+
   disableThemeToggle: false
   ShowReadingTime: false
 
