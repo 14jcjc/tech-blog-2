@@ -1,7 +1,7 @@
 ---
 # title: '『データサイエンス100本ノック～構造化データ加工編ガイドブック』レビュー'
 title: サイト作成Tips
-draft: false
+draft: true
 date: '2024-12-29T01:20:27+09:00'
 weight: 11
 # draft: false
