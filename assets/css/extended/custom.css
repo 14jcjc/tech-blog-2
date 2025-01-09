@@ -7,11 +7,13 @@
 /* --code-bg: #F4FCFF; */
 /* --code-bg: #ECF6FF; */
   --code-bg: #F0F8FF;
-/* --primary: rgb(30, 30, 30); */
+  /* --primary: rgb(30, 30, 30); */
   /* --primary: rgb(80, 80, 110); */
-  --primary: rgb(75, 75, 100);
-/* --content: rgb(31, 31, 31); */
-  --content: rgb(85, 85, 85);
+  /* --primary: rgb(75, 75, 100); */
+  --primary: rgb(40, 40, 60);
+  /* --content: rgb(31, 31, 31); */
+  /* --content: rgb(85, 85, 85); */
+  --content: rgb(55, 55, 55);
   /* --theme: rgb(255, 255, 255);
   --entry: rgb(255, 255, 255);
   --primary: rgb(30, 30, 30);

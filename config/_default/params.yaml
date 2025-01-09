@@ -9,7 +9,8 @@ k100:
     edition: 
       s: '標準編' # standard
       a: '発展編' # advanced
-    rsql: '【R+SQL】'
+    # rsql: '【R+SQL】'
+    rsql: '[R+SQL] '
     category: 
       edition_s: 'DS-100本ノック＋α（標準編）'
       edition_a: 'DS-100本ノック＋α（発展編）'
