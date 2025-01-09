@@ -200,13 +200,13 @@ blockquote.alert {
 /* 関連記事 */
 .related-posts {
   margin-top: 12pt;
-  padding: 6pt 12pt;
+  padding: 6pt 12pt 4pt;
   background-color: var(--code-bg); 
   border-radius: 8px;
 }
 .related-posts h2 {
   font-size: 14pt;
-  margin-bottom: 14pt;
+  margin-bottom: 12pt;
 }
 .related-posts ul {
   list-style-type: none;
@@ -214,7 +214,7 @@ blockquote.alert {
 }
 .related-posts li {
   font-size: 12pt;
-  margin-bottom: 0.5em;
+  margin-bottom: 2pt;
 }
 
 .related-posts a {
