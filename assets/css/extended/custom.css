@@ -197,14 +197,15 @@ blockquote.alert {
   border-left: 5px solid #afc300 !important;
 }
 
+/* 関連記事 */
 .related-posts {
-  margin-top: 50pt;
-  padding: 12pt;
+  margin-top: 12pt;
+  padding: 10pt;
   background-color: var(--code-bg); 
   border-radius: 8px;
 }
 .related-posts h2 {
-  font-size: 20pt;
+  font-size: 18pt;
   margin-bottom: 18pt;
 }
 .related-posts ul {

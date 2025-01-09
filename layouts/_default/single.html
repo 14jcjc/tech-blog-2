@@ -42,32 +42,6 @@
   </div>
   {{- end }}
 
-  {{/* katsu: 関連コンテンツ */}}
-  <div class="related-posts">
-    {{- $limit := .Site.Params.related.limit -}}
-    {{- $related := .Site.RegularPages.Related . | first $limit -}}
-    {{- with $related -}}
-    <h2>関連記事</h2>
-      <ul>
-        {{- range $i, $p := . -}}
-          <li>
-            <a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a>
-            {{- with .HeadingsFiltered -}}
-              <ul>
-                {{- range . -}}
-                  {{- $link := printf "%s#%s" $p.RelPermalink .ID | safeURL -}}
-                  <li>
-                    <a href="{{ $link }}">{{- .Title -}}</a>
-                  </li>
-                {{- end -}}
-              </ul>
-              {{- end -}}
-          </li>
-          {{- end -}}
-      </ul>
-      {{- end -}}
-  </div>
-
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
@@ -75,6 +49,33 @@
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
+
+    {{/* katsu: 関連コンテンツ */}}
+    <div class="related-posts">
+      {{- $limit := .Site.Params.related.limit -}}
+      {{- $related := .Site.RegularPages.Related . | first $limit -}}
+      {{- with $related -}}
+      <h2>関連記事</h2>
+        <ul>
+          {{- range $i, $p := . -}}
+            <li>
+              <a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a>
+              {{- with .HeadingsFiltered -}}
+                <ul>
+                  {{- range . -}}
+                    {{- $link := printf "%s#%s" $p.RelPermalink .ID | safeURL -}}
+                    <li>
+                      <a href="{{ $link }}">{{- .Title -}}</a>
+                    </li>
+                  {{- end -}}
+                </ul>
+                {{- end -}}
+            </li>
+            {{- end -}}
+        </ul>
+        {{- end -}}
+    </div>
+
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
