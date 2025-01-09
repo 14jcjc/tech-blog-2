@@ -606,19 +606,6 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 \<kbd>: \
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
-### リスト
-
-1. 1111111111
-   - aaaaaaaaaa
-   - bbbbbbbbbbb
-   - ccccccccccccc
-     - ddddddddddddd
-     - eeeeeeeeeeeeee
-2. 2222222222
-     * fffffffffff
-     + gggggggggggg
-       - hhhhhhhhhhhh
-       - iiiiiiiiiiiii
 
 ### タスクリスト
 
@@ -635,17 +622,34 @@ Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the ses
 
 --  
 
+---
+
+### リスト
+
+1. [SITE.全ページ](https://gohugo.io/methods/site/allpages/) すべての言語のすべてのページのコレクションを返します。
+   - [サイト.ページ](https://gohugo.io/methods/site/pages/)すべてのページのコレクションを返します。
+   - [SITE.通常ページ](https://gohugo.io/methods/site/regularpages/)すべての通常ページのコレクションを返します。
+     - [サイトセクション](https://gohugo.io/methods/site/sections/)最初のレベルのセクションページのコレクションを返します。
+
+2. デフォルトでは、Hugo はページ コレクションを次のように並べ替えます。
+
+   1.  [重さ](https://gohugo.io/methods/page/weight/)、[日付](https://gohugo.io/methods/page/date/)の降順
+   2.  [LinkTitle が](https://gohugo.io/methods/page/linktitle/)[Title](https://gohugo.io/methods/page/title/)に戻る[](https://gohugo.io/methods/page/title/)
+   3.  [](https://gohugo.io/methods/page/file/#filename)ページがファイルによってバックアップされている場合は[ファイル名](https://gohugo.io/methods/page/file/#filename)
+       - これらのメソッドを使用してページ コレクションを並べ替えます。
+       - これらのメソッドを使用してページ コレクションを並べ替えます。
+
 For example, the base template below calls the [partial](https://gohugo.io/functions/partials/include/) function to include partial templates for the `head`, `header`, and `footer` elements of each page, and it uses the [block](https://gohugo.io/functions/go-template/block/) function to include `home`, `single`, `section`, `taxonomy`, and `term` templates within the `main` element of each page.
 
 A home template renders your site’s home page. For a single page site this is the only required template. For example, the home template below inherits the site’s shell from the base template, and renders the home page content with a list of pages.
 
 ショートコードの定義方法に応じて、引数は名前付き、位置指定、またはその両方になりますが、1 回の呼び出しで引数タイプを混在させることはできません。
 
-## H2 見出し2
+## H2 見出し2 セクションには、1つ以上の祖先 (ホームページを含む) と、0個以上の子孫があります
 
 Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
 
-### H3 見出し3
+### H3 見出し3 ショートコードは、組み込みテンプレートまたはカスタムテンプレートを呼び出すコンテンツファイル内のシンプルなスニペット
 
 Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。
 
@@ -657,9 +661,13 @@ TODO: rewrite the paragraph below.
 
 これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
 
-ショートコードの定義方法に応じて、引数は名前付き、位置指定、またはその両方になりますが、1 回の呼び出しで引数タイプを混在させることはできません。名前付き引数の形式は、 という形式の HTML の形式をモデルにしていますname="value"。
+ショートコードの定義方法に応じて、引数は名前付き、位置指定、またはその両方になりますが、1 回の呼び出しで引数タイプを混在させることはできません。
 
-#### H4 見出し4
+#### H4 見出し4 ショートコードは、コンテンツファイル内のシンプルなスニペット
+
+ショートコードの定義方法に応じて、引数は名前付き、位置指定、またはその両方になりますが、1 回の呼び出しで引数タイプを混在させることはできません。名前付き引数の形式は、`name="value"` という形式の HTML の形式をモデルにしています。
+
+#### H4 見出し4 ショートコードは、組み込みテンプレートまたはカスタムテンプレートを呼び出すコンテンツファイル内のシンプルなスニペット
 
 Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。
 
@@ -687,6 +695,22 @@ Hugo は、特定のページのテンプレートを選択する際に、以下
 Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。
 
 テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
+
+#### H4 [PAGE.ページ](https://gohugo.io/methods/page/pages/)
+
+現在のセクション内の通常のページと、直下の子孫セクションのセクション ページのコレクションを返します。
+
+#### H4 [PAGE.通常ページ](https://gohugo.io/methods/page/regularpages/)
+
+現在のセクション内の通常のページのコレクションを返します。
+
+#### H4 [PAGE.RegularPagesRecursive](https://gohugo.io/methods/page/regularpagesrecursive/)
+
+現在のセクション内の通常のページと、すべての子孫セクション内の通常のページのコレクションを返します。
+
+#### H4 [ページセクション](https://gohugo.io/methods/page/sections/)
+
+指定されたページの直下のセクションごとに 1 つずつ、セクション ページのコレクションを返します。
 
 ### Mathematics in Markdown
 
