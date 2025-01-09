@@ -136,7 +136,7 @@ params:
   # description: katsuのブログです。
   defaultTheme: auto # dark, light
   related:
-    limit: 5 # 関連コンテンツを最大 N件まで表示
+    limit: 10 # 関連コンテンツを最大 N件まで表示
 
   disableThemeToggle: false
   ShowReadingTime: false

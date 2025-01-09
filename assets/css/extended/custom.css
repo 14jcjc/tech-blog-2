@@ -200,7 +200,7 @@ blockquote.alert {
 /* 関連記事 */
 .related-posts {
   margin-top: 12pt;
-  padding: 4pt 11pt 4pt;
+  padding: 4pt 11pt 3pt;
   background-color: var(--code-bg); 
   border-radius: 8px;
 }
@@ -209,6 +209,7 @@ blockquote.alert {
   margin-bottom: 5pt;
 }
 .related-posts ul {
+  /* リストアイテムのマーカー(点や数字など)を非表示にする: */
   list-style-type: none;
   padding-left: 0;
 }
