@@ -56,9 +56,9 @@ h3 {
 /* post-single.css */
 /* post contents の H2 に border を引く */
 .post-content h2 {
-  /* margin: 32px auto 24px; */
   /* auto は width が設定されると左右中央揃えになる */
-  margin: 45px auto 24px; /* 上部, 左右, 下部 */
+  /* margin: 32px auto 24px; */
+  margin: 70px auto 24px; /* 上部, 左右, 下部 */
   font-size: 32px;
   border-bottom: 1.7px solid #C0C0E0; /* アンダーラインの太さと色 */
   padding-bottom: 5px; /* アンダーラインと文字の間隔 */
@@ -66,21 +66,25 @@ h3 {
 
 .post-content h3 {
   font-size: 24px;
-  margin: 24px 0 16px;
+  /* margin: 24px 0 16px; */
+  margin: 40px 0 16px;
 }
 
 .post-content h4 {
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 18px;
   margin: 24px 0 16px;
 }
 
 .post-content h5 {
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: 16px;
   margin: 24px 0 16px;
 }
 
 .post-content h6 {
-  font-size: 12px;
+  /* font-size: 12px; */
+  font-size: 14px;
   margin: 24px 0 16px;
 }
 
