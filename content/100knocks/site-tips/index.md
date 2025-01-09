@@ -1,6 +1,6 @@
 ---
 # title: '『データサイエンス100本ノック～構造化データ加工編ガイドブック』レビュー'
-title: サイト作成Tips
+# title: サイト作成Tips
 # draft: true
 # date: '2024-12-29T01:20:27+09:00'
 # weight: 11
@@ -10,6 +10,7 @@ weight: 1000
 slug: 'site-tips'
 summary: 'これはsummaryです。'
 description: "This is description."
+hideSummary: true
 UseHugoToc: true
 TocOpen: true
 categories: 
@@ -257,6 +258,8 @@ read: assets/test/pets.csv
 
 #### Rコード {#r}
 
+Rのコードは以下のようになります。
+
 ```r {linenos=true,lineNoStart=1,hl_lines=[2,"7-8"]}
 receipt %>% 
   summarise(amount = sum(amount), .by = "sales_ymd") %>% 
@@ -267,6 +270,8 @@ receipt %>%
   mutate(diff_amount = amount - pre_amount) %>% 
   arrange(sales_ymd) # コメント
 ```
+
+Rのコードは以下のようになります。
 
 ```r {linenos=inline,lineNoStart=14,hl_lines=[2,"6-8"],anchorLineNos=true}
 receipt %>% 
@@ -279,7 +284,11 @@ receipt %>%
   arrange(sales_ymd) # コメント
 ```
 
+次はSQLです。
+
 #### SQL
+
+SQLのコードは以下のようになります。
 
 ```sql {linenos=false,lineNoStart=1,hl_lines=["3-4","9-11"]}
 with customer_amount as (
@@ -300,7 +309,11 @@ order by
   total_amount DESC
 ```
 
+次は go-html-template コードです。
+
 #### go-html-template コード
+
+go-html-template のコードは以下のようになります。
 
 ```go-html-template {linenos=false,anchorLineNos=false}
 <div><p>xxxxxxxxxxxxxxxxxxxxxx</p></div>
@@ -324,6 +337,8 @@ order by
 ```
 
 #### go-text-template コード
+
+go-text-template のコードは以下のようになります。
 
 ```go-text-template {linenos=false,anchorLineNos=false}
 <div><p>xxxxxxxxxxxxxxxxxxxxxx</p></div>
@@ -372,6 +387,8 @@ order by
 
 ### Code block with Hugo's internal highlight shortcode {#code}
 
+Rのコードは以下のようになります。
+
 {{< highlight r >}}
 receipt %>% 
   summarise(amount = sum(amount), .by = "sales_ymd") %>% 
@@ -383,11 +400,15 @@ receipt %>%
   arrange(sales_ymd) # コメント
 {{< /highlight >}}
 
+htmlのコードは以下のようになります。
+
 {{< highlight html >}}
 {{ range .Pages }}
   <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
 {{ end }}
 {{< /highlight >}}
+
+go-html-template のコードは以下のようになります。
 
 {{< highlight go-html-template "lineNos=inline, lineNoStart=42" >}}
 {{ range .Pages }}
@@ -614,6 +635,53 @@ Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the ses
 
 --  
 
+## H2 見出し2
+
+Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
+
+### H3 見出し3
+
+Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。
+
+```go-html-template {linenos=false,anchorLineNos=false}
+{{%/* comment */%}} 
+TODO: rewrite the paragraph below. 
+{{%/* /comment */%}}
+```
+
+これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
+
+ショートコードの定義方法に応じて、引数は名前付き、位置指定、またはその両方になりますが、1 回の呼び出しで引数タイプを混在させることはできません。名前付き引数の形式は、 という形式の HTML の形式をモデルにしていますname="value"。
+
+#### H4 見出し4
+
+Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。
+
+```r {linenos=true,lineNoStart=1,hl_lines=[2,"7-8"]}
+receipt %>% 
+  summarise(amount = sum(amount), .by = "sales_ymd") %>% 
+  mutate(
+    pre_sales_ymd = lag(sales_ymd, n = 1L, order_by = sales_ymd), 
+    pre_amount = lag(amount, n = 1L, default = NA, order_by = sales_ymd)
+  ) %>% 
+  mutate(diff_amount = amount - pre_amount) %>% 
+  arrange(sales_ymd) # コメント
+```
+
+これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
+
+##### H5 見出し5
+
+Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。
+
+これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
+
+###### H6 見出し6
+
+Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。
+
+テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
+
 ### Mathematics in Markdown
 
 - This is an inline \(a^*=x-b^*\) equation.
@@ -658,28 +726,6 @@ A \\$5 bill _saved_ is a \\$5 bill _earned_.
 - Chemistry
 
 $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
-
-Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。
-
-## H2 見出し2
-
-Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
-
-### H3 見出し3
-
-Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
-
-#### H4 見出し4
-
-Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
-
-##### H5 見出し5
-
-Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
-
-###### H6 見出し6
-
-Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。これは自然なことのはずですが、さまざまなパラメータのバリエーションの具体的な例については、以下の表をご覧ください。
 
 ## Diagrams
 
