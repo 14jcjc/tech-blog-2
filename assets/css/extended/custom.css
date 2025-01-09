@@ -200,7 +200,7 @@ blockquote.alert {
 /* 関連記事 */
 .related-posts {
   margin-top: 12pt;
-  padding: 4pt 10pt 4pt;
+  padding: 4pt 12pt 4pt;
   background-color: var(--code-bg); 
   border-radius: 8px;
 }
