@@ -4,3 +4,29 @@
 {{- /* Head custom content area end */ -}}
 
 {{/*  This is contents of extend_head.html.  */}}
+{{/* katsu */}}
+
+{{/* style を適用する type の配列 */}}
+{{
+  $arrayType := slice "testglossary" "<other-type-string>"
+}}
+
+{{- $tp := "" -}}
+{{- with .Page.Params.type -}}
+  {{- $tp = . -}}
+  {{- $found := false -}}
+  {{- $allowed := $arrayType -}}
+  {{- range $allowed -}}
+    {{- if eq . $tp -}}
+      {{- $found = true -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $found -}}
+    {{/* style (css) の定義 */}}
+    <style>
+      .list {
+        background-color: var(--theme); 
+      }
+    </style> 
+  {{- end -}}
+{{- end -}}

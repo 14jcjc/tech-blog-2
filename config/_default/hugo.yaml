@@ -135,8 +135,10 @@ params:
   # subtitle: This is subtitle
   # description: katsuのブログです。
   defaultTheme: auto # dark, light
+  
   related:
-    limit: 10 # 関連コンテンツを最大 N件まで表示
+    show: true
+    limit: 10 # 関連コンテンツを最大 N件まで表示 (default: 5)
 
   disableThemeToggle: false
   ShowReadingTime: false

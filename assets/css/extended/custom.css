@@ -225,3 +225,7 @@ blockquote.alert {
 .related-posts a:hover {
   text-decoration: underline;
 }
+
+.testglossary-posts {
+  background-color: var(--theme); 
+}

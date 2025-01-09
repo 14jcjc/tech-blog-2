@@ -1,6 +1,6 @@
 ---
 draft: true
-section: page
+date: '2024-12-22T02:20:27+09:00'
 description: 'description: 用語集です。'
 build:
   render: always # glossary ページが常にレンダリングされることを保証する
