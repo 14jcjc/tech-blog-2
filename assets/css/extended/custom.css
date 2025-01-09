@@ -137,6 +137,7 @@ h3 {
 /* chroma (Hugo の構文ハイライト) */
 .chroma {
   background-color: unset;
+  margin: 0px 0 26px;
 }
 
 /* PaperMod custom styles for demo site */
