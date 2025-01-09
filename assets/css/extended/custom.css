@@ -67,20 +67,21 @@ h3 {
 .post-content h3 {
   font-size: 24px;
   /* margin: 24px 0 16px; */
-  margin: 40px 0 16px;
+  margin: 40px 0 20px;
 }
 
 .post-content h4 {
   /* font-size: 16px; */
   font-size: 18px;
   /* margin: 24px 0 16px; */
-  margin: 26px 0 16px;
+  margin: 30px 0 16px;
 }
 
 .post-content h5 {
   /* font-size: 14px; */
   font-size: 16px;
-  margin: 24px 0 16px;
+  /* margin: 24px 0 16px; */
+  margin: 26px 0 16px;
 }
 
 .post-content h6 {
