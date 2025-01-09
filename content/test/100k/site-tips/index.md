@@ -13,6 +13,11 @@ description: "This is description."
 hideSummary: true
 UseHugoToc: true
 TocOpen: true
+
+# related:
+#   show: true
+#   limit: 7 # 関連コンテンツを最大 N件まで表示 (default: 5)
+
 categories: 
   - "DS-100本ノック"
 tags: 

@@ -51,7 +51,10 @@
     </ul>
 
     {{/* katsu: 関連コンテンツ */}}
-    {{- $limit := .Site.Params.related.limit | default 5 -}}
+    {{ $show := (.Param "related.show") | default (.Site.Params.related.show) | default true }}
+    {{ if $show }}
+    
+    {{ $limit := (.Param "related.limit") | default (.Site.Params.related.limit) | default 5 }}
     {{- $related := .Site.RegularPages.Related . | first $limit -}}
     {{- with $related -}}
     <div class="related-posts">
@@ -74,6 +77,7 @@
           {{- end -}}
       </ul>
     </div>
+    {{- end -}}
     {{- end -}}
 
     {{- if (.Param "ShowPostNavLinks") }}
