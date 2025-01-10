@@ -1,5 +1,6 @@
 /* PaperMod の配色変更 */
 :root {
+  --base-font-size: 16px;
 /* --code-bg: rgb(245, 245, 245); */
 /* --code-bg: #F5F5F5; */
 /* --code-bg: #F0F5FF; */
@@ -29,7 +30,10 @@
 } */
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: var(--base-font-size);
+  line-height: 1.6;
   font-weight: normal;
   font-style: normal;
 }
@@ -37,6 +41,7 @@ body {
 /* 半角文字のフォント */
 /* body * {
   font-family: 'Roboto', sans-serif; 
+  font-size: var(--base-font-size);
   font-weight: normal;
   font-style: normal;
 } */
@@ -57,6 +62,7 @@ code {
   /* font-family: 'Monaco', 'Roboto Mono', 'Consolas', 'Courier New', monospace; */
   /* font-family: 'Noto Sans Mono', 'Roboto Mono', 'Monaco', 'Consolas', 'Courier New', monospace; */
   font-family: 'Roboto Mono', 'Monaco', 'Consolas', 'Courier New', monospace;
+  font-size: calc(var(--base-font-size) * 0.88) !important;
   font-weight: normal;
   /* font-size: 12pt !important; */
 }
@@ -96,7 +102,8 @@ h6 {
 
 .first-entry .entry-header h1 {
   line-height: 1.4; /* default: 1.3 */
-  font-size: 35px !important;
+  /* font-size: 35px !important; */
+  font-size: calc(var(--base-font-size) * 2.25) !important;
    /* 上部, 左右, 下部 */
   /* margin: 0px auto 0px !important; */
   /* padding-bottom: 0px !important; */
@@ -105,7 +112,8 @@ h6 {
 /* post-single.css */
 
 h1 {
-  font-size: 35px !important;
+  /* font-size: 35px !important; */
+  font-size: calc(var(--base-font-size) * 1.75) !important;
   /* 上部, 左右, 下部 */
   /* margin: 0px auto 0px !important; */
   /* padding-bottom: 0px; */
@@ -116,44 +124,47 @@ h1 {
   /* auto は width が設定されると左右中央揃えになる */
   /* margin: 32px auto 24px; */
   margin: 70px auto 24px; /* 上部, 左右, 下部 */
-  /* font-size: 32px; */
-  font-size: 28px;
+  /* font-size: 28px; */
+  font-size: calc(var(--base-font-size) * 1.65);
   /* アンダーラインの太さと色 */
   border-bottom: 1.7px solid #BAD0E0;
   padding-bottom: 5px; /* アンダーラインと文字の間隔 */
 }
 
 .post-content h3 {
-  /* font-size: 28px; */
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: calc(var(--base-font-size) * 1.35);
   /* margin: 24px 0 16px; */
   margin: 45px 0 20px;
 }
 
 .post-content h4 {
-  /* font-size: 16px; */
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: calc(var(--base-font-size) * 1.1);
   /* margin: 24px 0 16px; */
   margin: 30px 0 16px;
 }
 
 .post-content h5 {
   /* font-size: 14px; */
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: calc(var(--base-font-size) * 1.0);
   /* margin: 24px 0 16px; */
   margin: 26px 0 16px;
 }
 
 .post-content h6 {
   /* font-size: 12px; */
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: calc(var(--base-font-size) * 0.9);
   margin: 24px 0 16px;
 }
 
 /* Archive */
 .archive-posts {
   width: 100%; /* default: 100% */
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: calc(var(--base-font-size) * 0.93);
   /* background: #FFFFFF */
 }
 
@@ -176,7 +187,8 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 80%;
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: calc(var(--base-font-size) * 2.5);
   font-weight: 300;
 }
 
@@ -256,7 +268,8 @@ blockquote.alert {
   border-radius: 8px;
 }
 .related-posts h2 {
-  font-size: 14pt;
+  /* font-size: 14pt; */
+  font-size: calc(var(--base-font-size) * 1.1);
   margin-bottom: 5pt;
 }
 .related-posts ul {
@@ -265,7 +278,8 @@ blockquote.alert {
   padding-left: 0;
 }
 .related-posts li {
-  font-size: 12pt;
+  /* font-size: 12pt; */
+  font-size: calc(var(--base-font-size) * 1.0);
   margin: 1pt 0;
   /* margin-bottom: 2pt; */
 }
