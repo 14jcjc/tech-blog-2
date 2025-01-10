@@ -4,9 +4,14 @@
 {{- /* Head custom content area end */ -}}
 
 {{/*  This is contents of extend_head.html.  */}}
-{{/* katsu */}}
+{{/*  katsu  */}}
 
-{{/* style を適用する type の配列 */}}
+{{/*  font  */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+{{/*  style を適用する type の配列  */}}
 {{
   $arrayType := slice "testglossary" "<other-type-string>"
 }}
@@ -22,7 +27,7 @@
     {{- end -}}
   {{- end -}}
   {{- if $found -}}
-    {{/* style (css) の定義 */}}
+    {{/*  style (css) の定義  */}}
     <style>
       .list {
         background-color: var(--theme); 

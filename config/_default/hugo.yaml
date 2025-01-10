@@ -376,7 +376,8 @@ menu:
 pygmentsUseClasses: true
 markup:
   highlight:
-    noClasses: false
+    # noClasses: false
+    noClasses: true
     anchorLineNos: false
     codeFences: true
     guessSyntax: true
