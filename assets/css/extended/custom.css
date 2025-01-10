@@ -63,10 +63,10 @@ code {
 
 /* chroma (Hugo の構文ハイライト) */
 .chroma {
-  /* background-color: unset; */
-  background-color: unset !important;
+  background-color: unset;
+  /* background-color: unset !important; */
   /* margin: 0px 0 26px; */
-  margin: 0px 0 26px !important;
+  /* margin: 0px 0 26px !important; */
 }
 
 /* 本文の line-height (default: 1.6) */
@@ -116,36 +116,37 @@ h1 {
   /* auto は width が設定されると左右中央揃えになる */
   /* margin: 32px auto 24px; */
   margin: 70px auto 24px; /* 上部, 左右, 下部 */
-  font-size: 32px;
+  /* font-size: 32px; */
+  font-size: 28px;
   /* アンダーラインの太さと色 */
   border-bottom: 1.7px solid #BAD0E0;
   padding-bottom: 5px; /* アンダーラインと文字の間隔 */
 }
 
 .post-content h3 {
-  /* font-size: 24px; */
-  font-size: 28px;
+  /* font-size: 28px; */
+  font-size: 24px;
   /* margin: 24px 0 16px; */
   margin: 45px 0 20px;
 }
 
 .post-content h4 {
   /* font-size: 16px; */
-  font-size: 20px;
+  font-size: 18px;
   /* margin: 24px 0 16px; */
   margin: 30px 0 16px;
 }
 
 .post-content h5 {
   /* font-size: 14px; */
-  font-size: 18px;
+  font-size: 16px;
   /* margin: 24px 0 16px; */
   margin: 26px 0 16px;
 }
 
 .post-content h6 {
   /* font-size: 12px; */
-  font-size: 16px;
+  font-size: 14px;
   margin: 24px 0 16px;
 }
 

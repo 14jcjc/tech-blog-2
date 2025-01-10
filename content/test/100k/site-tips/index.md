@@ -305,10 +305,10 @@ receipt %>%
   arrange(sales_ymd) # コメント
 ```
 
-Rのコードは以下のようになります。
+Rのコードは上記のようになります。
 
 > [!CAUTION]
-> linenos=inline とすると、merge-bottom が効かない！ → 解決済み 
+> linenos=inline とすると、merge-bottom が効かない！
 
 次はSQLです。
 
@@ -316,7 +316,7 @@ Rのコードは以下のようになります。
 
 SQLのコードは以下のようになります。
 
-```sql {linenos=false,lineNoStart=1,hl_lines=["3-4","9-11"]}
+```sql {linenos=false}
 with customer_amount as (
   select
     customer_id, 
@@ -362,6 +362,8 @@ go-html-template のコードは以下のようになります。
 {{ end }}
 ```
 
+次は go-text-template コードです。
+
 #### go-text-template コード
 
 go-text-template のコードは以下のようになります。
@@ -387,6 +389,18 @@ go-text-template のコードは以下のようになります。
 {{ end }}
 ```
 
+次は yaml です。
+
+#### yaml
+
+```yml {linenos=false}
+params:
+  assets:
+    disableFingerprinting: true
+```
+
+次は text です。
+
 #### textコード
 
 ```text {linenos=true,lineNoStart=1,hl_lines=["3-4",23], anchorLineNos=true}
@@ -410,6 +424,8 @@ go-text-template のコードは以下のようになります。
 └── tips
     └── index.md
 ```
+
+Hugo's internal highlight. ⬇️
 
 ### Code block with Hugo's internal highlight shortcode {#code}
 

@@ -378,21 +378,23 @@ menu:
 pygmentsUseClasses: true
 markup:
   highlight:
+    # noClasses: true # default
     # noClasses: false
-    noClasses: true
     anchorLineNos: false
     codeFences: true
-    guessSyntax: true
+    guessSyntax: false
+    # guessSyntax: true
     lineNos: true
     lineNoStart: 1
     lineNumbersInTable: true
+    # <code>タグ内を強調表示する. codeタグは code-inline という名前のクラスを取得する: 
     hl_inline: false
     hl_Lines: ""
     lineAnchors: ""
     noHl: false
     style: monokai
     # tabWidth: 2
-    # wrapperClass: highlight
+    wrapperClass: highlight
 
   tableOfContents:
     ordered: false
