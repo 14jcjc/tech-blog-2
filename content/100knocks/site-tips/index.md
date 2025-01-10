@@ -1,7 +1,7 @@
 ---
 # title: '『データサイエンス100本ノック～構造化データ加工編ガイドブック』レビュー'
 title: サイト作成Tips
-# draft: false
+# draft: true
 # date: '2024-12-29T01:20:27+09:00'
 # weight: 11
 draft: false
@@ -13,6 +13,11 @@ description: "This is description."
 hideSummary: true
 UseHugoToc: true
 TocOpen: true
+
+# related:
+#   show: true
+#   limit: 7 # 関連コンテンツを最大 N件まで表示 (default: 5)
+
 categories: 
   - "DS-100本ノック"
 tags: 
@@ -46,9 +51,19 @@ cover:
 ---
 
 このブロックは summary です。  
-<!\--more--> までがリスト表示で出力されます。
-summary: の設定より優先度が高いです。
+<!\--more--> までがリスト表示で出力されます.
+summary: の設定より優先度が高いです. 
 <!--more-->
+
+## font-family
+
+179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.
+
+`179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.`
+
+**179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.**
+
+*179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.*
 
 ## 絵文字
 
@@ -588,8 +603,11 @@ ABC ~打ち消し線~ XYZ
 
 \*, **, ***: \
 *斜体*  
-**太字**  
-***太字と斜体***
+**太字 Igl**  
+***太字と斜体 Igl***
+
+<i>このテキストは斜体です</i>
+<em>このテキストは強調（斜体）されています</em>
 
 \<ins>: \
 これは<ins>下線付きの文章</ins>です。
