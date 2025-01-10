@@ -11,6 +11,8 @@ slug: 'site-tips'
 summary: 'これはsummaryです。'
 description: "This is description."
 hideSummary: true
+hideFooter: false
+# ShowToc: false
 UseHugoToc: true
 TocOpen: true
 
@@ -55,15 +57,19 @@ cover:
 summary: の設定より優先度が高いです. 
 <!--more-->
 
-## font-family
+--- 
+
+## フォントファミリー (font-family)
 
 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.
 
 `179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.`
 
-**179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.**
+**太字: 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.**
 
-*179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.*
+*斜体: 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.*
+
+***太字+斜体: 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.***
 
 ## 絵文字
 
@@ -80,6 +86,23 @@ summary: の設定より優先度が高いです.
 ℹ️ - 情報  
 ➡️ ⬅️ ⬆️ ⬇️ 👉  
 :see_no_evil: :hear_no_evil: :speak_no_evil:
+
+## Font Awesome
+
+サイズなどのスタイル設定 → 
+{{< href-target-blank url="https://docs.fontawesome.com/web/style/size" text="font awesome" >}}
+
+Alerts スタイルの参考サイト → 
+{{< href-target-blank url="https://sdmxistattoolkit.github.io/mydoc_alerts.html" text="ISTAT Statkit" >}}
+
+<i class="fa-solid fa-circle-info"></i> 
+<i class="fa-solid fa-bell"></i>
+
+<div style="text-align: center;">
+  <i class="fa-solid fa-circle-info fa-3x" style="color: #0000FF;"></i>
+  <h4 style="margin-top: 0.25em;">infomation</h4>
+  <p>スタイル設定</p>
+</div>
 
 ## shortcodes {#shortcodes}
 
@@ -299,13 +322,18 @@ receipt %>%
   arrange(sales_ymd) # コメント
 ```
 
+Rのコードは上記のようになります。
+
+> [!CAUTION]
+> linenos=inline とすると、merge-bottom が効かない！
+
 次はSQLです。
 
 #### SQL
 
 SQLのコードは以下のようになります。
 
-```sql {linenos=false,lineNoStart=1,hl_lines=["3-4","9-11"]}
+```sql {linenos=false}
 with customer_amount as (
   select
     customer_id, 
@@ -351,6 +379,8 @@ go-html-template のコードは以下のようになります。
 {{ end }}
 ```
 
+次は go-text-template コードです。
+
 #### go-text-template コード
 
 go-text-template のコードは以下のようになります。
@@ -376,6 +406,18 @@ go-text-template のコードは以下のようになります。
 {{ end }}
 ```
 
+次は yaml です。
+
+#### yaml
+
+```yml {linenos=false}
+params:
+  assets:
+    disableFingerprinting: true
+```
+
+次は text です。
+
 #### textコード
 
 ```text {linenos=true,lineNoStart=1,hl_lines=["3-4",23], anchorLineNos=true}
@@ -399,6 +441,8 @@ go-text-template のコードは以下のようになります。
 └── tips
     └── index.md
 ```
+
+Hugo's internal highlight. ⬇️
 
 ### Code block with Hugo's internal highlight shortcode {#code}
 
@@ -430,6 +474,8 @@ go-html-template のコードは以下のようになります。
   <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
 {{ end }}
 {{< /highlight >}}
+
+go-html-template のコードは上記のようになります。
 
 ## Markdown
 
@@ -545,9 +591,7 @@ Rendered:
 > [!WARNING]
 > Urgent info that needs immediate user attention to avoid problems.
 
-5. 
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
+5. CAUTION は無し
 
 ### 注釈
 
@@ -646,7 +690,9 @@ Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the ses
 
 1. [SITE.全ページ](https://gohugo.io/methods/site/allpages/) すべての言語のすべてのページのコレクションを返します。
    - [サイト.ページ](https://gohugo.io/methods/site/pages/)すべてのページのコレクションを返します。
-   - [SITE.通常ページ](https://gohugo.io/methods/site/regularpages/)すべての通常ページのコレクションを返します。
+   - [SITE.通常ページ](https://gohugo.io/methods/site/regularpages/)すべての通常ページのコレクションを返します。  
+     ノート
+     - 最初のレベルのセクションページのコレクションを返します。
      - [サイトセクション](https://gohugo.io/methods/site/sections/)最初のレベルのセクションページのコレクションを返します。
 
 2. デフォルトでは、Hugo はページ コレクションを次のように並べ替えます。
@@ -662,6 +708,8 @@ For example, the base template below calls the [partial](https://gohugo.io/func
 A home template renders your site’s home page. For a single page site this is the only required template. For example, the home template below inherits the site’s shell from the base template, and renders the home page content with a list of pages.
 
 ショートコードの定義方法に応じて、引数は名前付き、位置指定、またはその両方になりますが、1 回の呼び出しで引数タイプを混在させることはできません。
+
+---
 
 ## H2 見出し2 セクションには、1つ以上の祖先 (ホームページを含む) と、0個以上の子孫があります
 

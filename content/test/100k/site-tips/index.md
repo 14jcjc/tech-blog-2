@@ -59,7 +59,7 @@ summary: の設定より優先度が高いです.
 
 --- 
 
-## font-family
+## フォントファミリー (font-family)
 
 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.
 
@@ -86,6 +86,23 @@ summary: の設定より優先度が高いです.
 ℹ️ - 情報  
 ➡️ ⬅️ ⬆️ ⬇️ 👉  
 :see_no_evil: :hear_no_evil: :speak_no_evil:
+
+## Font Awesome
+
+サイズなどのスタイル設定 → 
+{{< href-target-blank url="https://docs.fontawesome.com/web/style/size" text="font awesome" >}}
+
+Alerts スタイルの参考サイト → 
+{{< href-target-blank url="https://sdmxistattoolkit.github.io/mydoc_alerts.html" text="ISTAT Statkit" >}}
+
+<i class="fa-solid fa-circle-info"></i> 
+<i class="fa-solid fa-bell"></i>
+
+<div style="text-align: center;">
+  <i class="fa-solid fa-circle-info fa-3x" style="color: #0000FF;"></i>
+  <h4 style="margin-top: 0.25em;">infomation</h4>
+  <p>スタイル設定</p>
+</div>
 
 ## shortcodes {#shortcodes}
 
@@ -574,9 +591,7 @@ Rendered:
 > [!WARNING]
 > Urgent info that needs immediate user attention to avoid problems.
 
-5. 
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
+5. CAUTION は無し
 
 ### 注釈
 

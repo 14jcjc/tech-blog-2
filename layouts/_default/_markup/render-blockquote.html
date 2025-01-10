@@ -1,31 +1,22 @@
-{{/* $emojis := dict
-  "note" ":information_source:"
-  "warning" ":information_source:"
-  "important" ":information_source:"
-  "caution" ":exclamation:"
-  "tip" ":bulb:"
+{{/*  "note" "fa-solid fa-circle-info fa-lg"  */}}
+{{/* $class := dict
+  "note" (printf "class=%q style=\"color: %s;\"" "fa-solid fa-circle-info" "#2196f3")
+  "tip" (printf "class=%q style=\"color: %s;\"" "fa-solid fa-lightbulb" "#60C000")
+  "important" (printf "class=%q style=\"color: %s;\"" "fa-solid fa-circle" "#9560f0")
+  "warning" (printf "class=%q style=\"color: %s;\"" "fa-solid fa-triangle-exclamation" "#ff5722")
 */}}
 
-{{/* $emojis := dict
-  "note" ":memo:"
-  "warning" ":warning:"
-  "important" ":exclamation:"
-  "caution" ":exclamation:"
-  "tip" ":bulb:"
-*/}}
-
-{{ $emojis := dict
-  "note" "ℹ️"
-  "warning" "⚠️"
-  "important" "🟣"
-  "caution" "❗️"
-  "tip" "💡"
+{{ $class := dict
+  "note" (printf "class=%q" "fa-solid fa-circle-info")
+  "tip" (printf "class=%q" "fa-solid fa-lightbulb")
+  "important" (printf "class=%q" "fa-solid fa-circle")
+  "warning" (printf "class=%q" "fa-solid fa-triangle-exclamation")
 }}
 
 {{ if eq .Type "alert" }}
   <blockquote class="alert alert-{{ .AlertType }}">
     <p class="alert-heading">
-      {{ transform.Emojify (index $emojis .AlertType) }}
+      <i {{ printf "%s" (index $class .AlertType) | safeHTMLAttr }}></i>
       {{ with .AlertTitle }}
         {{ . }}
       {{ else }}
