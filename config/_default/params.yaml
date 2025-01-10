@@ -12,8 +12,8 @@ k100:
     # rsql: '【R+SQL】'
     rsql: '[R+SQL] '
     category: 
-      edition_s: 'DS-100本ノック＋α（標準編）'
-      edition_a: 'DS-100本ノック＋α（発展編）'
+      edition_s: 'DS-100本ノック＋α (標準編) '
+      edition_a: 'DS-100本ノック＋α (発展編) '
   afiurl: 
     book: 
       amazon: "https://amzn.to/3Pmq47H"

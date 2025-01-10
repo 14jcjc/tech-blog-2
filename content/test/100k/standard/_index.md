@@ -6,9 +6,9 @@ date: '2025-01-01T01:10:39+09:00'
 # draft: false
 draft: true
 weight: 1
-# categories: ["DS-100本ノック＋α（標準編）"]
-summary: '【R+SQL】データサイエンス100本ノック＋α（標準編）の問題集です。'
-description: '【R+SQL】データサイエンス100本ノック＋α（標準編）の問題集です。'
+# categories: ["DS-100本ノック＋α (標準編) "]
+summary: '[R+SQL] データサイエンス100本ノック＋α (標準編) の問題集です。'
+description: '[R+SQL] データサイエンス100本ノック＋α (標準編) の問題集です。'
 cover:
   image: "images/100knocks/cover-100k-standard.png" #< /static
   relative: false

@@ -1,6 +1,6 @@
 ---
 # title: "2nd Post"
-title: '【R+SQL】データサイエンス100本ノック＋α - 環境設定'
+title: '[R+SQL] データサイエンス100本ノック＋α - 環境設定'
 # draft: true
 # date: '2024-12-30T22:24:00+09:00'
 # weight: 3

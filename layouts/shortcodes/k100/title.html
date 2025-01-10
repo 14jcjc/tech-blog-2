@@ -7,9 +7,9 @@
 {{- $t := $title -}}
 {{- with .Get 0 -}}
   {{- if eq . "s" -}}
-    {{- $t = printf "%s%s（%s）" $rsql $title $editionS -}}
+    {{- $t = printf "%s%s (%s)" $rsql $title $editionS -}}
   {{- else -}}
-    {{- $t = printf "%s%s（%s）" $rsql $title $editionA -}}
+    {{- $t = printf "%s%s (%s)" $rsql $title $editionA -}}
   {{- end -}}
 {{- end -}}
 

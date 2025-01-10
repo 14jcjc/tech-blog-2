@@ -35,26 +35,36 @@ body {
 }
 
 /* 半角文字のフォント */
-body * {
+/* body * {
   font-family: 'Roboto', sans-serif; 
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 strong {
   font-weight: bold; /* 親要素で通常の太さを指定 */
 }
 
-code, pre {
-  font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
-  font-weight: normal; /* 親要素で通常の太さを指定 */
-  font-style: normal;
+/* コード (コードブロック, インラインコード)  */
+/* 'Monaco' が無い環境では 'Roboto Mono' を適用する */
+code {
+  /* font-family: 'xxxxxxxxxxxxxxxxxxxxx'; */
+  /* font-family: 'Roboto Mono', 'Monaco', 'Source Code Pro', 'Consolas', 'Courier New', monospace; */
+  /* font-family: 'Source Code Pro' */
+  /* font-family: 'Consolas', 'Courier New', monospace; */
+  /* font-family: 'Courier New', monospace; */
+  /* font-family: 'monospace' */
+  /* font-family: 'Monaco', 'Roboto Mono', 'Consolas', 'Courier New', monospace; */
+  /* font-family: 'Noto Sans Mono', 'Roboto Mono', 'Monaco', 'Consolas', 'Courier New', monospace; */
+  font-family: 'Roboto Mono', 'Monaco', 'Consolas', 'Courier New', monospace;
+  font-weight: normal;
+  /* font-size: 12pt !important; */
 }
 
+/* chroma (Hugo の構文ハイライト) */
 .chroma {
-  font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
-  font-weight: normal; /* 親要素で通常の太さを指定 */
-  font-style: normal;
+  background-color: unset;
+  margin: 0px 0 26px;
 }
 
 /* 本文の line-height (default: 1.6) */
@@ -167,12 +177,6 @@ h6 {
 .post-content li ol,
 .post-content li ul {
   margin-bottom: 0;
-}
-
-/* chroma (Hugo の構文ハイライト) */
-.chroma {
-  background-color: unset;
-  margin: 0px 0 26px !important; 
 }
 
 /* PaperMod custom styles for demo site */
