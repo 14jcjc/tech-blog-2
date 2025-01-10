@@ -166,11 +166,13 @@ params:
   # To Hide meta elements : date, read-time, author and available-translations for page: 
   hidemeta: false
   hideSummary: false # To Hide summary being shown in list pages
-  ShowToc: true
   ShowPageNums: true
   hideFooter: false
+
   UseHugoToc: true # To use Hugo’s default Toc instead of custom
+  ShowToc: true
   TocOpen: false
+  
   math: true
   mainMenu:
     enableChildren: true

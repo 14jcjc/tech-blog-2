@@ -11,8 +11,10 @@ slug: 'site-tips'
 summary: 'これはsummaryです。'
 description: "This is description."
 hideSummary: true
+hideFooter: false
+# ShowToc: false
 UseHugoToc: true
-TocOpen: true
+# TocOpen: false
 
 # related:
 #   show: true
