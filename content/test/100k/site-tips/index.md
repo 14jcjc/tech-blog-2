@@ -14,7 +14,7 @@ hideSummary: true
 hideFooter: false
 # ShowToc: false
 UseHugoToc: true
-# TocOpen: false
+TocOpen: true
 
 # related:
 #   show: true
@@ -57,15 +57,19 @@ cover:
 summary: の設定より優先度が高いです. 
 <!--more-->
 
+--- 
+
 ## font-family
 
 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.
 
 `179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.`
 
-**179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.**
+**太字: 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.**
 
-*179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.*
+*斜体: 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.*
+
+***太字+斜体: 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.***
 
 ## 絵文字
 

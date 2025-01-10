@@ -115,7 +115,8 @@ h1 {
   /* margin: 32px auto 24px; */
   margin: 70px auto 24px; /* 上部, 左右, 下部 */
   font-size: 32px;
-  border-bottom: 1.7px solid #C0C0E0; /* アンダーラインの太さと色 */
+  /* アンダーラインの太さと色 */
+  border-bottom: 1.7px solid #BAD0E0;
   padding-bottom: 5px; /* アンダーラインと文字の間隔 */
 }
 
