@@ -63,8 +63,10 @@ code {
 
 /* chroma (Hugo の構文ハイライト) */
 .chroma {
-  background-color: unset;
-  margin: 0px 0 26px;
+  /* background-color: unset; */
+  background-color: unset !important;
+  /* margin: 0px 0 26px; */
+  margin: 0px 0 26px !important;
 }
 
 /* 本文の line-height (default: 1.6) */

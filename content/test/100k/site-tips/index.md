@@ -305,6 +305,11 @@ receipt %>%
   arrange(sales_ymd) # コメント
 ```
 
+Rのコードは以下のようになります。
+
+> [!CAUTION]
+> linenos=inline とすると、merge-bottom が効かない！ → 解決済み 
+
 次はSQLです。
 
 #### SQL
@@ -436,6 +441,8 @@ go-html-template のコードは以下のようになります。
   <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
 {{ end }}
 {{< /highlight >}}
+
+go-html-template のコードは上記のようになります。
 
 ## Markdown
 
@@ -652,7 +659,9 @@ Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the ses
 
 1. [SITE.全ページ](https://gohugo.io/methods/site/allpages/) すべての言語のすべてのページのコレクションを返します。
    - [サイト.ページ](https://gohugo.io/methods/site/pages/)すべてのページのコレクションを返します。
-   - [SITE.通常ページ](https://gohugo.io/methods/site/regularpages/)すべての通常ページのコレクションを返します。
+   - [SITE.通常ページ](https://gohugo.io/methods/site/regularpages/)すべての通常ページのコレクションを返します。  
+     ノート
+     - 最初のレベルのセクションページのコレクションを返します。
      - [サイトセクション](https://gohugo.io/methods/site/sections/)最初のレベルのセクションページのコレクションを返します。
 
 2. デフォルトでは、Hugo はページ コレクションを次のように並べ替えます。
@@ -668,6 +677,8 @@ For example, the base template below calls the [partial](https://gohugo.io/func
 A home template renders your site’s home page. For a single page site this is the only required template. For example, the home template below inherits the site’s shell from the base template, and renders the home page content with a list of pages.
 
 ショートコードの定義方法に応じて、引数は名前付き、位置指定、またはその両方になりますが、1 回の呼び出しで引数タイプを混在させることはできません。
+
+---
 
 ## H2 見出し2 セクションには、1つ以上の祖先 (ホームページを含む) と、0個以上の子孫があります
 
