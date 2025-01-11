@@ -19,10 +19,8 @@
 */}}
 
 {{/*  font awesome  */}}
-{{/*  <link rel="stylesheet" href="awesome/css/all.css">  */}}
-{{/*  <link rel="stylesheet" href="{{ '/awesome/css/all.css' | relURL }}">  */}}
-
-<link rel="stylesheet" href="{{ "awesome/css/all.css" | relURL }}">
+{{ $css := "awesome/css/awesome.css" | relURL }}
+<link rel="stylesheet" href="{{ $css }}">
 
 {{/*  style を適用する type の配列  */}}
 {{

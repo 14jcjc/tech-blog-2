@@ -1,0 +1,41 @@
+/*!
+ * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2024 Fonticons, Inc.
+ */
+:root, :host {
+  --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free'; }
+
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  /* フォントが読み込まれるまでフォントの表示を待つ */
+  font-display: block;
+  /* フォントが読み込まれ次第, 表示をスワップ */
+  /* font-display: swap; */
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype"); }
+
+.fas,
+.fa-solid {
+  font-family: 'Font Awesome 6 Free', sans-serif;
+  font-style: normal; /* フォントスタイルをnormalに設定 */
+  font-weight: 900;
+}
+
+.fa-circle-info::before {
+  content: "\f05a"; /* Unicode for the icon */
+}
+
+.fa-lightbulb::before {
+  content: "\f0eb"; /* Unicode for the icon */
+}
+
+.fa-circle-exclamation::before {
+  content: "\f06a"; /* Unicode for the icon */
+}
+
+.fa-triangle-exclamation::before {
+  content: "\f071"; /* Unicode for the icon */
+}
