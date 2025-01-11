@@ -8,9 +8,9 @@ weight: 11
 # date: '2021-04-01T00:20:27+09:00'
 # weight: 1000
 slug: 'site-tips'
-summary: 'これはsummaryです。'
+# summary: 'これはsummaryです。'
 description: "This is description."
-hideSummary: true
+# hideSummary: true
 hideFooter: false
 # ShowToc: false
 UseHugoToc: true
@@ -53,9 +53,8 @@ cover:
 ---
 
 このブロックは summary です。  
-<!\--more--> までがリスト表示で出力されます.
+<!\--more\--> までがリスト表示で出力されます.
 summary: の設定より優先度が高いです. 
-<!--more-->
 
 --- 
 

@@ -8,7 +8,7 @@ weight: 11
 # date: '2021-04-01T00:20:27+09:00'
 # weight: 1000
 slug: 'site-tips'
-summary: 'これはsummaryです (include).'
+# summary: 'これはsummaryです (include).'
 description: "This is description."
 hideSummary: false
 hideFooter: false
@@ -52,11 +52,10 @@ cover:
 #     appendFilePath: true # to append file path to Edit link
 ---
 
-このブロックは summary です。  
-<!\--more--> までがリスト表示で出力されます.
-summary: の設定より優先度が高いです. 
-<!--more-->
-
---- 
+/test/100k/site-tips/index.md を include ⬇️
 
 {{% include "/test/100k/site-tips/index.md" %}}
+
+/test/100k/overview/index.md を include ⬇️
+
+{{% include "/test/100k/overview/index.md" %}}
