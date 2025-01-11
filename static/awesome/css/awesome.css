@@ -15,27 +15,122 @@
   font-display: block;
   /* フォントが読み込まれ次第, 表示をスワップ */
   /* font-display: swap; */
-  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype"); }
+  src: 
+    url("../webfonts/fa-solid-900.woff2") format("woff2"), /* 最軽量で推奨 */
+    url("../webfonts/fa-solid-900.ttf") format("truetype"); } /* 最終フォールバック */
+
+.fa {
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-weight: var(--fa-style, 900); }
 
 .fas,
-.fa-solid {
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+.fa {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto; }
+
+.fas::before,
+.far::before,
+.fab::before,
+.fa-solid::before,
+.fa-regular::before,
+.fa-brands::before,
+.fa::before {
+  content: var(--fa); }
+
+.fa-classic,
+.fas,
+.fa-solid,
+.far,
+.fa-regular {
   font-family: 'Font Awesome 6 Free', sans-serif;
   font-style: normal; /* フォントスタイルをnormalに設定 */
   font-weight: 900;
 }
 
-.fa-circle-info::before {
-  content: "\f05a"; /* Unicode for the icon */
+.fa-brands,
+.fab {
+  font-family: 'Font Awesome 6 Brands', sans-serif;
 }
 
-.fa-lightbulb::before {
-  content: "\f0eb"; /* Unicode for the icon */
-}
+/* アイコンのサイズ指定クラス */
+.fa-1x {
+  font-size: 1em; }
 
-.fa-circle-exclamation::before {
-  content: "\f06a"; /* Unicode for the icon */
-}
+.fa-2x {
+  font-size: 2em; }
 
-.fa-triangle-exclamation::before {
-  content: "\f071"; /* Unicode for the icon */
-}
+.fa-3x {
+  font-size: 3em; }
+
+.fa-4x {
+  font-size: 4em; }
+
+.fa-5x {
+  font-size: 5em; }
+
+.fa-6x {
+  font-size: 6em; }
+
+.fa-7x {
+  font-size: 7em; }
+
+.fa-8x {
+  font-size: 8em; }
+
+.fa-9x {
+  font-size: 9em; }
+
+.fa-10x {
+  font-size: 10em; }
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em; }
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.08333em;
+  vertical-align: 0.125em; }
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.07143em;
+  vertical-align: 0.05357em; }
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em; }
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.04167em;
+  vertical-align: -0.125em; }
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em; }
+
+.fa-circle-info {
+  --fa: "\f05a"; }
+
+.fa-lightbulb {
+  --fa: "\f0eb"; }
+
+.fa-circle-exclamation {
+  --fa: "\f06a"; }
+
+.fa-triangle-exclamation {
+  --fa: "\f071"; }
