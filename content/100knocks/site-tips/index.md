@@ -52,10 +52,20 @@ cover:
 #     appendFilePath: true # to append file path to Edit link
 ---
 
-/test/100k/site-tips/index.md を include ⬇️
+
+
+<!--more-->
+
+## include .md ファイル
+
+- {{%/* include "..." */%}}
+
+レンダリングされたショートコードにさらに処理が必要であることを Hugo に伝える。
+
+**/test/100k/site-tips/index.md を include** ⬇️
 
 {{% include "/test/100k/site-tips/index.md" %}}
 
-/test/100k/overview/index.md を include ⬇️
+**/test/100k/overview/index.md を include** ⬇️
 
 {{% include "/test/100k/overview/index.md" %}}

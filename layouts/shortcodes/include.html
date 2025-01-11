@@ -1,13 +1,12 @@
 {{/* 
+Shortcode
+テンプレート(.md)を include する.
 .RenderShortcodes: 
 周囲のマークアップを保持しながら, 指定されたページのコンテンツ内のすべてのショートコードをレンダリングする.
 */}}
 {{ with .Get 0 }}
   {{ with $.Page.GetPage . }}
     {{- .RenderShortcodes }}
-    {{/*  {{- .RenderShortcodes | safeHTML }}  */}}
-    {{/*  {{ .Content | $.Page.RenderString | .RenderShortcodes | safeHTML }}  */}}
-    {{/*  {{ .Content | safeHTML }}  */}}
   {{ else }}
     {{ errorf "The %q shortcode was unable to find %q. See %s" $.Name . $.Position }}
   {{ end }}
