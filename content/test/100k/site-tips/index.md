@@ -96,7 +96,7 @@ Alerts スタイルの参考サイト →
 {{< href-target-blank url="https://sdmxistattoolkit.github.io/mydoc_alerts.html" text="ISTAT Statkit" >}}
 
 <i class="fa-solid fa-circle-info"></i> 
-<i class="fa-solid fa-bell"></i>
+<i class="fa-solid fa-lightbulb"></i>
 
 <div style="text-align: center;">
   <i class="fa-solid fa-circle-info fa-3x" style="color: #0000FF;"></i>
