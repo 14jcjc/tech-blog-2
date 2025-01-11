@@ -383,7 +383,7 @@ markup:
     codeFences: true
     guessSyntax: false
     # guessSyntax: true
-    lineNos: true
+    lineNos: false
     lineNoStart: 1
     lineNumbersInTable: true
     # <code>タグ内を強調表示する. codeタグは code-inline という名前のクラスを取得する: 

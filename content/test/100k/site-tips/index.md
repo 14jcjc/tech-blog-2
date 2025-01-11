@@ -188,9 +188,13 @@ Markdown は保持されることに注意。
 
 ### ref {#ref}
 
-- ref: コンテンツディレクトリ (通常content/) のルートからの相対パスを指定
-- relref: 現在のページからの相対パスを指定
-<br></br>
+```go-html-template
+{{</* ref "overview.md#d2" */>}}    → 絶対URL
+{{</* relref "overview.md#d2" */>}} → 相対URL
+```
+→  
+{{< ref "overview.md#d2" >}}  
+{{< relref "overview.md#d2" >}}
 
 - overview#bbb へのリンク
 
@@ -210,7 +214,6 @@ Markdown は保持されることに注意。
   ```html {lineNos=false}
   <a href="http://example.org/overview/#bbb" title="About us">こちら</a>
   ```
-  xxxxxxxxxxxxxxxxxx
 
 ### relref
 
@@ -268,7 +271,7 @@ This is a **bold** word.
    src="box.png" 
    alt="代替テキスト" 
    align="center" 
-   width="50%" 
+   width="50%" height="50%" 
    link="../overview#bbb" 
    rel="noopener" 
    target="_blank" 
@@ -278,7 +281,7 @@ This is a **bold** word.
 ```
 👉  
 {{< 
-figure src="box.png" alt="代替テキスト" align="center"  width="50%" link="../overview#bbb" rel="noopener" target="_blank" caption="キャプション" title="Box plot" 
+figure src="box.png" alt="代替テキスト" align="center" width="50%" height="50%" link="../overview#bbb" rel="noopener" target="_blank" caption="キャプション" title="Box plot" class="myclass"
 >}}
 
 ### Data sources
@@ -685,6 +688,16 @@ Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the ses
 '  ‘  ’  "  ”  
 
 --  
+
+### 画像
+
+shortcodes: figure を使う！
+
+``` md
+!["画像"](tree.png "サンプル画像")
+```
+
+!["画像"](tree.png "サンプル画像")
 
 ---
 
