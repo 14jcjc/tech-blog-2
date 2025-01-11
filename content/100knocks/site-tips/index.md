@@ -324,9 +324,6 @@ receipt %>%
 
 Rのコードは上記のようになります。
 
-> [!CAUTION]
-> linenos=inline とすると、merge-bottom が効かない！
-
 次はSQLです。
 
 #### SQL
@@ -574,24 +571,28 @@ Rendered:
 > Helpful advice for doing things better or more easily.
 ```
 
-1. 
+この blockquote レンダリング フックは、アラート指定子が存在する場合は多言語アラートをレンダリングする。
+
 > [!NOTE]
 > この blockquote レンダリング フックは、アラート指定子が存在する場合は多言語アラートをレンダリングし、
 > それ以外の場合は CommonMarkdown の仕様に従って blockquote をレンダリングします。
 
-2. 
+この blockquote レンダリング フックは、アラート指定子が存在する場合は多言語アラートをレンダリングする。
+
 > [!TIP]
 > Helpful advice for doing things better or more easily.
 
-3. 
+この blockquote レンダリング フックは、アラート指定子が存在する場合は多言語アラートをレンダリングする。
+
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
 
-4. 
+この blockquote レンダリング フックは、アラート指定子が存在する場合は多言語アラートをレンダリングする。
+
 > [!WARNING]
 > Urgent info that needs immediate user attention to avoid problems.
 
-5. CAUTION は無し
+CAUTION は無し
 
 ### 注釈
 
