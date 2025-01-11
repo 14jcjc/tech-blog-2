@@ -195,8 +195,6 @@ Markdown は保持されることに注意。
 →  
 {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" >}}
 
-
-
 ### ref {#ref}
 
 ```go-html-template
