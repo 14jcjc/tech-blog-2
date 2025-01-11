@@ -13,10 +13,10 @@
   /* --primary: rgb(75, 75, 100); */
   /* --primary: rgb(40, 40, 60); */
   --primary: rgb(30, 30, 50);
-  --content: rgb(31, 31, 31);
+  /* --content: rgb(31, 31, 31); */
   /* --content: rgb(85, 85, 85); */
   /* --content: rgb(55, 55, 55); */
-  /* --content: rgb(40, 40, 40); */
+  --content: rgb(40, 40, 40);
     /* --theme: rgb(255, 255, 255);
   --entry: rgb(255, 255, 255);
   --primary: rgb(30, 30, 30);
