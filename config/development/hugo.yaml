@@ -1,4 +1,4 @@
-baseURL: "http://localhost:1313/tech-blog/"
+# baseURL: "http://localhost:1313/tech-blog/"
 
 # permalinks を設定すると, パンクズリストがきちんと表示されなくなる.
 #-> /themes/PaperMod/layouts/partials/breadcrumbs.html を修正することで解決.

@@ -121,11 +121,12 @@ h1 {
 
 /* post contents の H2 に border を引く */
 .post-content h2 {
+  /* font-size: 28px; */
+  /* font-size: calc(var(--base-font-size) * 1.65); */
+  font-size: calc(var(--base-font-size) * 1.55);
   /* auto は width が設定されると左右中央揃えになる */
   /* margin: 32px auto 24px; */
   margin: 70px auto 24px; /* 上部, 左右, 下部 */
-  /* font-size: 28px; */
-  font-size: calc(var(--base-font-size) * 1.65);
   /* アンダーラインの太さと色 */
   border-bottom: 1.7px solid #BAD0E0;
   padding-bottom: 5px; /* アンダーラインと文字の間隔 */
