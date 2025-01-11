@@ -81,11 +81,11 @@ code {
 /* 本文の line-height (default: 1.6) */
 .post-content {
   /* line-height: 1.8; */
-  line-height: 2em;
+  line-height: 2.0;
 }
 
 .entry-content {
-  line-height: 2em;
+  line-height: 1.8;
 }
 
 /* post-entry.css */
