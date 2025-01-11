@@ -64,6 +64,3 @@ cover:
 
 {{% include "/test/100k/site-tips/index.md" %}}
 
-**/test/100k/overview/index.md を include** ⬇️
-
-{{% include "/test/100k/overview/index.md" %}}
