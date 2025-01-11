@@ -60,6 +60,9 @@ summary: の設定より優先度が高いです.
 
 ---
 
+{{< href-target-blank url="https://zenn.dev/masayukeeeee/articles/20cbba894ae2b6" text="" >}}
+
+
 ## フォントファミリー (font-family)
 
 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.
@@ -183,8 +186,16 @@ Markdown は保持されることに注意。
 ```go-html-template {linenos=false,anchorLineNos=false}
 {{</* href-target-blank url="https://..." text="リポジトリ📂" */>}}
 ```
-→   
+→  
 {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="リポジトリ📂" >}}
+
+```go-html-template {linenos=false,anchorLineNos=false}
+{{</* href-target-blank url="https://github.com/14katsumix/100knocks-dp" */>}}
+```
+→  
+{{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" >}}
+
+
 
 ### ref {#ref}
 
@@ -764,7 +775,7 @@ TODO: rewrite the paragraph below.
 
 #### H4 見出し4 ショートコード
 
-Hugo は、特定のページのテンプレートを選択する際に、以下にリストされているパラメータを考慮します。テンプレートは、詳細度によって順序付けられています。
+Hugo は、特定のページのテンプレートを選択する際に、以下にリストされている**パラメータ**を考慮します。**テンプレート**は、詳細度によって順序付けられています。
 
 ```r {linenos=true,lineNoStart=1,hl_lines=[2,"7-8"]}
 receipt %>% 

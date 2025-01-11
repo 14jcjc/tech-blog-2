@@ -1,3 +1,5 @@
-<a href='{{ .Get "url" | default "#" }}' target="_blank" rel="noopener noreferrer">
-  {{ .Get "text" | default "リンク" }}
+{{- $href := .Get "url" | default "#" -}}
+{{- $text := .Get "text" | default $href -}}
+<a href="{{ $href }}" target="_blank" rel="noopener noreferrer">
+  {{- $text -}}
 </a>
