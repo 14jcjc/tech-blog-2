@@ -1,32 +1,32 @@
 /* PaperMod の配色変更 */
 :root {
   --base-font-size: 16.5px;
-/* --code-bg: rgb(245, 245, 245); */
-/* --code-bg: #F5F5F5; */
-/* --code-bg: #F0F5FF; */
-/* --code-bg: #F0FCFF; */
-/* --code-bg: #F4FCFF; */
+  --gap: 24px;
+  /* --content-gap: 20px; */
+  --content-gap: calc(var(--base-font-size) * 1.45);
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --radius: 8px;
+  /* --theme: rgb(255, 255, 255); */
+  /* --entry: rgb(255, 255, 255); */
+  /* --code-bg: rgb(245, 245, 245); */
   /* --code-bg: #ECF6FF; */
-  --code-bg: #F0F8FF;
+  /* --code-bg: #F0F8FF; */
+  --code-bg: rgb(240, 248, 255);
+  /* --content: rgb(31, 31, 31); */
+  --content: rgb(50, 50, 50);
   /* --primary: rgb(30, 30, 30); */
-  /* --primary: rgb(80, 80, 110); */
-  /* --primary: rgb(75, 75, 100); */
   /* --primary: rgb(40, 40, 60); */
   --primary: rgb(30, 30, 50);
-  /* --content: rgb(31, 31, 31); */
-  /* --content: rgb(85, 85, 85); */
-  /* --content: rgb(55, 55, 55); */
-  --content: rgb(50, 50, 50);
-    /* --theme: rgb(255, 255, 255);
-  --entry: rgb(255, 255, 255);
-  --primary: rgb(30, 30, 30);
   --secondary: rgb(108, 108, 108);
   --tertiary: rgb(214, 214, 214);
   --code-block-bg: rgb(28, 29, 33);
-  --border: rgb(238, 238, 238); */
-  /* archive-entry-background */
+  --border: rgb(238, 238, 238);
 }
 
+/* ダークモードで変数の設定 */
 /* 
 .dark {
 } */
