@@ -16,15 +16,18 @@
   {{ end }}
   {{ if eq .id $id }}
     {{ $found = true }}
-    {{ $dict := index . $platform }}
-    {{ if not $dict}}
-      {{ errorf "%q shortcode: platform '%s' not found." .Name $platform }}
+    {{ with index . $platform }}
+      {{ with index . $type }}
+        <a href="{{- . -}}" target="_blank">{{- $text -}}</a>
+      {{ else }}
+        {{ errorf "%q shortcode: type '%s' not found." $.Name $type }}
+      {{ end }}
+    {{ else }}
+      {{ errorf "%q shortcode: platform '%s' not found." $.Name $platform }}
     {{ end }}
-    {{ $url := index $dict $type }}
-    <a href="{{- $url -}}" target="_blank">{{- $text -}}</a>
   {{ end }}
 {{ end }}
 
 {{ if not $found }}
-  {{ errorf "The %q shortcode was unable to find %q. See %s" $.Name $id $.Position }}
+  {{ errorf "The %q shortcode was unable to find %q. See %s" .Name $id .Position }}
 {{ end }}
