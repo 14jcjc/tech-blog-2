@@ -3,12 +3,12 @@
   --base-font-size: 16.5px;
   --gap: 24px;
   /* --content-gap: 20px; */
-  --content-gap: calc(var(--base-font-size) * 1.45);
-  --nav-width: 1024px;
-  --main-width: 720px;
-  --header-height: 60px;
-  --footer-height: 60px;
-  --radius: 8px;
+  --content-gap: calc(var(--base-font-size) * 1.22);
+  /* --nav-width: 1024px; */
+  /* --main-width: 720px; */
+  /* --header-height: 60px; */
+  /* --footer-height: 60px; */
+  /* --radius: 8px; */
   /* --theme: rgb(255, 255, 255); */
   /* --entry: rgb(255, 255, 255); */
   /* --code-bg: rgb(245, 245, 245); */

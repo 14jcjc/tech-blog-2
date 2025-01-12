@@ -60,8 +60,9 @@ summary: の設定より優先度が高いです.
 
 ---
 
-{{< product-link id="ds100kdp" platform="amazon" type="url" text="これは通常のURL" >}}
-
+{{% comment %}}
+{{< test1 >}}
+{{% /comment %}}
 
 ## フォントファミリー (font-family)
 
@@ -317,9 +318,9 @@ read: assets/test/pets.csv
 ⬇️  
 {{< csv-to-table "test/pets.csv" >}}
 
-## PaperMod {#paperod}
+## Code block (chroma) {#code-block}
 
-### Code block with PaperMod
+### Code block with ```
 
 #### Rコード {#r}
 
