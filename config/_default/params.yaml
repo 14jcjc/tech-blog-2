@@ -20,16 +20,29 @@ k100:
   url: 
     book: 
       amazon: "https://amzn.to/3Pmq47H"
-# 本家
-k100dp: 
-  title: "データサイエンス100本ノック（構造化データ加工編）"
-  book: 
-    title: "データサイエンス100本ノック～構造化データ加工編ガイドブック"
-  git: 
-    url: |
-      "https://github.com/The-Japan-DataScientist-Society/100knocks-preprocess"
-  # "データサイエンティスト協会"
-  # "データサイエンティスト協会スキル定義委員会"
+  # The Japan DataScientist Society
+  dss:
+    name: "データサイエンティスト協会"
+    # Skill Definition Committee
+    sdc: "データサイエンティスト協会スキル定義委員会"
+    title: "データサイエンス100本ノック（構造化データ加工編）"
+    book: 
+      title: "データサイエンス100本ノック～構造化データ加工編ガイドブック"
+    git: 
+      url: |
+        "https://github.com/The-Japan-DataScientist-Society/100knocks-preprocess"
+
+products: 
+  - id: "ds-100k-dp"
+    name: "データサイエンス100本ノック～構造化データ加工編ガイドブック"
+    amazon: 
+      description: "Amazonで購入"
+      url: "https://www.amazon.co.jp/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%87%E3%83%BC%E3%82%BF%E5%8A%A0%E5%B7%A5%E7%B7%A8%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E6%A3%AE%E8%B0%B7-%E5%92%8C%E5%BC%98/dp/4802613563/ref=tmm_hrd_swatch_0?_encoding=UTF8"
+      afiurl: "https://amzn.to/3Pmq47H"
+    yahoo: 
+      description: "Yahooで購入"
+      url: "https://amzn.to/3Pmq47H"
+      afiurl: "https://amzn.to/3Pmq47H"
 
 keywords: 
   - "データサイエンス100本ノック"

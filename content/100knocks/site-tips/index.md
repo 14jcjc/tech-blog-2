@@ -54,11 +54,13 @@ cover:
 
 ## include .md ファイル
 
-- {{%/* include "..." */%}}
+- `{{%/* include "..." */%}}`
 
 レンダリングされたショートコードにさらに処理が必要であることを Hugo に伝える。
 
 <!--more-->
+
+---
 
 **/test/100k/site-tips/index.md を include** ⬇️
 

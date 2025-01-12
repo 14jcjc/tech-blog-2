@@ -1,0 +1,30 @@
+{{ $id := .Get "id" }}
+{{ if not $id }}
+  {{ errorf "The %q shortcode requires a 'id' argument. See %s" .Name .Position }}
+{{ end }}
+{{ $platform := .Get "platform" }}
+{{ if not $platform }}
+  {{ errorf "The %q shortcode requires a 'platform' argument. See %s" .Name .Position }}
+{{ end }}
+{{ $type := .Get "type" | default "afiurl" }}
+{{ $text := .Get "text" }}
+{{ $found := false }}
+
+{{ range site.Params.products }}
+  {{ if not $text }}
+    {{ $text = .name }}
+  {{ end }}
+  {{ if eq .id $id }}
+    {{ $found = true }}
+    {{ $dict := index . $platform }}
+    {{ if not $dict}}
+      {{ errorf "%q shortcode: platform '%s' not found." .Name $platform }}
+    {{ end }}
+    {{ $url := index $dict $type }}
+    <a href="{{- $url -}}" target="_blank">{{- $text -}}</a>
+  {{ end }}
+{{ end }}
+
+{{ if not $found }}
+  {{ errorf "The %q shortcode was unable to find %q. See %s" $.Name $id $.Position }}
+{{ end }}
