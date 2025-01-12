@@ -14,26 +14,26 @@ k100:
     category: 
       edition_s: 'DS-100本ノック＋α (標準編) '
       edition_a: 'DS-100本ノック＋α (発展編) '
-  afiurl: 
-    book: 
-      amazon: "https://amzn.to/3Pmq47H"
-  url: 
-    book: 
-      amazon: "https://amzn.to/3Pmq47H"
+  # afiurl: 
+  #   book: 
+  #     amazon: "https://amzn.to/3Pmq47H"
+  # url: 
+  #   book: 
+  #     amazon: "https://amzn.to/3Pmq47H"
   # The Japan DataScientist Society
   dss:
     name: "データサイエンティスト協会"
     # Skill Definition Committee
     sdc: "データサイエンティスト協会スキル定義委員会"
     title: "データサイエンス100本ノック（構造化データ加工編）"
-    book: 
-      title: "データサイエンス100本ノック～構造化データ加工編ガイドブック"
     git: 
       url: |
         "https://github.com/The-Japan-DataScientist-Society/100knocks-preprocess"
+    # book: 
+    #   title: "データサイエンス100本ノック～構造化データ加工編ガイドブック"
 
 products: 
-  - id: "ds-100k-dp"
+  ds100kDp: 
     name: "データサイエンス100本ノック～構造化データ加工編ガイドブック"
     amazon: 
       description: "Amazonで購入"

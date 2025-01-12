@@ -60,6 +60,9 @@ summary: の設定より優先度が高いです.
 
 ---
 
+{{< product-link id="ds100kdp" platform="amazon" type="url" text="これは通常のURL" >}}
+
+
 ## フォントファミリー (font-family)
 
 179 g Q Ii Ll [R+SQL] データサイエンス100本ノック+α.
@@ -195,16 +198,16 @@ Markdown は保持されることに注意。
 ### product\-link
 
 ```go-html-template {linenos=false,anchorLineNos=false}
-{{</* product-link id="ds-100k-dp" platform="amazon" */>}}
+{{</* product-link id="ds100kdp" platform="amazon" */>}}
 ```
 →  
-{{< product-link id="ds-100k-dp" platform="amazon" >}}
+{{< product-link id="ds100kdp" platform="amazon" >}}
 
 ```go-html-template {linenos=false,anchorLineNos=false}
-{{</* product-link id="ds-100k-dp" platform="amazon" type="url" text="これは通常のURL" */>}}
+{{</* product-link id="ds100kdp" platform="amazon" type="url" text="これは通常のURL" */>}}
 ```
 →  
-{{< product-link id="ds-100k-dp" platform="amazon" type="url" text="これは通常のURL" >}}
+{{< product-link id="ds100kdp" platform="amazon" type="url" text="これは通常のURL" >}}
 
 ### ref {#ref}
 

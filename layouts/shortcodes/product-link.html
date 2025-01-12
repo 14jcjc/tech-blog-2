@@ -8,26 +8,25 @@
 {{ end }}
 {{ $type := .Get "type" | default "afiurl" }}
 {{ $text := .Get "text" }}
-{{ $found := false }}
+{{/*  {{ $found := false }}  */}}
 
-{{ range site.Params.products }}
+{{/*  for debug  */}}
+{{/*  {{ printf "site.Params.products: %v" site.Params.products | safeHTML }}  */}}
+
+{{ with index site.Params.products (lower $id) }}
+  {{/*  {{ $found = true }}  */}}
   {{ if not $text }}
     {{ $text = .name }}
   {{ end }}
-  {{ if eq .id $id }}
-    {{ $found = true }}
-    {{ with index . $platform }}
-      {{ with index . $type }}
-        <a href="{{- . -}}" target="_blank">{{- $text -}}</a>
-      {{ else }}
-        {{ errorf "%q shortcode: type '%s' not found." $.Name $type }}
-      {{ end }}
+  {{ with index . $platform }}
+    {{ with index . $type }}
+      <a href="{{- . -}}" target="_blank">{{- $text -}}</a>
     {{ else }}
-      {{ errorf "%q shortcode: platform '%s' not found." $.Name $platform }}
+      {{ errorf "%q shortcode: type '%s' not found." $.Name $type }}
     {{ end }}
+  {{ else }}
+    {{ errorf "%q shortcode: platform '%s' not found." $.Name $platform }}
   {{ end }}
-{{ end }}
-
-{{ if not $found }}
+{{ else }}
   {{ errorf "The %q shortcode was unable to find %q. See %s" .Name $id .Position }}
 {{ end }}
