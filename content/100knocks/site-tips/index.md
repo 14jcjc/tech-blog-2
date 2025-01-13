@@ -27,8 +27,6 @@ tags:
   - SQL
 # tags_weight: 1
 params:
-  params:
-    math: true # Mathematics in Markdown
   testparam: "これは params.testparam."
   testparam2: 
     nestparam: "これは testparam2.nestparam."

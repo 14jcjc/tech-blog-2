@@ -187,13 +187,13 @@ Markdown は保持されることに注意。
 ```go-html-template {linenos=false,anchorLineNos=false}
 {{</* href-target-blank url="https://..." text="リポジトリ📂" */>}}
 ```
-→  
+→ 
 {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="リポジトリ📂" >}}
 
 ```go-html-template {linenos=false,anchorLineNos=false}
 {{</* href-target-blank url="https://github.com/14katsumix/100knocks-dp" */>}}
 ```
-→  
+→ 
 {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" >}}
 
 ### product\-link
@@ -201,13 +201,13 @@ Markdown は保持されることに注意。
 ```go-html-template {linenos=false,anchorLineNos=false}
 {{</* product-link id="ds100kdp" platform="amazon" */>}}
 ```
-→  
+→ 
 {{< product-link id="ds100kdp" platform="amazon" >}}
 
 ```go-html-template {linenos=false,anchorLineNos=false}
 {{</* product-link id="ds100kdp" platform="amazon" type="url" text="これは通常のURL" */>}}
 ```
-→  
+→ 
 {{< product-link id="ds100kdp" platform="amazon" type="url" text="これは通常のURL" >}}
 
 ### ref {#ref}

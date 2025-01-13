@@ -1,9 +1,9 @@
 ---
 # title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-title: "{{ .Site.Params.site_rsql }}{{ .Site.Params.site_100knocks }}（{{ .Site.Params.site_suffix_s }}）{{ title .File.ContentBaseName }}"
+title: "{{ .Site.Params.k100.site.rsql }}{{ .Site.Params.k100.site.title }}（{{ .Site.Params.k100.site.editionS }}）{{ upper .File.ContentBaseName }}"
 date: '{{ .Date }}'
 slug: '{{ lower .File.ContentBaseName }}'
 # draft: true
 categories: 
-  - "{{ .Site.Params.site_category_s }}"
+  - "{{ .Site.Params.k100.site.category.editionS }}"
 ---
