@@ -54,7 +54,8 @@
   --alert-text-color: var(--content); /* 明るいテキスト色 */
   --alert-color-note: #64b5f6; /* 明るい青 */
   --alert-color-tip: #a2e57b; /* 明るい緑 */
-  --alert-color-important: #b39ddb; /* 明るい紫 */
+  /* --alert-color-important: #b39ddb; */
+  --alert-color-important: #C090F0;
   --alert-color-warning: #ff8a65; /* 明るいオレンジ */
   /* 演習問題の難易度レーティング (星) */
   --difficulty-rating-filled-stars: #FFC107;
@@ -280,11 +281,13 @@ iframe {
 /* アラート全体のスタイル */
 blockquote.alert {
   padding-left: 10pt;
+  /* padding-bottom: 0.1em; */
   margin-top: 1.6em;
   margin-bottom: 1.6em;
-  border-left: 5px solid;
+  border-left: 4px solid;
   background-color: var(--alert-bg-color);
   color: var(--alert-text-color);
+  font-size: 1.0em;
   /* background-color: #f9f9f9; */
   /* border-radius: 4px; */
   /* font-size: 1rem; */
@@ -300,6 +303,10 @@ blockquote.alert {
   border-left-color: var(--alert-color-note) !important;
 }
 
+.alert-note .alert-heading {
+  color: var(--alert-color-note) !important;
+}
+
 .alert-note .fa-circle-info {
   color: var(--alert-color-note) !important;
 }
@@ -308,12 +315,24 @@ blockquote.alert {
   border-left-color: var(--alert-color-tip) !important;
 }
 
+.alert-tip .alert-heading {
+  color: var(--alert-color-tip) !important;
+}
+
 .alert-tip .fa-lightbulb {
   color: var(--alert-color-tip) !important;
 }
 
 .alert-important {
   border-left-color: var(--alert-color-important) !important;
+}
+
+.alert-important .alert-heading {
+  color: var(--alert-color-important) !important;
+}
+
+.alert-important .fa-lightbulb {
+  color: var(--alert-color-important) !important;
 }
 
 .alert-important .fa-circle-exclamation {
@@ -325,6 +344,14 @@ blockquote.alert {
 }
 
 .alert-warning .fa-triangle-exclamation {
+  color: var(--alert-color-warning) !important;
+}
+
+.alert-warning {
+  border-left-color: var(--alert-color-warning) !important;
+}
+
+.alert-warning .alert-heading {
   color: var(--alert-color-warning) !important;
 }
 

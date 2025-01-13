@@ -608,6 +608,9 @@ Rendered:
 定義ファイル:
 - layouts/_default/_markup/render-blockquote.html
 - i18n/ja.yaml
+- レイアウトの参考:  
+  {{< href-target-blank url="https://tech.buty4649.net/entry/2024/04/20/122439" text="" >}}
+  {{< href-target-blank url="https://github.com/orgs/community/discussions/16925" text="" >}}
 
 ```text {lineNos=false}
 > [!TIP]
@@ -742,6 +745,7 @@ shortcodes: figure を使う！
 
 ### リスト
 
+リストの前にギャップがある.
 1. [SITE.全ページ](https://gohugo.io/methods/site/allpages/) すべての言語のすべてのページのコレクションを返します。
    - [サイト.ページ](https://gohugo.io/methods/site/pages/)すべてのページのコレクションを返します。
    - [SITE.通常ページ](https://gohugo.io/methods/site/regularpages/)すべての通常ページのコレクションを返します。  
@@ -755,8 +759,7 @@ shortcodes: figure を使う！
    2.  [LinkTitle が](https://gohugo.io/methods/page/linktitle/)[Title](https://gohugo.io/methods/page/title/)に戻る[](https://gohugo.io/methods/page/title/)
    3.  [](https://gohugo.io/methods/page/file/#filename)ページがファイルによってバックアップされている場合は[ファイル名](https://gohugo.io/methods/page/file/#filename)
        - これらのメソッドを使用してページ コレクションを並べ替えます。
-       - これらのメソッドを使用してページ コレクションを並べ替えます。
-
+       - これらのメソッドを使用してページ コレクションを並べ替えます。  
 For example, the base template below calls the [partial](https://gohugo.io/functions/partials/include/) function to include partial templates for the `head`, `header`, and `footer` elements of each page, and it uses the [block](https://gohugo.io/functions/go-template/block/) function to include `home`, `single`, `section`, `taxonomy`, and `term` templates within the `main` element of each page.
 
 A home template renders your site’s home page. For a single page site this is the only required template. For example, the home template below inherits the site’s shell from the base template, and renders the home page content with a list of pages.
