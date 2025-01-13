@@ -24,12 +24,25 @@
   --tertiary: rgb(214, 214, 214);
   --code-block-bg: rgb(28, 29, 33);
   --border: rgb(238, 238, 238);
+  /* alerts */
+  --alert-bg-color: #f9f9f9; /* アラート背景 */
+  --alert-text-color: #333; /* 通常テキスト色 */
+  --alert-color-blue: #2196f3; /* Note */
+  --alert-color-green: #60C000; /* Tip */
+  --alert-color-purple: #9560f0; /* Important */
+  --alert-color-orange: #ff5722; /* Warning, Caution */
 }
 
 /* ダークモードで変数の設定 */
-/* 
 .dark {
-} */
+  /* alerts */
+  --alert-bg-color: #2e2e2e; /* ダーク背景 */
+  --alert-text-color: #f1f1f1; /* 明るいテキスト色 */
+  --alert-color-blue: #64b5f6; /* 明るい青 */
+  --alert-color-green: #a2e57b; /* 明るい緑 */
+  --alert-color-purple: #b39ddb; /* 明るい紫 */
+  --alert-color-orange: #ff8a65; /* 明るいオレンジ */
+}
 
 .list {
   background: var(--code-bg);
@@ -252,6 +265,9 @@ blockquote.alert {
   padding-left: 10pt;
   margin-top: 1.6em;
   margin-bottom: 1.6em;
+  border-left: 5px solid;
+  background-color: var(--alert-bg-color);
+  color: var(--alert-text-color);
   /* background-color: #f9f9f9; */
   /* border-radius: 4px; */
   /* font-size: 1rem; */
@@ -262,45 +278,43 @@ blockquote.alert {
   margin-bottom: 0.4em !important; /* 下部マージンを指定 */
 }
 
-/* 各アラートタイプに応じた border-left のスタイル */
 .alert-note {
-  border-left: 5px solid #2196f3 !important; /* 青 */
+  border-left-color: var(--alert-color-blue) !important;
 }
 
 .alert-note .fa-circle-info {
-  color: #2196f3 !important;
+  color: var(--alert-color-blue) !important;
 }
 
 .alert-tip {
-  /* border-left: 5px solid #afc300 !important; */
-  border-left: 5px solid #60C000 !important;
+  border-left-color: var(--alert-color-green) !important;
 }
 
 .alert-tip .fa-lightbulb {
-  color: #60C000 !important;
+  color: var(--alert-color-green) !important;
 }
 
 .alert-important {
-  /* border-left: 5px solid #8352E0 !important; */
-  border-left: 5px solid #9560f0 !important;
+  border-left-color: var(--alert-color-purple) !important;
 }
 
 .alert-important .fa-circle-exclamation {
-  color: #9560f0 !important;
+  color: var(--alert-color-purple) !important;
 }
 
 .alert-warning {
-  /* border-left: 5px solid #ff9800 !important; */
-  border-left: 5px solid #ff5722 !important; /* サーモン */
+  border-left-color: var(--alert-color-orange) !important;
 }
 
 .alert-warning .fa-triangle-exclamation {
-  color: #ff5722 !important;
+  color: var(--alert-color-orange) !important;
 }
 
 .alert-caution {
-  border-left: 5px solid #ff5722 !important; /* サーモン */
+  border-left-color: var(--alert-color-orange) !important;
 }
+
+/* 各アラートタイプに応じたスタイル */
 
 /* 関連記事 */
 .related-posts {
