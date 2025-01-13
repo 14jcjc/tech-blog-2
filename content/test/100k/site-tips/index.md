@@ -60,30 +60,6 @@ summary: の設定より優先度が高いです.
 
 ---
 
-<br>
-<svg class="difficulty-rating" xmlns="http://www.w3.org/2000/svg" width="400" height="60" viewBox="0 0 200 30">
-  <!-- 塗りつぶされた星（★） -->
-  <g class="filled-stars" fill="gold">
-    <polygon points="10,1 13,9 21,9 15,14 17,22 10,18 3,22 5,14 -1,9 7,9" />
-    <polygon points="32,1 35,9 43,9 37,14 39,22 32,18 25,22 27,14 21,9 29,9" />
-    <polygon points="54,1 57,9 65,9 59,14 61,22 54,18 47,22 49,14 43,9 51,9" />
-  </g>
-  <!-- 空の星（☆） -->
-  <g class="empty-stars" fill="lightgray">
-    <polygon points="76,1 79,9 87,9 81,14 83,22 76,18 69,22 71,14 65,9 73,9" />
-    <polygon points="98,1 101,9 109,9 103,14 105,22 98,18 91,22 93,14 87,9 95,9" />
-  </g>
-</svg>
-
-
-{{< q-rating 0 >}}
-{{< q-rating 1 >}}
-{{< q-rating 2 >}}
-{{< q-rating 3 >}}
-{{< q-rating 4 >}}
-{{< q-rating 5 >}}
-
-
 {{% comment %}}
 {{< test1 >}}
 {{% /comment %}}
@@ -331,6 +307,21 @@ This is a **bold** word.
 {{< 
 figure src="box.png" alt="代替テキスト" align="center" width="50%" height="50%" link="../overview#bbb" rel="noopener" target="_blank" caption="キャプション" title="Box plot" class="myclass"
 >}}
+
+### レーティング　(星で示す難易度)
+
+```html {linenos=false,anchorLineNos=false}
+{{</* q-rating 3 */>}}  
+```
+
+0〜5段階: 
+
+{{< q-rating 0 >}}  
+{{< q-rating 1 >}}  
+{{< q-rating 2 >}}  
+{{< q-rating 3 >}}  
+{{< q-rating 4 >}}  
+{{< q-rating 5 >}}  
 
 ### Data sources
 
