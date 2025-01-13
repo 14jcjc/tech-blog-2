@@ -18,17 +18,10 @@
   {{ $content := dict "mediaType" "text/markdown" "value" .summary }}
   {{ $dates := dict "date" (time.AsTime .date) }}
   {{ $params := dict "author" .author "isbn" .isbn "rating" .rating "tags" .tags }}
-  {{/* 動的にレイアウトを指定 */}}
-
-  {{ $layout := "test/books/single" }}
-
   {{ $page := dict
     "content" $content
     "dates" $dates
     "kind" "page"
-
-    "layout" $layout
-
     "params" $params
     "path" .title
     "title" .title
@@ -46,7 +39,6 @@
         {{ $params := dict "alt" $item.title }}
         {{ $resource := dict
           "content" $content
-          
           "params" $params
           "path" (printf "%s/cover.%s" $item.title .MediaType.SubType)
         }}

@@ -74,6 +74,11 @@ mainSections:
   # - "books"
   # - "glossary"
 
+# content: 
+#   test: 
+#     books: 
+#       layout: "test/books/single"
+
 # 関連ページ (See also)
 related:
   # 0～100. 値が低いほど一致は多くなるが, 関連性は低くなる可能性がある: 
@@ -331,7 +336,8 @@ menu:
       url: test/glossary
       weight: 60
     - name: Books
-      url: test/books
+      # url: test/books
+      url: books
       weight: 70
     # - name: standard
     #   url: "/ds-100knocks-dp-test/standard"
