@@ -314,7 +314,7 @@ figure src="box.png" alt="代替テキスト" align="center" width="50%" height=
 {{</* q-rating 3 */>}}  
 ```
 
-0〜5段階: 
+0〜5段階 : 
 
 {{< q-rating 0 >}}  
 {{< q-rating 1 >}}  

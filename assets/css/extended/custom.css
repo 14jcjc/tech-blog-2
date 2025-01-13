@@ -27,10 +27,13 @@
   /* alerts */
   --alert-bg-color: #f9f9f9; /* アラート背景 */
   --alert-text-color: #333; /* 通常テキスト色 */
-  --alert-color-blue: #2196f3; /* Note */
-  --alert-color-green: #60C000; /* Tip */
-  --alert-color-purple: #9560f0; /* Important */
-  --alert-color-orange: #ff5722; /* Warning, Caution */
+  --alert-color-note: #2196f3; /* Note */
+  --alert-color-tip: #60C000; /* Tip */
+  --alert-color-important: #9560f0; /* Important */
+  --alert-color-warning: #ff5722; /* Warning, Caution */
+  /* 演習問題の難易度レーティング (星) */
+  --difficulty-rating-filled-stars: #FFC107;
+  --difficulty-rating-empty-stars: #C0C0C0;
 }
 
 /* ダークモードで変数の設定 */
@@ -49,10 +52,13 @@
   /* alerts */
   --alert-bg-color: var(--entry); /* ダーク背景 */
   --alert-text-color: var(--content); /* 明るいテキスト色 */
-  --alert-color-blue: #64b5f6; /* 明るい青 */
-  --alert-color-green: #a2e57b; /* 明るい緑 */
-  --alert-color-purple: #b39ddb; /* 明るい紫 */
-  --alert-color-orange: #ff8a65; /* 明るいオレンジ */
+  --alert-color-note: #64b5f6; /* 明るい青 */
+  --alert-color-tip: #a2e57b; /* 明るい緑 */
+  --alert-color-important: #b39ddb; /* 明るい紫 */
+  --alert-color-warning: #ff8a65; /* 明るいオレンジ */
+  /* 演習問題の難易度レーティング (星) */
+  --difficulty-rating-filled-stars: #FFC107;
+  --difficulty-rating-empty-stars: #C0C0C0;
 }
 
 .list {
@@ -291,43 +297,42 @@ blockquote.alert {
 }
 
 .alert-note {
-  border-left-color: var(--alert-color-blue) !important;
+  border-left-color: var(--alert-color-note) !important;
 }
 
 .alert-note .fa-circle-info {
-  color: var(--alert-color-blue) !important;
+  color: var(--alert-color-note) !important;
 }
 
 .alert-tip {
-  border-left-color: var(--alert-color-green) !important;
+  border-left-color: var(--alert-color-tip) !important;
 }
 
 .alert-tip .fa-lightbulb {
-  color: var(--alert-color-green) !important;
+  color: var(--alert-color-tip) !important;
 }
 
 .alert-important {
-  border-left-color: var(--alert-color-purple) !important;
+  border-left-color: var(--alert-color-important) !important;
 }
 
 .alert-important .fa-circle-exclamation {
-  color: var(--alert-color-purple) !important;
+  color: var(--alert-color-important) !important;
 }
 
 .alert-warning {
-  border-left-color: var(--alert-color-orange) !important;
+  border-left-color: var(--alert-color-warning) !important;
 }
 
 .alert-warning .fa-triangle-exclamation {
-  color: var(--alert-color-orange) !important;
+  color: var(--alert-color-warning) !important;
 }
 
 .alert-caution {
-  border-left-color: var(--alert-color-orange) !important;
+  border-left-color: var(--alert-color-warning) !important;
 }
 
-
-/*  */
+/* 演習問題の難易度レーティング (星) */
 .difficulty-rating {
   width: 200px;
   height: auto;
@@ -335,20 +340,22 @@ blockquote.alert {
 
 .difficulty-rating .filled-stars {
   /* fill: #FFD700; */
-  fill: #FFC107;
+  fill: var(--difficulty-rating-filled-stars);
 }
 
 .difficulty-rating .empty-stars {
   /* fill: #D3D3D3; */
-  fill: #C0C0C0;
+  fill: var(--difficulty-rating-empty-stars);
 }
 
 .dark .difficulty-rating .filled-stars {
-  fill: #ffd700;
+  /* fill: #ffd700; */
+  fill: var(--difficulty-rating-filled-stars);
 }
 
 .dark .difficulty-rating .empty-stars {
-  fill: #AAA;
+  /* fill: #AAA; */
+  fill: var(--difficulty-rating-empty-stars);
 }
 
 /* 関連記事 */
