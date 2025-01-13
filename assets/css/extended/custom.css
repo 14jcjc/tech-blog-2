@@ -285,6 +285,7 @@ blockquote.alert {
   /* line-height: 1.5; */
 }
 
+/* 各アラートタイプに応じたスタイル */
 .alert-heading {
   margin-bottom: 0.4em !important; /* 下部マージンを指定 */
 }
@@ -325,7 +326,30 @@ blockquote.alert {
   border-left-color: var(--alert-color-orange) !important;
 }
 
-/* 各アラートタイプに応じたスタイル */
+
+/*  */
+.difficulty-rating {
+  width: 200px;
+  height: auto;
+}
+
+.difficulty-rating .filled-stars {
+  /* fill: #FFD700; */
+  fill: #FFC107;
+}
+
+.difficulty-rating .empty-stars {
+  /* fill: #D3D3D3; */
+  fill: #C0C0C0;
+}
+
+.dark .difficulty-rating .filled-stars {
+  fill: #ffd700;
+}
+
+.dark .difficulty-rating .empty-stars {
+  fill: #AAA;
+}
 
 /* 関連記事 */
 .related-posts {
