@@ -68,11 +68,11 @@ summary: の設定より優先度が高いです.
 ```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/q-list */>}}
 or
-{{</* k100/q-list "standard,advanced" */>}}
+{{</* k100/q-list ed="standard,advanced" root=".." */>}}
 ```
 ⬇️
 
-{{< k100/q-list "standard,advanced" >}}
+{{< k100/q-list ed="standard,advanced" root=".." >}}
 
 ### 演習問題文の出力
 
