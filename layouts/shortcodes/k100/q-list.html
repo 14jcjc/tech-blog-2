@@ -9,6 +9,7 @@
 {{ else }}
   {{ $ed := split (.Get "ed" | default "standard,advanced") "," }}
   {{ range $ed }}
+    <div class="q-list-{{ $ed }}">
     {{ $category := .}}
     <div class="q-list-category-title">
       {{ $edition := index $dictE $category }}
@@ -40,5 +41,6 @@
         {{ end }}
       </tbody>
     </table>
+    </div>
   {{ end }}{{/*  {{ range $ed }}  */}}
 {{ end }} {{/*  {{ if not $data }}  */}}

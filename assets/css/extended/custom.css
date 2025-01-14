@@ -219,6 +219,7 @@ h1 {
 }
 
 /* Archive */
+
 .archive-posts {
   width: 100%; /* default: 100% */
   /* font-size: 16px; */
@@ -237,6 +238,8 @@ h1 {
   background: var(--entry);
 }
 
+/* 404.html */
+
 .not-found {
   position: absolute;
   left: 0;
@@ -250,7 +253,6 @@ h1 {
   font-weight: 300;
 }
 
-/* 404.html */
 .not-found a {
   color: #3498db; /* リンクテキストの色を設定（青色） */
 }
@@ -261,6 +263,7 @@ h1 {
 }
 
 /* PaperMod custom styles for demo site */
+
 .twitter-tweet {
   margin: auto;
 }
@@ -277,6 +280,8 @@ iframe {
 .entry-cover img {
   border: 1px solid var(--border);
 } */
+
+/* Alerts */
 
 /* アラート全体のスタイル */
 blockquote.alert {
@@ -359,6 +364,8 @@ blockquote.alert {
   border-left-color: var(--alert-color-warning) !important;
 }
 
+/* stars */
+
 .rating-stars {
   display: flex;
   justify-content: center; /* 左右中央揃え */
@@ -373,6 +380,7 @@ blockquote.alert {
   /* width: 200px; */
   /* width: 100%; */
   /* height: 50px; */
+  /* width: calc(var(--base-font-size) * 4.0 * 5); */
 }
 
 .q-difficulty-rating {
@@ -383,13 +391,13 @@ blockquote.alert {
   /* 親要素に対して拡大 */
   /* flex-grow: 1; */
   /* 親要素の150%に設定 */
-  /* width: 150%; */
+  /* width: 70%; */
   /* width: 200px; */
   /* width: calc(var(--base-font-size) * 5.0); */
   /* height: 50px; */
-  width: calc(var(--base-font-size) * 2.3 * 5); /* 5つの星を横に並べる場合 */
+  width: calc(var(--base-font-size) * 2.3 * 5);
   /* height: calc(var(--base-font-size) * 1.7); */
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .rating-stars .filled-stars{
@@ -420,6 +428,7 @@ blockquote.alert {
 }
 
 /* 関連記事 */
+
 .related-posts {
   margin-top: 12pt;
   padding: 8pt 11pt 7pt;
@@ -452,4 +461,72 @@ blockquote.alert {
 
 .testglossary-posts {
   background-color: var(--theme); 
+}
+
+/* 演習問題一覧 */
+
+/* 標準編と発展編のリスト全体のスタイル */
+.q-list-standard,
+.q-list-advanced {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* カテゴリータイトルのスタイル */
+.q-list-category-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+}
+
+/* テーブル全体のスタイル */
+.q-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* テーブルヘッダーのスタイル */
+.q-list-table thead th {
+  background-color: #007BFF;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* テーブルボディのスタイル */
+.q-list-table tbody td {
+  padding: 10px !important;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+
+.q-list-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* テーブル行のホバー効果 */
+.q-list-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.q-list-table tbody td a {
+  all: unset; /* すべてのスタイルをリセット */
+  color: #007BFF;
+  /* text-decoration: none; */
+  text-decoration: underline;
+  display: inline; /* inline要素に戻す */
+}
+
+.q-list-table tbody td a:hover {
+  color: #FF00AA;
+  text-decoration: underline;
 }

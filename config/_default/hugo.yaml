@@ -327,6 +327,9 @@ menu:
     - name: Search
       url: search
       weight: 40
+    - name: "[R+SQL]演習問題一覧"
+      url: "test/100k/q-list"
+      weight: 45
     - name: "データサイエンス100本ノック＋α - test"
       # url: ds-100knocks-dp-test
       url: test/100k
