@@ -32,8 +32,8 @@
   --alert-color-important: #9560f0; /* Important */
   --alert-color-warning: #ff5722; /* Warning, Caution */
   /* 演習問題の難易度レーティング (星) */
-  --difficulty-rating-filled-stars: #FFC107;
-  --difficulty-rating-empty-stars: #C0C0C0;
+  --q-difficulty-rating-filled-stars: #FFC107;
+  --q-difficulty-rating-empty-stars: #C0C0C0;
 }
 
 /* ダークモードで変数の設定 */
@@ -58,8 +58,8 @@
   --alert-color-important: #C090F0;
   --alert-color-warning: #ff8a65; /* 明るいオレンジ */
   /* 演習問題の難易度レーティング (星) */
-  --difficulty-rating-filled-stars: #FFC107;
-  --difficulty-rating-empty-stars: #C0C0C0;
+  --q-difficulty-rating-filled-stars: #FFC107;
+  --q-difficulty-rating-empty-stars: #C0C0C0;
 }
 
 .list {
@@ -359,30 +359,41 @@ blockquote.alert {
   border-left-color: var(--alert-color-warning) !important;
 }
 
+.rating-stars {
+  width: 300px;
+  height: auto;
+}
+
+.rating-stars .filled-stars{
+  fill: #FF0088;
+}
+
+.rating-stars .empty-stars{
+  fill: #AAA;
+}
+
 /* 演習問題の難易度レーティング (星) */
-.difficulty-rating {
+.q-difficulty-rating {
   width: 200px;
   height: auto;
 }
 
-.difficulty-rating .filled-stars {
-  /* fill: #FFD700; */
-  fill: var(--difficulty-rating-filled-stars);
+.q-difficulty-rating .filled-stars {
+  fill: var(--q-difficulty-rating-filled-stars);
 }
 
-.difficulty-rating .empty-stars {
-  /* fill: #D3D3D3; */
-  fill: var(--difficulty-rating-empty-stars);
+.q-difficulty-rating .empty-stars {
+  fill: var(--q-difficulty-rating-empty-stars);
 }
 
-.dark .difficulty-rating .filled-stars {
+.dark .q-difficulty-rating .filled-stars {
   /* fill: #ffd700; */
-  fill: var(--difficulty-rating-filled-stars);
+  fill: var(--q-difficulty-rating-filled-stars);
 }
 
-.dark .difficulty-rating .empty-stars {
+.dark .q-difficulty-rating .empty-stars {
   /* fill: #AAA; */
-  fill: var(--difficulty-rating-empty-stars);
+  fill: var(--q-difficulty-rating-empty-stars);
 }
 
 /* 関連記事 */

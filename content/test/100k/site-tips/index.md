@@ -29,7 +29,7 @@ tags:
 params:
   question:
     edition: "standard"
-    id: "R-003"
+    id: "R-901"
   testparam: "これは params.testparam."
   testparam2: 
     nestparam: "これは testparam2.nestparam."
@@ -60,6 +60,45 @@ summary: の設定より優先度が高いです.
 <!--more-->
 
 ---
+
+## 演習問題
+
+### 演習問題一覧の出力
+
+```go-html-template {linenos=false,anchorLineNos=false}
+{{</* k100/q-list */>}}
+or
+{{</* k100/q-list "standard,advanced" */>}}
+```
+⬇️
+
+{{< k100/q-list "standard,advanced" >}}
+
+### 演習問題文の出力
+
+read: /data/100k/questions.yaml
+
+```go-html-template {linenos=false,anchorLineNos=false}
+{{</* k100/question */>}} <-- フロントマターから ed, id を取得
+{{</* k100/question ed="standard" id="R-902" */>}}
+{{</* k100/question ed="advanced" id="A-901" */>}}
+```
+
+{{< k100/question >}}
+
+---
+
+{{< k100/question ed="standard" id="R-902" >}}
+
+---
+
+{{< k100/question ed="advanced" id="A-901" >}}
+
+---
+
+{{% comment %}}
+{{< test1 >}}
+{{% /comment %}}
 
 ## フォントファミリー (font-family)
 
@@ -313,30 +352,12 @@ figure src="box.png" alt="代替テキスト" align="center" width="50%" height=
 
 0〜5段階 : 
 
-{{< q-rating 0 >}}  
-{{< q-rating 1 >}}  
-{{< q-rating 2 >}}  
-{{< q-rating 3 >}}  
-{{< q-rating 4 >}}  
-{{< q-rating 5 >}}  
-
-### 演習問題文の出力
-
-read: /data/100k/questions.yaml
-
-```go-html-template {linenos=false,anchorLineNos=false}
-{{</* k100/question */>}} <-- フロントマターから ed, id を取得
-{{</* k100/question ed="standard" id="R-004" */>}}
-{{</* k100/question ed="advanced" id="A-001" */>}}
-```
-
-{{< k100/question >}}
-{{< k100/question ed="standard" id="R-004" >}}
-{{< k100/question ed="advanced" id="A-001" >}}
-
-{{% comment %}}
-{{< test1 >}}
-{{% /comment %}}
+難易度0: {{< k100/q-rating 0 >}}  
+難易度1: {{< k100/q-rating 1 >}}  
+{{< k100/q-rating 2 >}}  
+難易度3: {{< k100/q-rating 3 >}}  
+{{< k100/q-rating 4 >}}  
+難易度5: {{< k100/q-rating 5 >}}
 
 ### Data sources
 

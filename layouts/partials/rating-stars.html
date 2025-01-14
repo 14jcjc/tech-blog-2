@@ -1,0 +1,25 @@
+{{ $rating := .rating | int }}
+{{ $class := .class | default "" }}
+
+{{ if or (lt $rating 0) (gt $rating 5) }}
+  <p>Error: Rating value is out of range. It must be between 0 and 5.</p>
+{{- else -}}
+  <svg class="rating-stars {{ $class }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 30">
+    <!-- 塗りつぶされた星（★） -->
+    <g class="filled-stars" fill="#FFC107">
+      {{ if ge $rating 1 }}<polygon points="10,1 13,9 21,9 15,14 17,22 10,18 3,22 5,14 -1,9 7,9" />{{ end }}
+      {{ if ge $rating 2 }}<polygon points="32,1 35,9 43,9 37,14 39,22 32,18 25,22 27,14 21,9 29,9" />{{ end }}
+      {{ if ge $rating 3 }}<polygon points="54,1 57,9 65,9 59,14 61,22 54,18 47,22 49,14 43,9 51,9" />{{ end }}
+      {{ if ge $rating 4 }}<polygon points="76,1 79,9 87,9 81,14 83,22 76,18 69,22 71,14 65,9 73,9" />{{ end }}
+      {{ if ge $rating 5 }}<polygon points="98,1 101,9 109,9 103,14 105,22 98,18 91,22 93,14 87,9 95,9" />{{ end }}
+    </g>
+    <!-- 空の星（☆） -->
+    <g class="empty-stars" fill="#C0C0C0">
+      {{ if lt $rating 5 }}<polygon points="98,1 101,9 109,9 103,14 105,22 98,18 91,22 93,14 87,9 95,9" />{{ end }}
+      {{ if lt $rating 4 }}<polygon points="76,1 79,9 87,9 81,14 83,22 76,18 69,22 71,14 65,9 73,9" />{{ end }}
+      {{ if lt $rating 3 }}<polygon points="54,1 57,9 65,9 59,14 61,22 54,18 47,22 49,14 43,9 51,9" />{{ end }}
+      {{ if lt $rating 2 }}<polygon points="32,1 35,9 43,9 37,14 39,22 32,18 25,22 27,14 21,9 29,9" />{{ end }}
+      {{ if lt $rating 1 }}<polygon points="10,1 13,9 21,9 15,14 17,22 10,18 3,22 5,14 -1,9 7,9" />{{ end }}
+    </g>
+  </svg>
+{{- end -}}
