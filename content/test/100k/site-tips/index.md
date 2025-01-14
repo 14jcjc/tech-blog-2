@@ -96,6 +96,8 @@ read: /data/100k/questions.yaml
 
 ---
 
+通常の文章。
+
 {{% comment %}}
 {{< test1 >}}
 {{% /comment %}}

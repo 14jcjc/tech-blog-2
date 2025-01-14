@@ -1,8 +1,7 @@
 {{ $dictE := dict 
-    "standard" .Site.Params.k100.site.edition.s
-    "advanced" .Site.Params.k100.site.edition.a
+  "standard" .Site.Params.k100.site.edition.s
+  "advanced" .Site.Params.k100.site.edition.a
 }}
-
 {{ $data := .Site.Data.k100.questions }}
 {{ if not $data }}
   <div class="error-message">データが存在しません。</div>
@@ -10,9 +9,9 @@
   {{ $ed := split (.Get 0 | default "standard,advanced") "," }}
   {{ range $ed }}
     {{ $category := .}}
-    <div class="q-category-title">
-    {{ $edition := index $dictE $category }}
-    {{ $edition }}
+    <div class="q-list-category-title">
+      {{ $edition := index $dictE $category }}
+      {{ $edition }}
     </div>
     <table class="q-list-table">
       <thead>
@@ -23,18 +22,20 @@
         </tr>
       </thead>
       <tbody>
-    {{ $question := index $data $category }}
-    {{ if $question }}
-      {{ range $question }}
-        <tr>
-          <td><a href="../{{ $category }}/{{ lower .id }}">{{ .id }}</a></td>
-          <td>{{ partial "rating-stars.html" (dict "class" "q-difficulty-rating" "rating" .difficulty) }}</td>
-          <td>{{ .text | markdownify }}</td>
-        </tr>
-      {{ end }}
-    {{ else }}
-      <div class="error-message">指定されたカテゴリー「{{ $category }}」に対応するデータが存在しません。</div>
-    {{ end }}
+        {{ $question := index $data $category }}
+        {{ if $question }}
+          {{ range $question }}
+            <tr>
+              <td><a href="../{{ $category }}/{{ lower .id }}">{{ .id }}</a></td>
+              <td>{{ partial "rating-stars.html" (dict "class" "q-difficulty-rating" "rating" .difficulty) }}</td>
+              <td>{{ .text | markdownify }}</td>
+            </tr>
+          {{ end }}
+        {{ else }}
+          <tr>
+            <td colspan="3">指定されたカテゴリー「{{ $category }}」に対応するデータが存在しません。</td>
+          </tr>
+        {{ end }}
       </tbody>
     </table>
   {{ end }}{{/*  {{ range $ed }}  */}}
