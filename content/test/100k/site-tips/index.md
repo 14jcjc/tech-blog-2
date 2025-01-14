@@ -27,8 +27,9 @@ tags:
   - SQL
 # tags_weight: 1
 params:
-  params:
-    math: true # Mathematics in Markdown
+  question:
+    edition: "standard"
+    id: "R-003"
   testparam: "これは params.testparam."
   testparam2: 
     nestparam: "これは testparam2.nestparam."
@@ -59,10 +60,6 @@ summary: の設定より優先度が高いです.
 <!--more-->
 
 ---
-
-{{% comment %}}
-{{< test1 >}}
-{{% /comment %}}
 
 ## フォントファミリー (font-family)
 
@@ -322,6 +319,24 @@ figure src="box.png" alt="代替テキスト" align="center" width="50%" height=
 {{< q-rating 3 >}}  
 {{< q-rating 4 >}}  
 {{< q-rating 5 >}}  
+
+### 演習問題文の出力
+
+read: /data/100k/questions.yaml
+
+```go-html-template {linenos=false,anchorLineNos=false}
+{{</* k100/question */>}} <-- フロントマターから ed, id を取得
+{{</* k100/question ed="standard" id="R-004" */>}}
+{{</* k100/question ed="advanced" id="A-001" */>}}
+```
+
+{{< k100/question >}}
+{{< k100/question ed="standard" id="R-004" >}}
+{{< k100/question ed="advanced" id="A-001" >}}
+
+{{% comment %}}
+{{< test1 >}}
+{{% /comment %}}
 
 ### Data sources
 
