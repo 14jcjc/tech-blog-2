@@ -33,9 +33,9 @@
 <div class="question-difficulty">
   <span class="difficulty-label">難易度</span>
   <span class="difficulty-stars">
-    {{ partial "rating-stars.html" (dict "class" "q-difficulty-rating" "rating" $question.difficulty) }}
+    {{- partial "rating-stars.html" (dict "class" "q-difficulty-rating" "rating" $question.difficulty) -}}
   </span>
 </div>
 <div class="question-text">
-  {{ $question.text | markdownify }}
+  {{- $question.text | markdownify -}}
 </div>

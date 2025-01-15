@@ -424,6 +424,14 @@ blockquote.alert {
   fill: #C0C0C0; /* 灰色 */
   transition: fill 0.3s ease-in-out;
 }
+.dark .q-difficulty-rating .filled-stars {
+  /* fill: #ffd700; */
+  fill: var(--q-difficulty-rating-filled-stars);
+}
+.dark .q-difficulty-rating .empty-stars {
+  /* fill: #AAA; */
+  fill: var(--q-difficulty-rating-empty-stars);
+}
 
 /* ホバー時のスタイリング（例: 星が少し明るくなる） */
 .q-difficulty-rating-container:hover .filled-stars {
@@ -438,16 +446,6 @@ blockquote.alert {
 .q-difficulty-rating-container:focus-within .empty-stars {
   outline: 2px solid #FFC107;
   outline-offset: 4px;
-}
-
-.dark .q-difficulty-rating .filled-stars {
-  /* fill: #ffd700; */
-  fill: var(--q-difficulty-rating-filled-stars);
-}
-
-.dark .q-difficulty-rating .empty-stars {
-  /* fill: #AAA; */
-  fill: var(--q-difficulty-rating-empty-stars);
 }
 
 /* 関連記事 */
@@ -618,8 +616,10 @@ blockquote.alert {
   width: 90px;
   height: 30px;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  /* 必要なら左寄せ、中央揃えの場合は center */
+  justify-content: flex-start; 
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 }
 
 /* 問題文(1題)のスタイル */
