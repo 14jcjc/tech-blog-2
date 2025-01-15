@@ -6,7 +6,7 @@
 {{ else }}
   {{ $viewBox := "0 0 120 25" }}
   <div class="rating-stars {{ $class }}-container">
-    <svg class="{{ $class }}" xmlns="http://www.w3.org/2000/svg" viewBox="{{ $viewBox }}" role="img" aria-label="Rating: {{ $rating }} out of 5" width="100%" height="100%">
+    <svg class="{{ $class }}" xmlns="http://www.w3.org/2000/svg" viewBox="{{ $viewBox }}" role="img" aria-label="Rating: {{ $rating }} out of 5" width="80px" height="20px">
       <!-- 星形のポリゴン座標リスト -->
       {{ $stars := slice 
         "10,1 13,9 21,9 15,14 17,22 10,18 3,22 5,14 -1,9 7,9"

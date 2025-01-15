@@ -20,6 +20,8 @@ cover:
   # hidden: true
 ---
 
+<font color="#F0B007">★</font>は難易度です。
+
 ## 標準編
 
 {{< k100/q-list ed="standard" root=".." >}}
