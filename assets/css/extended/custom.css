@@ -575,6 +575,7 @@ blockquote.alert {
 }
 
 .q-list-table tbody tr.content-row td {
+  padding-top: 15px !important;
   padding-bottom: 25px !important;
 }
 
