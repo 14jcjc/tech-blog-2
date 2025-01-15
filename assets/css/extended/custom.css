@@ -491,55 +491,21 @@ blockquote.alert {
 /* 標準編と発展編のリスト全体のスタイル */
 .q-list-standard,
 .q-list-advanced {
-  margin: 20px 0;
+  /* margin-top: 0px !important; */
   /* padding: 15px; */
   /* border: 1px solid #ccc; */
   /* border-radius: 8px; */
   /* background-color: #f9f9f9; */
 }
 
-/* カテゴリータイトルのスタイル */
-.q-list-category-title {
-  /* font-size: 1.5rem; */
-  /* font-weight: bold; */
-  /* color: #333; */
-  /* margin-bottom: 10px; */
-  /* border-bottom: 2px solid #A0C0FF; */
-  /* padding-bottom: 5px; */
-}
-
-/* テーブルヘッダーのスタイル */
-/* 
-.q-list-table thead th {
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  border: 1px solid var(--border);
-  background-color: #3060A0;
-  color: #fff;
-}
-.dark .q-list-table thead th {
-  color: #222233;
-  background-color: #B0E0FF;
-} */
-
-/* 
-  --code-bg: rgb(240, 248, 255);
-  --content: rgb(50, 50, 50);
-  --primary: rgb(30, 30, 50);
-  --secondary: rgb(108, 108, 108);
-  --tertiary: rgb(214, 214, 214);
-  --code-block-bg: rgb(28, 29, 33);
-  --border: rgb(238, 238, 238); 
-*/
-
 /* 設問行のスタイル (奇数と偶数で背景色を分ける) */
 
 .q-list-table tbody tr:nth-of-type(2n-1) {
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background-color: var(--code-bg);
 }
 .dark .q-list-table tbody tr:nth-of-type(2n-1) {
-  background-color: var(--code-bg); 
+  background-color: var(--code-bg);
 }
 
 .q-list-table tbody tr:nth-of-type(2n) {
@@ -596,15 +562,24 @@ blockquote.alert {
 /* テーブルボディのスタイル */
 .q-list-table tbody td {
   overflow: hidden;
-  padding: 0;
+  /* padding: 0 !important;; */
   text-align: left;
   vertical-align: top;
   word-wrap: break-word;
   word-break: break-word;
   white-space: normal;
   max-width: 100%;
-  /* height: 40px; */
-  border: 1px solid var(--border);
+  height: auto;
+  border: none !important;
+  /* border: 1px solid var(--border); */
+}
+
+.q-list-table tbody tr.content-row td {
+  padding-bottom: 25px !important;
+}
+
+.q-list-table tbody tr.id-row td {
+  border: none
 }
 
 /* .q-id のスタイル */
@@ -615,10 +590,12 @@ blockquote.alert {
   /* height: 30px; */
   /* ボーダーを幅に含める */
   /* box-sizing: border-box; */
+  /* 溢れたテキストを非表示にする */
   /* overflow: hidden;  */
-  /* text-overflow: ellipsis; */
-  /* テキストの折り返しを防ぐ（必要に応じて） */
+  /* テキストの折り返しを防ぐ */
   /* white-space: nowrap;  */
+  /* テキストが指定された領域に収まりきらない場合に、テキストを省略して「…」(ellipsis) を表示する */
+  /* text-overflow: ellipsis; */
 }
 
 .q-list-table tbody td.q-difficulty {
