@@ -9,7 +9,7 @@
 {{ else }}
   {{ $ed := split (.Get "ed" | default "standard,advanced") "," }}
   {{ range $ed }}
-    <div class="q-list-{{ $ed }}">
+    <div class="q-list-{{ . }}">
     {{ $category := .}}
     <div class="q-list-category-title">
       {{ $edition := index $dictE $category }}
@@ -29,9 +29,15 @@
           {{ range $question }}
             {{ $url := path.Join $root $category (lower .id) }}
             <tr>
-              <td><a href="{{ $url }}">{{ .id }}</a></td>
+              <td>
+                <div class="q-id">
+                  <a href="{{ $url }}">{{ .id }}</a>
+                </div>
+              </td>
               <td>{{ partial "rating-stars.html" (dict "class" "q-difficulty-rating" "rating" .difficulty) }}</td>
-              <td>{{ .text | markdownify }}</td>
+              <td>
+                {{ .text | markdownify }}
+              </td>
             </tr>
           {{ end }}
         {{ else }}
