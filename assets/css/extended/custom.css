@@ -565,12 +565,15 @@ blockquote.alert {
 /* ホバー時の背景変更 */
 .q-item:hover {
   background-color: #F5F6FF;
+  transition: background-color 0.3s ease;
 }
 .q-item:hover .q-header {
   background-color: #E0E9FF;
+  transition: background-color 0.3s ease;
 }
 .q-item:hover .q-content {
   background-color: #F5F6FF;
+  transition: background-color 0.3s ease;
 }
 .dark .q-item:hover {
   background-color: #050520;
