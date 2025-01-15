@@ -238,7 +238,6 @@ h1 {
   background: var(--entry);
 }
 
-/* ------------------------------------------------------------------------------- */
 /* 404.html */
 
 .not-found {
@@ -263,7 +262,6 @@ h1 {
   color: #e74c3c; /* ホバー時にリンクテキストの色を赤に変更 */
 }
 
-/* ------------------------------------------------------------------------------- */
 /* PaperMod custom styles for demo site */
 
 .twitter-tweet {
@@ -283,7 +281,6 @@ iframe {
   border: 1px solid var(--border);
 } */
 
-/* ------------------------------------------------------------------------------- */
 /* Alerts */
 
 /* アラート全体のスタイル */
@@ -367,7 +364,6 @@ blockquote.alert {
   border-left-color: var(--alert-color-warning) !important;
 }
 
-/* ------------------------------------------------------------------------------- */
 /* stars */
 
 /* .rating-stars { */
@@ -456,7 +452,6 @@ blockquote.alert {
   outline-offset: 4px;
 }
 
-/* ------------------------------------------------------------------------------- */
 /* 関連記事 */
 
 .related-posts {
@@ -493,96 +488,158 @@ blockquote.alert {
   background-color: var(--theme); 
 }
 
-/* ------------------------------------------------------------------------------- */
 /* 演習問題一覧 */
 
-/* 問題全体のレイアウト */
-.q-item {
-  /* margin: 30px 0; */
-  margin-bottom: 12px;
-  padding-bottom: 0;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  /* border: 1px solid #ddd; */
+/* 標準編と発展編のリスト全体のスタイル */
+.q-list-standard,
+.q-list-advanced {
+  /* margin-top: 0px !important; */
+  /* padding: 15px; */
+  /* border: 1px solid #ccc; */
+  /* border-radius: 8px; */
+  /* background-color: #f9f9f9; */
 }
 
-/* ヘッダー部分 (No. と 星を横並び) */
-.q-item .q-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.q-item .q-header .q-difficulty .q-difficulty-rating-container {
-  display: flex;
-  align-items: center; /* 上下中央揃え */
-  width: 95px;
+/* 設問行のスタイル (奇数と偶数で背景色を分ける) */
+
+.q-list-table {
+border-collapse: separate;
+/* border-spacing: 0 15px; */
+border-spacing: 0 4px;
 }
 
-/* 問題文のスタイル */
-.q-item .q-content {
-  padding-top: 5px;
-  padding-bottom: 15px;
-  font-size: 0.9em;
-  line-height: 1.7;
-  /* background-color: var(--theme); */
-  background-color: #FEFEFF;
+.q-list-table tbody tr:nth-of-type(2n-1) {
+  /* background-color: #f9f9f9; */
+  background-color: var(--code-bg);
 }
-.dark .q-item .q-content {
-  background-color: #202020;
-}
-
-.q-item .q-header {
+.dark .q-list-table tbody tr:nth-of-type(2n-1) {
   background-color: var(--code-bg);
 }
 
-/* ホバー時の背景変更 */
-.q-item:hover {
-  background-color: #F5F6FF;
+.q-list-table tbody tr:nth-of-type(2n) {
+  /* background-color: var(--theme); */
+  background-color: #FEFEFF;
 }
-.q-item:hover .q-header {
+.dark .q-list-table tbody tr:nth-of-type(2n) {
+  background-color: #202020;
+}
+
+/* .q-id をホバー時に背景色を変える */
+.q-list-table .id-row:hover {
+  /* background-color: #f1f1f1; */
+  /* background-color: #E9E9FF; */
   background-color: #E0E9FF;
 }
-.q-item:hover .q-content {
+/* content-row に対してもホバー時に背景色を変更する */
+.q-list-table .id-row:hover + .content-row {
+  /* background-color: #F3F3FF; */
   background-color: #F5F6FF;
 }
-.dark .q-item:hover {
-  background-color: #050520;
-}
-.dark .q-item:hover .q-header {
+.dark .q-list-table .id-row:hover {
+  /* background-color: #080808; */
+  /* background-color: #07073C */
+  /* background-color: #232350 */
   background-color: #232950
 }
-.dark .q-item:hover .q-content {
+.dark .q-list-table .id-row:hover + .content-row {
+  /* background-color: #080808; */
   background-color: #050520;
 }
 
-/* No. のスタイル */
-.q-item .q-header .q-id a {
-  /* すべてのスタイルをリセット */
-  /* all: unset;  */
-  /* inline要素に戻す */
-  /* display: inline;  */
-  font-weight: bold;
+/* .q-list-table tbody td a { */
+.q-list-table .q-id a {
+  all: unset; /* すべてのスタイルをリセット */
   /* text-decoration: none; */
-  /* text-decoration: underline; */
-  font-size: 1.0em;
+  text-decoration: underline;
+  display: inline; /* inline要素に戻す */
   color: #007BFF;
-  /* 親要素の値を引き継ぐ */
-  /* color: inherit;  */
 }
-.dark .q-item .q-header .q-id a {
-  /* color: #40C0FF; */
-  color: #00ADFF;
-  transition: color 0.3s ease;
-}
-.q-item .q-header .q-id a:hover {
-  /* color: #0056b3; */
-  /* color: #FF00AA; */
-  /* color: #E64A19 */
-  color: #FF5722
+.dark .q-list-table .q-id a {
+  color: #40C0FF;
 }
 
-/* ------------------------------------------------------------------------------- */
+.q-list-table .q-id a:hover {
+  color: #FF00AA;
+  text-decoration: underline;
+}
+
+/* テーブル全体のスタイル */
+.q-list-table {
+  /* 列幅を自動調整 */
+  table-layout: auto;
+  /* 列幅を固定 */
+  /* table-layout: fixed; */
+  width: 100%;
+  /* box-sizing: border-box; */
+  /* border-collapse: collapse; */
+  /* margin-top: 20px; */
+}
+
+/* テーブルボディのスタイル */
+.q-list-table tbody td {
+  overflow: hidden;
+  /* padding: 0 !important;; */
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  max-width: 100%;
+  height: auto;
+  border: none !important;
+  /* border: 1px solid var(--border); */
+}
+
+.q-list-table tbody tr.content-row td {
+  padding-top: 15px !important;
+  padding-bottom: 25px !important;
+}
+
+.q-list-table tbody tr.id-row td {
+  border: none
+}
+
+/* .q-id のスタイル */
+.q-list-table tbody td.q-id {
+  vertical-align: middle;
+  width: 80px;
+  /* max-width: 30px; */
+  /* height: 30px; */
+  /* ボーダーを幅に含める */
+  /* box-sizing: border-box; */
+  /* 溢れたテキストを非表示にする */
+  /* overflow: hidden;  */
+  /* テキストの折り返しを防ぐ */
+  /* white-space: nowrap;  */
+  /* テキストが指定された領域に収まりきらない場合に、テキストを省略して「…」(ellipsis) を表示する */
+  /* text-overflow: ellipsis; */
+}
+
+.q-list-table tbody td.q-difficulty {
+  vertical-align: middle;
+  width: 120px;
+}
+
+.q-list-table tbody td .q-difficulty-rating {
+  /* display: block; */
+  vertical-align: middle;
+  /* width: 90px; */
+  /* height: 30px; */
+  /* max-width: 100%; */
+  /* max-height: 30px; */
+  /* margin: 0 auto; */
+}
+
+.q-list-table tbody td .q-difficulty-rating-container {
+  width: 90px;
+  height: 30px;
+  position: relative;
+  /* 必要なら左寄せ、中央揃えの場合は center */
+  justify-content: flex-start; 
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+}
+
 /* 問題文(1題)のスタイル */
 
 .question-difficulty {
@@ -611,5 +668,3 @@ blockquote.alert {
   justify-content: flex-start; /* 必要なら左寄せ、中央揃えの場合は center */
   width: 110px;
 }
-
-/* ------------------------------------------------------------------------------- */
