@@ -12,12 +12,11 @@
   {{ range $ed }}
     <div class="q-list-{{ . }}">
     {{ $category := .}}
-    {{/*  <div class="q-list-category-title">  */}}
+    <div class="q-list-category-title">
       {{/*  {{ $edition := index $dictE $category }}  */}}
       {{/*  {{ $edition }}  */}}
-    {{/*  </div>  */}}
+    </div>
     <table class="q-list-table">
-      {{/*        
       <thead>
         <tr>
           <th>No.</th>
@@ -25,34 +24,26 @@
           <th>設問内容</th>
         </tr>
       </thead>
-      */}}
       <tbody>
         {{ $question := index $data $category }}
         {{ if $question }}
           {{ range $question }}
             {{ $url := path.Join $root $category (lower .id) }}
-            <tr class="id-row">
-              <td class="q-id">
-                {{/*  <div class="q-id">  */}}
+            <tr>
+              <td>
+                <div class="q-id">
                   <a href="{{ $url }}">{{ .id }}</a>
-                {{/*  </div>  */}}
+                </div>
               </td>
-              {{/*  <td class="q-test">  */}}
-                {{/*  あああああああああああああああああああああああああああああああああああああああああああああああああああ  */}}
-              <td class="q-difficulty">
-                {{ partial "rating-stars.html" (dict "class" "q-difficulty-rating" "rating" .difficulty) }}
-              </td>
-              <td></td>
-            </tr>
-            <tr class="content-row">
-              <td colspan="3">
+              <td>{{ partial "rating-stars.html" (dict "class" "q-difficulty-rating" "rating" .difficulty) }}</td>
+              <td>
                 {{ .text | markdownify }}
               </td>
             </tr>
           {{ end }}
         {{ else }}
           <tr>
-            <td colspan="3" class="no-data">指定されたカテゴリー「{{ $category }}」に対応するデータが存在しません。</td>
+            <td colspan="3">指定されたカテゴリー「{{ $category }}」に対応するデータが存在しません。</td>
           </tr>
         {{ end }}
       </tbody>

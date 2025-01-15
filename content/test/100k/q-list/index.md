@@ -5,8 +5,8 @@ date: '2024-12-29T21:31:23+09:00'
 weight: 16
 description: "{{< k100/q-list >}} RとSQLの演習問題一覧です。"
 slug: 'q-list'
-ShowToc: false
-# TocOpen: true
+ShowToc: true
+TocOpen: true
 categories: ["DS-100本ノック"]
 tags: 
   - R
@@ -20,4 +20,10 @@ cover:
   # hidden: true
 ---
 
-{{< k100/q-list ed="standard,advanced" root=".." >}}
+## 標準編
+
+{{< k100/q-list ed="standard" root=".." >}}
+
+## 発展編
+
+{{< k100/q-list ed="advanced" root=".." >}}

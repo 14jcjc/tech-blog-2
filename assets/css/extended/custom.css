@@ -440,8 +440,6 @@ blockquote.alert {
   outline-offset: 4px;
 }
 
-
-
 .dark .q-difficulty-rating .filled-stars {
   /* fill: #ffd700; */
   fill: var(--q-difficulty-rating-filled-stars);
@@ -451,7 +449,6 @@ blockquote.alert {
   /* fill: #AAA; */
   fill: var(--q-difficulty-rating-empty-stars);
 }
-
 
 /* 関連記事 */
 
@@ -503,66 +500,28 @@ blockquote.alert {
 
 /* カテゴリータイトルのスタイル */
 .q-list-category-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  /* font-size: 1.5rem; */
+  /* font-weight: bold; */
   /* color: #333; */
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   /* border-bottom: 2px solid #A0C0FF; */
   /* padding-bottom: 5px; */
 }
 
-/* テーブル全体のスタイル */
-.q-list-table {
-  table-layout: auto; /* 列幅を自動調整 */
-  /* 列幅を固定 */
-  /* table-layout: fixed; */
-  width: 100%;
-  /* border-collapse: collapse; */
-  /* margin-top: 20px; */
-}
-
 /* テーブルヘッダーのスタイル */
+/* 
 .q-list-table thead th {
   font-weight: bold;
-  /* text-align: left; */
   text-align: center;
   padding: 10px;
   border: 1px solid var(--border);
-  /* background-color: var(--code-bg); */
-  /* background-color: #007BFF; */
-  /* background-color: #3090FF; */
   background-color: #3060A0;
   color: #fff;
 }
 .dark .q-list-table thead th {
-  /* background-color: #003090; */
   color: #222233;
   background-color: #B0E0FF;
-}
-
-/* テーブルボディのスタイル */
-.q-list-table tbody td {
-  /* コンテンツがはみ出た場合に隠す */
-  overflow: hidden;
-  padding: 0; /* 余白をリセット */
-  text-align: left;
-  vertical-align: top;
-  word-wrap: break-word; /* 単語が長すぎる場合に折り返し */
-  word-break: break-word; /* 長い単語を折り返す */
-  white-space: normal; /* テキストが折り返しできるようにする */
-  max-width: 100%; /* 最大幅を指定して、はみ出さないようにする */
-  border: 1px solid var(--border);
-}
-
-/* 
-.q-list-table tbody td:nth-child(1) {
-  text-align: center;
 } */
-
-.q-list-table tbody td .q-id {
-  text-align: center; /* 左右中央揃え */
-  width: 60px;
-}
 
 /* 
   --code-bg: rgb(240, 248, 255);
@@ -574,70 +533,114 @@ blockquote.alert {
   --border: rgb(238, 238, 238); 
 */
 
-/* 偶数行 */
-.q-list-table tbody tr:nth-child(even) {
+/* 設問行のスタイル (奇数と偶数で背景色を分ける) */
+
+.q-list-table tbody tr:nth-of-type(2n-1) {
   background-color: #f9f9f9;
 }
-.dark .q-list-table tbody tr:nth-child(even) {
-  /* background-color: #111; */
-  /* background-color: #191919; */
-  /* background-color: #222; */
-  background-color: #2A2A2A;
-  /* background-color: var(--code-bg); */
+.dark .q-list-table tbody tr:nth-of-type(2n-1) {
+  background-color: var(--code-bg); 
 }
 
-/* 奇数行 */
-.q-list-table tbody tr:nth-child(odd) {
-  /* background-color: #ffffff; */
+.q-list-table tbody tr:nth-of-type(2n) {
   background-color: var(--theme);
 }
-.dark .q-list-table tbody tr:nth-child(odd) {
-  /* background-color: #ffffff; */
-  /* background-color: #252525; */
+.dark .q-list-table tbody tr:nth-of-type(2n) {
   background-color: #202020;
 }
 
-/* テーブル行のホバー効果 */
-.q-list-table tbody tr:hover {
+/* .q-id をホバー時に背景色を変える */
+.q-list-table .id-row:hover {
   background-color: #f1f1f1;
 }
-.dark .q-list-table tbody tr:hover {
-  background-color: #000;
+.dark .q-list-table .id-row:hover {
+  background-color: #080808;
+}
+/* content-row に対してもホバー時に背景色を変更する */
+.q-list-table .id-row:hover + .content-row {
+  background-color: #f1f1f1;
+}
+.dark .q-list-table .id-row:hover + .content-row {
+  background-color: #080808;
 }
 
-.q-list-table tbody td a {
+/* .q-list-table tbody td a { */
+.q-list-table .q-id a {
   all: unset; /* すべてのスタイルをリセット */
   /* text-decoration: none; */
   text-decoration: underline;
   display: inline; /* inline要素に戻す */
   color: #007BFF;
 }
-.dark .q-list-table tbody td a {
+.dark .q-list-table .q-id a {
   color: #40C0FF;
 }
 
-.q-list-table tbody td a:hover {
+.q-list-table .q-id a:hover {
   color: #FF00AA;
   text-decoration: underline;
 }
 
-.q-list-table tbody td .q-difficulty-rating {
-  display: block;
+/* テーブル全体のスタイル */
+.q-list-table {
+  /* 列幅を自動調整 */
+  table-layout: auto;
+  /* 列幅を固定 */
+  /* table-layout: fixed; */
   width: 100%;
-  height: 100%;
-  /* max-width: 100px; */
+  /* box-sizing: border-box; */
+  /* border-collapse: collapse; */
+  /* margin-top: 20px; */
+}
+
+/* テーブルボディのスタイル */
+.q-list-table tbody td {
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
   max-width: 100%;
-  max-height: 30px;
-  margin: 0 auto;
+  /* height: 40px; */
+  border: 1px solid var(--border);
+}
+
+/* .q-id のスタイル */
+.q-list-table tbody td.q-id {
+  vertical-align: middle;
+  width: 80px;
+  /* max-width: 30px; */
+  /* height: 30px; */
+  /* ボーダーを幅に含める */
+  /* box-sizing: border-box; */
+  /* overflow: hidden;  */
+  /* text-overflow: ellipsis; */
+  /* テキストの折り返しを防ぐ（必要に応じて） */
+  /* white-space: nowrap;  */
+}
+
+.q-list-table tbody td.q-difficulty {
+  vertical-align: middle;
+  width: 120px;
+}
+
+.q-list-table tbody td .q-difficulty-rating {
+  /* display: block; */
+  vertical-align: middle;
+  /* width: 90px; */
+  /* height: 30px; */
+  /* max-width: 100%; */
+  /* max-height: 30px; */
+  /* margin: 0 auto; */
 }
 
 .q-list-table tbody td .q-difficulty-rating-container {
   width: 90px;
   height: 30px;
   position: relative;
-  /* 親要素の中央に配置 */
   left: 50%;
-  /* 中央揃えを補正 */
   transform: translateX(-50%);
 }
 
