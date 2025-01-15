@@ -612,7 +612,7 @@ blockquote.alert {
   display: flex;
   align-items: center; /* 上下中央揃え */
   justify-content: flex-start; /* 必要なら左寄せ、中央揃えの場合は center */
-  width: 110px;
+  width: 100px;
 }
 
 /* ------------------------------------------------------------------------------- */
