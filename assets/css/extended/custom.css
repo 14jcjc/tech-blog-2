@@ -519,6 +519,32 @@ blockquote.alert {
   width: 95px;
 }
 
+/* No. のスタイル */
+.q-item .q-header .q-id a {
+  /* すべてのスタイルをリセット */
+  /* all: unset;  */
+  /* inline要素に戻す */
+  /* display: inline;  */
+  /* font-weight: bold; */
+  /* text-decoration: none; */
+  /* text-decoration: underline; */
+  font-size: 1.0em;
+  color: #007BFF;
+  /* 親要素の値を引き継ぐ */
+  /* color: inherit;  */
+}
+.dark .q-item .q-header .q-id a {
+  /* color: #40C0FF; */
+  color: #00ADFF;
+  transition: color 0.3s ease;
+}
+.q-item .q-header .q-id a:hover {
+  /* color: #0056b3; */
+  /* color: #FF00AA; */
+  /* color: #E64A19 */
+  color: #FF5722
+}
+
 /* 問題文のスタイル */
 .q-item .q-content {
   padding-top: 5px;
@@ -554,32 +580,6 @@ blockquote.alert {
 }
 .dark .q-item:hover .q-content {
   background-color: #050520;
-}
-
-/* No. のスタイル */
-.q-item .q-header .q-id a {
-  /* すべてのスタイルをリセット */
-  /* all: unset;  */
-  /* inline要素に戻す */
-  /* display: inline;  */
-  font-weight: bold;
-  /* text-decoration: none; */
-  /* text-decoration: underline; */
-  font-size: 1.0em;
-  color: #007BFF;
-  /* 親要素の値を引き継ぐ */
-  /* color: inherit;  */
-}
-.dark .q-item .q-header .q-id a {
-  /* color: #40C0FF; */
-  color: #00ADFF;
-  transition: color 0.3s ease;
-}
-.q-item .q-header .q-id a:hover {
-  /* color: #0056b3; */
-  /* color: #FF00AA; */
-  /* color: #E64A19 */
-  color: #FF5722
 }
 
 /* ------------------------------------------------------------------------------- */
