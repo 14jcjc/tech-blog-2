@@ -257,22 +257,27 @@ h1 {
   margin-top: 10%;
 }
 
-.not-found h2 {
-  font-size: calc(var(--base-font-size) * 2.0);
+.not-found h1 {
+  font-size: calc(var(--base-font-size) * 2.0) !important;
+  margin-bottom: 20px;
+  margin-left: 10px;
   /* color: #d9534f; */
 }
 
 .not-found p {
   font-size: calc(var(--base-font-size) * 1.5);
+  margin: 0 20px;
 }
 
 .not-found a {
-  display: inline-block;
+  /* display: inline-block; */
+  display: block;
   font-size: calc(var(--base-font-size) * 1.5);
-  /* margin-top: 20px; */
+  margin: 20px 20px;
   /* padding: 10px 20px; */
   /* background-color: #0275d8; */
-  color: #3498db; /* リンクテキストの色を設定（青色） */
+  /* color: #3498db; */
+  color: #4080FF;
   text-decoration: none;
   border-radius: 5px;
 }
