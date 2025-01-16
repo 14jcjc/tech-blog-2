@@ -1,6 +1,7 @@
 ---
 title: 'Test'
 draft: true
+# 本番環境をターゲットにするビルドオプション
 cascade:
 - _target:
     environment: production
