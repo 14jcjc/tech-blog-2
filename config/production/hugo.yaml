@@ -51,7 +51,7 @@ params:
 menus:
   main:
     - name: "[R+SQL] 演習問題"
-      url: "100k/q-list"
+      url: "ds-100knocks-dp/q-list"
       weight: 10
     - name: レビュー
       url: "categories/%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/"
@@ -72,10 +72,10 @@ menus:
     # - name: カテゴリー
       # url: categories
       # weight: 50
-    - name: "データサイエンス100本ノック＋α"
-      url: ds-100knocks-dp
-      weight: 35
-      identifier: "DS-100knocks"
+    # - name: "データサイエンス100本ノック＋α"
+    #   url: ds-100knocks-dp
+    #   weight: 60
+    #   identifier: "DS-100knocks"
     # - name: standard
     #   url: "ds-100knocks-dp/standard"
     #   parent: "DS-100knocks"
