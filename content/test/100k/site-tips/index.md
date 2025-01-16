@@ -166,19 +166,19 @@ Markdown は保持されることに注意。
 ### .Site.Params. を使用
 
 ```go-html-template {linenos=false,anchorLineNos=false}
-{{</* k100/title */>}}
+{{</* k100/site/title */>}}
 ```
-➡️ {{< k100/title >}}
+➡️ {{< k100/site/title >}}
 
 ```go-html-template {linenos=false,anchorLineNos=false}
-{{</* k100/title "s" */>}}
+{{</* k100/site/title "s" */>}}
 ```
-→ {{< k100/title "s" >}}
+→ {{< k100/site/title "s" >}}
 
 ```go-html-template {linenos=false,anchorLineNos=false}
-{{</* k100/title "a" */>}}
+{{</* k100/site/title "a" */>}}
 ```
-→ {{< k100/title "a" >}}
+→ {{< k100/site/title "a" >}}
 
 ```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/git-url */>}}
