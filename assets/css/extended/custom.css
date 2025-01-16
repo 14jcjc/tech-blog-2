@@ -250,18 +250,37 @@ h1 {
   /* justify-content: center; */
   /* height: 80%; */
   /* font-size: 40px; */
-  font-size: calc(var(--base-font-size) * 2.5);
-  font-weight: 300;
-  margin: 0 10px;
+  /* font-size: calc(var(--base-font-size) * 2.5); */
+  /* font-weight: 300; */
+  /* margin: 0 10px; */
+  display: block;
+  margin-top: 10%;
+}
+
+.not-found h2 {
+  font-size: calc(var(--base-font-size) * 2.0);
+  /* color: #d9534f; */
+}
+
+.not-found p {
+  font-size: calc(var(--base-font-size) * 1.5);
 }
 
 .not-found a {
+  display: inline-block;
+  font-size: calc(var(--base-font-size) * 1.5);
+  /* margin-top: 20px; */
+  /* padding: 10px 20px; */
+  /* background-color: #0275d8; */
   color: #3498db; /* リンクテキストの色を設定（青色） */
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .not-found a:hover {
   text-decoration: underline; /* ホバー時に下線を引く */
   color: #e74c3c; /* ホバー時にリンクテキストの色を赤に変更 */
+  /* background-color: #025aa5; */
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -529,7 +548,7 @@ blockquote.alert {
   /* font-weight: bold; */
   /* text-decoration: none; */
   /* text-decoration: underline; */
-  font-size: 1.0em;
+  font-size: calc(var(--base-font-size) * 1.0);
   color: #007BFF;
   /* 親要素の値を引き継ぐ */
   /* color: inherit;  */
@@ -550,7 +569,8 @@ blockquote.alert {
 .q-item .q-content {
   padding-top: 5px;
   padding-bottom: 15px;
-  font-size: 0.9em;
+  /* font-size: 0.9em; */
+  font-size: calc(var(--base-font-size) * 0.9);
   line-height: 1.7;
   /* background-color: var(--theme); */
   background-color: #FEFEFF;
