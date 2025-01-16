@@ -315,33 +315,40 @@ taxonomies:
 
 menu:
   main:
-    - name: Archive
-      url: archives
+    - name: "[R+SQL] 演習問題"
+      url: "test/100k/q-list"
       weight: 10
+    - name: レビュー
+      url: "categories/%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/"
+      weight: 15
     - name: Tags
+    # - name: タグ
       url: tags
       weight: 20
-    - name: Categories
-      url: categories
+    - name: Archive
+    # - name: アーカイブ
+      url: archives
       weight: 30
     - name: Search
+    # - name: 検索
       url: search
       weight: 40
-    - name: "[R+SQL]演習問題一覧"
-      url: "test/100k/q-list"
-      weight: 45
-    - name: "データサイエンス100本ノック＋α - test"
-      # url: ds-100knocks-dp-test
-      url: test/100k
+    - name: Categories
+    # - name: カテゴリー
+      url: categories
       weight: 50
-      identifier: "DS-100knocks"
+    # - name: "データサイエンス100本ノック＋α"
+      # url: ds-100knocks-dp-test
+      # url: test/100k
+      # weight: 60
+      # identifier: "DS-100knocks"
     - name: Glossary
       url: test/glossary
-      weight: 60
-    - name: Books
-      # url: test/books
-      url: books
       weight: 70
+    # - name: Books
+      # url: test/books
+      # url: books
+      # weight: 70
     # - name: standard
     #   url: "/ds-100knocks-dp-test/standard"
     #   parent: "DS-100knocks"

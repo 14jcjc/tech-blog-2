@@ -21,6 +21,7 @@ TocOpen: true
 #   limit: 7 # 関連コンテンツを最大 N件まで表示 (default: 5)
 
 categories: 
+  - "レビュー"
   - "DS-100本ノック"
 tags: 
   - R

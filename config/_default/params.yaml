@@ -40,11 +40,11 @@ products:
       - amazon
       - yahoo
     amazon: 
-      description: "Amazonで購入"
+      description: "Amazonで見る"
       url: "https://www.amazon.co.jp/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9100%E6%9C%AC%E3%83%8E%E3%83%83%E3%82%AF%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%87%E3%83%BC%E3%82%BF%E5%8A%A0%E5%B7%A5%E7%B7%A8%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E6%A3%AE%E8%B0%B7-%E5%92%8C%E5%BC%98/dp/4802613563/ref=tmm_hrd_swatch_0?_encoding=UTF8"
       afiurl: "https://amzn.to/3Pmq47H"
     yahoo: 
-      description: "Yahooで購入"
+      description: "Yahooで見る"
       url: "https://amzn.to/3Pmq47H"
       afiurl: "https://amzn.to/3Pmq47H"
 
