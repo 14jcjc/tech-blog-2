@@ -11,6 +11,8 @@ categories: ["DS-100本ノック"]
 tags: 
   - R
   - SQL
+params: 
+  ShowPostNavLinks: false
 cover:
   # image: "images/papermod-cover.png" #< /static
   # image: "images/100knocks/cover-100k-standard.png" #< /static

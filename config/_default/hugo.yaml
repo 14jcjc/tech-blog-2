@@ -177,7 +177,7 @@ params:
   ShowToc: true
   TocOpen: false
   
-  math: true # # Mathematics in Markdown
+  math: true # Mathematics in Markdown
   mainMenu:
     enableChildren: true
 
