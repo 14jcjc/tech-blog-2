@@ -9,7 +9,7 @@ enableRobotsTXT: false
 
 services:
   googleAnalytics:
-    ID: UA-111-11
+    ID: G-GLB0HGKER4
   instagram:
     disableInlineCSS: true
   twitter:
