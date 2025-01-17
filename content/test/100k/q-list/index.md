@@ -38,7 +38,7 @@ cover:
   </div>
   <div class="row">
     <label for="id">
-      <input type="radio" id="id" name="order-toggle" value="id" checked> 問題番号順
+      <input type="radio" id="id" name="order-toggle" value="id" checked> 番号順
     </label>
     <label for="difficulty-desc">
       <input type="radio" id="difficulty-desc" name="order-toggle" value="difficulty-desc"> 難易度降順
@@ -51,7 +51,7 @@ cover:
 
 <!-- 全9パターンのリスト（最初はデフォルト以外を非表示にしておく） -->
 <div id="list-id-all" class="question-list" style="display:block;">
-  <div class="edition-title">全編（問題番号順）</div>
+  <div class="edition-title">全編（番号順）</div>
   {{< k100/q-list ed="standard,advanced" root=".." sortkey="id" order="asc" >}}
 </div>
 
@@ -66,7 +66,7 @@ cover:
 </div>
 
 <div id="list-id-standard" class="question-list" style="display:none;">
-  <div class="edition-title">標準編（問題番号順）</div>
+  <div class="edition-title">標準編（番号順）</div>
   {{< k100/q-list ed="standard" root=".." sortkey="id" order="asc" >}}
 </div>
 
@@ -81,7 +81,7 @@ cover:
 </div>
 
 <div id="list-id-advanced" class="question-list" style="display:none;">
-  <div class="edition-title">発展編（問題番号順）</div>
+  <div class="edition-title">発展編（番号順）</div>
   {{< k100/q-list ed="advanced" root=".." sortkey="id" order="asc" >}}
 </div>
 

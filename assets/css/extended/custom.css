@@ -682,23 +682,12 @@ blockquote.alert {
 .list-toggle label {
   display: flex;
   align-items: center; /* ラジオボタンとテキストを中央揃え */
-  gap: 5px; /* ラジオボタンとテキストの間隔 */
+  gap: 2px; /* ラジオボタンとテキストの間隔 */
   /* padding: 5px 10px; */
   /* border: 1px solid #ccc; */
   /* border-radius: 5px; */
   cursor: pointer;
 }
-
-/* .list-toggle label {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0px;
-  margin-right: 20px;
-  margin-bottom: 6px;
-  font-size: calc(var(--base-font-size) * 1.0);
-  font-weight: bold;
-  cursor: pointer;
-} */
 
 /* ラジオボタン全般 */
 .list-toggle input[type="radio"] {
