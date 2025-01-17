@@ -1,7 +1,7 @@
 ---
 title: '[R+SQL] データサイエンス100本ノック＋α - 演習問題一覧'
-draft: false
-date: '2025-01-11T00:01:20+09:00'
+draft: true
+date: '2024-12-30T00:00:20+09:00'
 weight: 12
 # description: "{{< k100/q-list >}} RとSQLの演習問題一覧です。"
 slug: 'q-list'
@@ -49,74 +49,72 @@ cover:
   </div>
 </div>
 
-<!-- 全9パターンのリスト（最初はデフォルト以外を非表示にしておく） -->
-<div id="list-id-all" class="question-list" style="display:block;">
+<!-- 全9パターンのリスト（最初はすべて非表示にしておく） -->
+<div id="list-id-all" class="question-list">
   <div class="edition-title">全編（問題番号順）</div>
   {{< k100/q-list ed="standard,advanced" root=".." sortkey="id" order="asc" >}}
 </div>
 
-<div id="list-difficulty-desc-all" class="question-list" style="display:none;">
+<div id="list-difficulty-desc-all" class="question-list">
   <div class="edition-title">全編（難易度降順）</div>
   {{< k100/q-list ed="standard,advanced" root=".." sortkey="difficulty" order="desc" >}}
 </div>
 
-<div id="list-difficulty-asc-all" class="question-list" style="display:none;">
+<div id="list-difficulty-asc-all" class="question-list">
   <div class="edition-title">全編（難易度昇順）</div>
   {{< k100/q-list ed="standard,advanced" root=".." sortkey="difficulty" order="asc" >}}
 </div>
 
-<div id="list-id-standard" class="question-list" style="display:none;">
+<div id="list-id-standard" class="question-list">
   <div class="edition-title">標準編（問題番号順）</div>
   {{< k100/q-list ed="standard" root=".." sortkey="id" order="asc" >}}
 </div>
 
-<div id="list-difficulty-desc-standard" class="question-list" style="display:none;">
+<div id="list-difficulty-desc-standard" class="question-list">
   <div class="edition-title">標準編（難易度降順）</div>
   {{< k100/q-list ed="standard" root=".." sortkey="difficulty" order="desc" >}}
 </div>
 
-<div id="list-difficulty-asc-standard" class="question-list" style="display:none;">
+<div id="list-difficulty-asc-standard" class="question-list">
   <div class="edition-title">標準編（難易度昇順）</div>
   {{< k100/q-list ed="standard" root=".." sortkey="difficulty" order="asc" >}}
 </div>
 
-<div id="list-id-advanced" class="question-list" style="display:none;">
+<div id="list-id-advanced" class="question-list">
   <div class="edition-title">発展編（問題番号順）</div>
   {{< k100/q-list ed="advanced" root=".." sortkey="id" order="asc" >}}
 </div>
 
-<div id="list-difficulty-desc-advanced" class="question-list" style="display:none;">
+<div id="list-difficulty-desc-advanced" class="question-list">
   <div class="edition-title">発展編（難易度降順）</div>
   {{< k100/q-list ed="advanced" root=".." sortkey="difficulty" order="desc" >}}
 </div>
 
-<div id="list-difficulty-asc-advanced" class="question-list" style="display:none;">
+<div id="list-difficulty-asc-advanced" class="question-list">
   <div class="edition-title">発展編（難易度昇順）</div>
   {{< k100/q-list ed="advanced" root=".." sortkey="difficulty" order="asc" >}}
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-  const questionLists = document.querySelectorAll('.question-list');
+    // どちらかのラジオボタンが変更されたときの処理
+    const updateList = () => {
+      const selectedOrder = document.querySelector('input[name="order-toggle"]:checked').value;
+      const selectedEdition = document.querySelector('input[name="edition-toggle"]:checked').value;
 
-  const updateList = () => {
-    const selectedOrder = document.querySelector('input[name="order-toggle"]:checked').value;
-    const selectedEdition = document.querySelector('input[name="edition-toggle"]:checked').value;
+      // すべてのリストを非表示に
+      document.querySelectorAll('.question-list').forEach(list => list.style.display = 'none');
 
-    // すべてのリストを非表示に
-    questionLists.forEach(list => list.style.display = 'none');
+      // 順番と編の組み合わせに応じたリストを表示
+      document.getElementById(`list-${selectedOrder}-${selectedEdition}`).style.display = 'block';
+    };
 
-    // 選択されたリストを表示（存在する場合のみ）
-    const targetList = document.getElementById(`list-${selectedOrder}-${selectedEdition}`);
-    if (targetList) {
-      targetList.style.display = 'block';
-    }
-  };
+    // ラジオボタンの変更時にリストを更新
+    document.querySelectorAll('input[name="order-toggle"], input[name="edition-toggle"]').forEach(radio => {
+      radio.addEventListener('change', updateList);
+    });
 
-  document.querySelectorAll('input[name="order-toggle"], input[name="edition-toggle"]').forEach(radio => {
-    radio.addEventListener('change', updateList);
+    // 初期状態のリスト表示
+    updateList(); // ページロード時にデフォルトの状態に対応するリストを表示
   });
-
-  updateList();
-});
 </script>

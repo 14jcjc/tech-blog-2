@@ -1,12 +1,10 @@
 ---
-title: '[R+SQL] データサイエンス100本ノック＋α - 演習問題一覧 (難易度順)'
-draft: false
-build:
-  list: local
-date: '2025-01-11T00:31:23+09:00'
+title: '[R+SQL] データサイエンス100本ノック＋α - 演習問題一覧'
+draft: true
+date: '2024-12-29T21:00:23+09:00'
 weight: 16
 description: "{{< k100/q-list >}} RとSQLの演習問題一覧です。"
-slug: 'q-list-difficulty'
+slug: 'q-list-id'
 ShowToc: true
 TocOpen: true
 categories: ["DS-100本ノック"]
@@ -26,12 +24,12 @@ cover:
 
 - <font color="#F0B007">★</font>は難易度です。
 
-- [問題番号順の一覧はこちら]({{< ref "q-list" >}})
+- [難易度順の一覧はこちら]({{< ref "q-list-difficulty" >}})
 
 ## {{% k100/site/edition "s" %}}
 
-{{< k100/q-list ed="standard" root=".." sortkey="difficulty" order="desc" >}}
+{{< k100/q-list ed="standard" root=".." sortkey="id" order="asc" >}}
 
 ## {{% k100/site/edition "a" %}}
 
-{{< k100/q-list ed="advanced" root=".." sortkey="difficulty" order="desc" >}}
+{{< k100/q-list ed="advanced" root=".." sortkey="id" order="asc">}}
