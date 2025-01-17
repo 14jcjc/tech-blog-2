@@ -654,7 +654,7 @@ blockquote.alert {
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 10px;
-  font-size: calc(var(--base-font-size) * 1.2);
+  font-size: calc(var(--base-font-size) * 1.1);
 }
 
 /* <div class="row edition"> のブロックを非表示にする */
@@ -688,6 +688,7 @@ blockquote.alert {
   /* border: 1px solid #ccc; */
   /* border-radius: 5px; */
   cursor: pointer;
+  font-size: calc(var(--base-font-size) * 0.9);
 }
 
 /* ラジオボタン全般 */
