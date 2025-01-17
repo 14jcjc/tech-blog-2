@@ -117,6 +117,60 @@ code {
   /* margin: 0px 0 26px !important; */
 }
 
+/* LineLink (コードの行番号のリンク) */
+.chroma .lnlinks {
+  outline: none;
+  text-decoration: underline;
+  color: inherit;
+}
+.dark .chroma .lnlinks {
+  /* .chroma .ln のカラーに合わせる */
+  color: #8087a2;
+}
+
+/* post-content のリンクのカラー */
+
+/* .post-content a { */
+.post-content a {
+  /* box-shadow: 0 1px 0; */
+  /* box-decoration-break: clone; */
+  /* -webkit-box-decoration-break: clone; */
+  box-shadow: none;
+  text-decoration: none;
+  /* border-bottom: none; */
+  /* 初期状態では透明なボーダー */
+  border-bottom: 1px solid transparent;
+  /* アンダーラインと文字の間隔を調整 */
+  padding-bottom: 0px;
+  color: #4080FF;
+}
+.dark .post-content a {
+  color: #80C0FF;
+}
+
+.post-content a:hover {
+  /* box-shadow: 0 1px 0; */
+  /* box-decoration-break: clone; */
+  /* -webkit-box-decoration-break: clone; */
+  box-shadow: none;
+  /* アンダーラインを消す */
+  /* text-decoration: none;  */
+  /* アンダーライン */
+  /* border-bottom: 1px solid #FF4080; */
+  border-bottom-color: #FF4080;
+  color: #FF4080;
+}
+.dark .post-content a:hover {
+  color: #FF80C0;
+}
+
+/* 
+.post-content a code {
+margin: auto 0;
+border-radius: 0;
+box-shadow: 0 -1px 0 var(--primary) inset;
+} */
+
 /* 本文の line-height (default: 1.6) */
 .post-content {
   /* line-height: 1.8; */
@@ -583,21 +637,26 @@ blockquote.alert {
   /* font-weight: bold; */
   /* text-decoration: none; */
   /* text-decoration: underline; */
+  /* text-decoration: none;  */
+  /* アンダーライン */
+  border-bottom: 1px solid #007BFF;
+  /* アンダーラインと文字の間隔を調整 */
+  padding-bottom: 0px;
   font-size: calc(var(--base-font-size) * 1.0);
   color: #007BFF;
   /* 親要素の値を引き継ぐ */
   /* color: inherit;  */
 }
 .dark .q-item .q-header .q-id a {
-  /* color: #40C0FF; */
-  color: #00ADFF;
+  border-bottom-color: #40C0FF;
+  /* color: #80C0FF; */
+  /* color: #00ADFF; */
+  color: #40C0FF;
   transition: color 0.3s ease;
 }
 .q-item .q-header .q-id a:hover {
-  /* color: #0056b3; */
-  /* color: #FF00AA; */
-  /* color: #E64A19 */
-  color: #FF5722
+  border-bottom-color: #FF4080;
+  color: #FF4080;
 }
 
 /* 問題文のスタイル */
