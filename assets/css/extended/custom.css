@@ -611,7 +611,8 @@ blockquote.alert {
   line-height: 1.7;
   color: var(--primary);
   /* background-color: var(--theme); */
-  background-color: #FAFAFA;
+  /* background-color: #FCFCFF; */
+  background-color: #FCFCFF;
 }
 .dark .q-item .q-content {
   color: var(--primary);
