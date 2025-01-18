@@ -1,14 +1,5 @@
-「データサイエンス100本ノック～構造化データ加工編ガイドブック」のレビューをブログに書きたい。
-以下の条件でサンプルを書いてください。
-- フォーマット: Markdown
-- 「長年RとSQLを活用してる自分でも成長できた」旨を含める。
-- このブログで演習問題の解説とサンプルコードを執筆するので、その記事にスムーズに繋がるような内容とする。
-
----
-title: "データサイエンス100本ノック～構造化データ加工編ガイドブック レビュー"
-date: 2025-01-17
-tags: ["データサイエンス", "R", "SQL", "書籍レビュー"]
----
+-------------------------------------------------------------------------------
+A. 記事: データサイエンス100本ノック～構造化データ加工編ガイドブック レビュー
 
 ## 『データサイエンス100本ノック～構造化データ加工編ガイドブック』を読んでみた
 
@@ -22,9 +13,7 @@ tags: ["データサイエンス", "R", "SQL", "書籍レビュー"]
 - **初心者向けの説明**: コードの意味やデータの扱い方を基礎から丁寧に説明。
 - **実務に直結するデータ処理**: 実際のビジネスデータを想定したデータ加工のノウハウが学べる。
 
-## 読んでみた感想
-
-### 良かった点
+## 本書を実践してみた感想
 
 1. **実践的なデータ処理スキルが身につく**
    - データのクレンジングや変換処理など、実務で必要なスキルを体系的に学べる。
@@ -35,21 +24,473 @@ tags: ["データサイエンス", "R", "SQL", "書籍レビュー"]
 4. **丁寧な解説**
    - 初学者でも理解しやすいようにコードの意味がしっかり説明されている。
 
-### 気になった点
-
-1. **ある程度の基礎知識は必要**
-   - 完全な初心者よりは、RやSQLの基本文法を少し知っている方がスムーズに理解できるかもしれない。
-2. **SQLの環境構築が少し手間**
-   - Rは手軽に試せるが、SQL環境の準備には少し時間がかかるため、最初のハードルが若干高め。
-
 ## まとめ
 
 『データサイエンス100本ノック～構造化データ加工編ガイドブック』は、データ分析に必要なスキルを実践的に学べる素晴らしい一冊です。特に、RやSQLを使ってデータを加工する力を身につけたい人におすすめです。
 
 ### おすすめ度: ★★★★☆（4.5/5）
 
-本ブログでは、この書籍の演習問題を解説し、RとSQLのサンプルコードを紹介していきます。ぜひ、次の記事もチェックしてみてください！
+当ブログでは、この書籍の演習問題を解説し、RとSQLのサンプルコードを紹介していきます。ぜひ、次の記事もチェックしてみてください！
 
 [📖 Amazonで見る](#)  
 [📖 楽天で見る](#)
 
+-------------------------------------------------------------------------------
+B. R によるデータベース・バックエンド処理と遅延評価の仕組み
+
+
+
+基本的な使い方は以下のような流れになります。
+
+```r
+# 必要なパッケージをロード
+pacman::p_load(
+  DBI, dplyr, dbplyr, 
+  RPostgres, # PostgreSQL の場合
+  install = T # 存在しないパッケージをインストールする
+)
+
+# データベースへの接続
+dbConnect(
+  RPostgres::Postgres(), # PostgreSQL の場合
+  host = "your_host", 
+  port = 5432, 
+  dbname = "your_database_name", 
+  user = "your_username", 
+  password = "your_password"
+) -> 
+con
+
+# データベースのテーブル参照を取得
+db_table = tbl(con, "your_table_name")
+
+# SQLクエリを実行してデータを操作
+db_table %>% 
+  filter(sales_ymd >= 20180101L ) %>%  
+  group_by(product_cd) %>% 
+  summarise(total_sales = sum(amount)) %>% 
+  arrange(desc(total_sales)) -> 
+  db_result
+
+# SQLクエリの確認
+db_result %>% show_query(cte = T)
+
+# クエリ結果をR側に取り込む
+df_result = 
+  db_result %>% collect()  
+
+# データベース接続を解除
+dbDisconnect(con)
+
+# 以下、データフレームでの処理
+df_result %>% head(10)
+```
+
+ハイライトした箇所のように、データベースのテーブルを dplyr の構文を用いてデータフレームのように操作できます。
+
+対応しているデータベース一覧は << こちら >> で確認できます。
+
+
+-------------------------------------------------------------------------------
+C. 記事: データサイエンス100本ノック＋α - 概要・導入
+
+前回の記事: 
+データサイエンス100本ノック～構造化データ加工編ガイドブック レビュー
+
+## 概要
+
+当ブログでは「データサイエンス100本ノック＋α」と題し、書籍の演習問題を解説し、R と SQL のサンプルコードを紹介していきます。
+「標準編」では書籍の30題ほどの演習問題をピックアップし、「発展編」ではオリジナル問題を紹介していく予定です。
+基本的に、各演習問題では以下のサンプルコードを解説付きで紹介します。
+
+- Rコード: データフレームでの処理
+- Rコード: データベース・バックエンドでの処理 << --> データベース・バックエンドの章にリンクを貼る >>
+- SQLクエリ: 上記処理と等価のもの
+
+サンプルコードはなるべくエレガントな記述を心がけたいと思います。
+
+## 環境構築
+
+データサイエンス100本ノック＋α では、Docker や jupyter notebook などの環境を必要とせず、RStudio など R の実行環境さえあれば OK です。
+なお、私は VSCode を愛用しています。
+
+環境構築の手順は以下の通りです。
+
+1. ...
+2. ...
+3. ...
+4. ディレクトリ構成
+5. 作業ディレクトリについて
+
+## 利用できる項目
+
+環境構築後、以下の項目を利用できるようになります。
+
+### パッケージ
+<< リスト or 表 >>
+
+### 変数
+<< リスト or 表 >>
+con, df_receipt, db_receipt, ...
+
+### 関数
+<< リスト or 表 >>
+my_show_query, my_sql_render, my_select
+
+使い方については後述します。
+
+### ER図 (データの構造・関係性)
+
+work/data/100knocks_ER.png
+
+これら6個のテーブルのER図: 
+
+<< ここに画像を貼る >>
+<< 出典を記載 >>
+
+## DuckDB について
+
+
+## 謝辞
+
+データサイエンティスト協会様が作成された素晴らしい教育コンテンツを、より豊かにできればという思いで当ブログを作成しました。データサイエンティスト協会様に感謝申し上げます。
+当ブログで使用するデータおよびER図の権利はデータサイエンティスト協会様にあります。
+より多くの方のスキルアップのために活用いただければ幸いです。
+
+-------------------------------------------------------------------------------
+D. 記事: データサイエンス100本ノック＋α - Tips
+
+参考記事: 
+- データサイエンス100本ノック～構造化データ加工編ガイドブック レビュー
+- データサイエンス100本ノック＋α - 概要・導入
+
+演習問題に入る前に予備知識として、データベース・バックエンド処理に関する便利な機能について紹介します。
+
+## R によるデータベース・バックエンド処理
+
+詳しくは << R によるデータベース・バックエンド処理と遅延評価の仕組み>> で述べましたが、
+データベース・バックエンドによる処理は、R から SQLデータベースに接続してデータを操作する方法です。
+R で記述した処理がデータベース上で操作されるため、R で処理できるメモリサイズを超える大規模なデータセットでも効率よく扱うことができます。
+
+今回は、データベース (DuckDB) をローカルファイルとして作成しているため、バックエンドによる処理の恩恵にはあまり授かれないかもしれませんが、R からデータベースに接続してデータ操作をするエクササイズにはなります。
+
+以下は、db_receipt (receiptテーブルの参照) を用いたサンプルですが、このようにデータベースのテーブルを dplyr の構文を用いてデータフレームのように操作できます。
+
+```
+db_receipt %>% 
+  filter(sales_ymd >= 20180101L ) %>%  
+  group_by(product_cd) %>% 
+  summarise(total_sales = sum(amount)) %>% 
+  arrange(desc(total_sales))
+```
+
+出力は以下のようになります。
+
+```
+# Source:     SQL [?? x 2]
+# Database:   DuckDB v1.1.3-dev165 [root@Darwin 24.1.0:R 4.4.2/.../DB/100knocks.duckdb]
+# Ordered by: desc(total_sales)
+   product_cd total_sales
+   <chr>            <dbl>
+ 1 P071401001     1233100
+ 2 P071401002      429000
+ 3 P071401003      371800
+ 4 P060303001      346320
+ 5 P071401012      305800
+ 6 P071401014      277200
+ 7 P071401024      271200
+ 8 P071401022      268800
+ 9 P071401013      264000
+10 P071401004      256300
+11 P071401025      247200
+12 P071401007      241200
+13 P071401017      239800
+14 P071401019      237600
+15 P071401020      237600
+# ℹ more rows
+# ℹ Use `print(n = ...)` to see more rows
+```
+
+## Tips
+
+演習問題などで役立つTipsを紹介します。
+
+### Myメソッド
+
+以下は、便宜上、自作した関数です。
+
+#### my_show_query()
+
+show_query() のラッパー。
+
+```
+db_receipt %>% 
+  filter(sales_ymd >= 20180101L ) %>%  
+  group_by(product_cd) %>% 
+  summarise(total_sales = sum(amount)) %>% 
+  arrange(desc(total_sales)) -> 
+  db_result
+
+db_result %>% my_show_query()
+```
+
+出力: 
+```
+<SQL>
+WITH q01 AS (
+  SELECT receipt.*
+  FROM receipt
+  WHERE (sales_ymd >= 20180101)
+)
+SELECT product_cd, SUM(amount) AS total_sales
+FROM q01
+GROUP BY product_cd
+ORDER BY total_sales DESC
+```
+
+オプションで出力形式を変えることができる。
+
+```
+db_result %>% my_show_query(cte = F)
+```
+
+出力: 
+```
+<SQL>
+SELECT product_cd, SUM(amount) AS total_sales
+FROM (
+  SELECT receipt.*
+  FROM receipt
+  WHERE (sales_ymd >= 20180101)
+) q01
+GROUP BY product_cd
+ORDER BY total_sales DESC
+```
+
+なお、基の show_query() でも基本的な使い方は同じです。
+
+```
+db_result %>% show_query(cte = F)
+```
+
+#### my_select()
+
+dbx::dbxSelect() のラッパー。
+SQLクエリを実行する。
+
+次のように、sql() と組み合わせて使うと便利です。
+
+```r
+q = sql("
+WITH q01 AS (
+  SELECT receipt.*
+  FROM receipt
+  WHERE (sales_ymd >= 20180101)
+)
+SELECT product_cd, SUM(amount) AS total_sales
+FROM q01
+GROUP BY product_cd
+ORDER BY total_sales DESC
+"
+)
+d = q %>% my_select(con) # con はデータベース接続オブジェクト
+d
+```
+
+結果は、以下のようにデータフレーム (デフォルトで tibble クラス) となります。
+
+```
+# A tibble: 7,061 × 2
+  product_cd total_sales
+  <chr>            <dbl>
+1 P071401001     1233100
+2 P071401002      429000
+3 P071401003      371800
+4 P060303001      346320
+5 P071401012      305800
+6 P071401014      277200
+7 P071401024      271200
+...
+```
+
+##### convert_tibble オプション
+
+convert_tibble = F で data.frame クラスのデータフレームを返すこともできます。
+(あまり使わないとは思いますが。)
+
+```
+q %>% 
+  my_select(con, convert_tibble = F) %>% class()
+#> [1] "data.frame"
+```
+
+##### プレースホルダー (params オプション)
+
+次のように、プレースホルダー (?) を用いてのクエリも実行できます。
+
+q = sql("
+SELECT sales_ymd, store_cd, product_cd, amount
+FROM receipt
+WHERE (sales_ymd >= ?)
+ORDER BY sales_ymd
+"
+)
+q %>% my_select(con, params = list(20190123))
+
+```
+# A tibble: 31,390 × 4
+  sales_ymd store_cd product_cd amount
+      <int> <chr>    <chr>       <dbl>
+1  20190123 S14028   P050302006    298
+2  20190123 S13017   P040802001     80
+3  20190123 S14049   P091501043    800
+4  20190123 S14046   P050303016    228
+5  20190123 S13018   P050101001     40
+6  20190123 S14026   P050101003    138
+...
+```
+
+このように、SQLクエリに値を後からバインドする方法は「バインドパラメータ (Bind Parameter)」または「プレースホルダー (Placeholder)」と呼ばれ、以下のようなメリットがあります。
+
+- SQLインジェクション対策 (ユーザー入力を直接埋め込まず、安全に処理できる)
+- パフォーマンス向上 (クエリの再利用による最適化)
+- コードの可読性向上 (値を直接クエリ内に埋め込まず、整理されたコードになる)
+
+#### my_sql_render()
+
+sql_render() のラッパーです。
+用法については後述しますが、sql_render() が出力するSQLクエリは、次のようにテーブル名やカラム名の識別子が
+バッククォート (`) で囲まれます。
+
+```
+db_result %>% sql_render(con = simulate_mysql())
+```
+
+出力: 
+```
+<SQL> SELECT `product_cd`, SUM(`amount`) AS `total_sales`
+FROM (
+  SELECT `receipt`.*
+  FROM receipt
+  WHERE (`sales_ymd` >= 20180101)
+) AS `q01`
+GROUP BY `product_cd`
+ORDER BY `total_sales` DESC
+```
+
+これはこれで推奨された安全な記法なのでよいのですが、通常は囲まないし読みずらいと思われるため、my_sql_render() はデフォルトでバッククォート (`) を消去してます。
+
+```
+db_result %>% my_sql_render(con = simulate_mysql())
+```
+
+出力: 
+```
+<SQL> WITH q01 AS (
+  SELECT receipt.*
+  FROM receipt
+  WHERE (sales_ymd >= 20180101)
+)
+SELECT product_cd, SUM(amount) AS total_sales
+FROM q01
+GROUP BY product_cd
+ORDER BY total_sales DESC
+```
+
+識別子をダブルクォートで囲む場合は次のようにします。
+
+```
+db_result %>% 
+  my_sql_render(
+    con = simulate_mysql(), pattern = "`", replacement = "\""
+  )
+```
+
+```
+<SQL> WITH "q01" AS (
+  SELECT "receipt".*
+  FROM receipt
+  WHERE ("sales_ymd" >= 20180101)
+)
+SELECT "product_cd", SUM("amount") AS "total_sales"
+FROM "q01"
+GROUP BY "product_cd"
+ORDER BY "total_sales" DESC
+```
+
+また、cte などのオプションを指定しやすくしてます。以下の2つは等価です。
+
+```
+# sql_render
+db_result %>% 
+  sql_render(
+    sql_options = 
+      sql_options(cte = T, use_star = F, qualify_all_columns = F)
+  )
+# my_sql_render
+db_result %>% 
+  my_sql_render(cte = T, use_star = F, qualify_all_columns = F)
+```
+
+### 他のDBでのSQLクエリを確認する方法
+
+my_sql_render() または sql_render() を使用します。
+
+MySQLでシミュレーション: 
+
+```
+db_result %>% my_sql_render(con = simulate_mysql())
+db_result %>% my_sql_render(con = simulate_postgres())
+db_result %>% my_sql_render(con = simulate_snowflake())
+```
+
+対応しているデータベース一覧は << こちら >> で確認できます。
+
+### sql()
+
+
+### tbl()
+
+q = sql("
+SELECT sales_ymd, product_cd, amount
+FROM receipt
+WHERE (sales_ymd >= 20180101)
+"
+)
+query = tbl(con, q)
+query
+
+# Source:   SQL [?? x 3]
+# Database: DuckDB v1.1.3-dev165 [root@Darwin 24.1.0:R 4.4.2/.../DB/100knocks.duckdb]
+  sales_ymd product_cd amount
+      <int> <chr>       <dbl>
+1  20181103 P070305012    158
+2  20181118 P070701017     81
+3  20190205 P050301001     25
+4  20180821 P060102007     90
+5  20190605 P050102002    138
+6  20181205 P080101005     30
+7  20190922 P070501004    128
+...
+
+query %>% 
+  group_by(product_cd) %>% 
+  summarise(total_sales = sum(amount)) %>% 
+  arrange(desc(total_sales)) -> 
+  db_result
+db_result
+
+# Source:     SQL [?? x 2]
+# Database:   DuckDB v1.1.3-dev165 [root@Darwin 24.1.0:R 4.4.2/.../DB/100knocks.duckdb]
+# Ordered by: desc(total_sales)
+  product_cd total_sales
+  <chr>            <dbl>
+1 P071401001     1233100
+2 P071401002      429000
+3 P071401003      371800
+4 P060303001      346320
+5 P071401012      305800
+6 P071401014      277200
+...
+
+-------------------------------------------------------------------------------
