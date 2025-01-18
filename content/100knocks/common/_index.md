@@ -1,7 +1,7 @@
 ---
 title: '基本情報'
-# draft: false
-draft: true
+draft: false
+# draft: true
 date: '2024-12-16T00:10:40+09:00'
 # weight: 1
 # categories: ["DS-100本ノック＋α (標準編) "]
