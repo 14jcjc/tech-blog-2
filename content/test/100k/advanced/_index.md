@@ -5,7 +5,7 @@ date: '2025-01-01T00:20:39+09:00'
 # section: "advanced"
 # draft: false
 draft: true
-weight: 2
+weight: 3
 summary: '[R+SQL] データサイエンス100本ノック＋α (発展編) の問題集です。'
 description: '[R+SQL] データサイエンス100本ノック＋α (発展編) の問題集です。'
 cover:

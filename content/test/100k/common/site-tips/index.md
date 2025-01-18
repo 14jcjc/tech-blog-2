@@ -69,12 +69,12 @@ summary: の設定より優先度が高いです.
 ```go-html-template {linenos=false,anchorLineNos=false}
 {{</* k100/q-list */>}}
 or
-{{</* k100/q-list root=".." sortkey="id" order="asc" */>}}
+{{</* k100/q-list root="../.." sortkey="id" order="asc" */>}}
 or
 {{</* k100/q-list ed="standard,advanced" root=".." */>}}
 ```
 ⬇️
-{{< k100/q-list ed="standard,advanced" root=".." sortkey="id" order="asc" >}}
+{{< k100/q-list ed="standard,advanced" root="../.." sortkey="id" order="asc" >}}
 
 ### 演習問題文の出力
 

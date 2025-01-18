@@ -1,9 +1,9 @@
 ---
 title: '[R+SQL] データサイエンス100本ノック＋α - 演習問題一覧'
 # draft: false
-date: '2025-01-11T00:01:20+09:00'
+# date: '2025-01-11T00:01:20+09:00'
 draft: true
-# date: '2024-12-30T00:00:20+09:00'
+date: '2024-12-30T00:00:20+09:00'
 weight: 12
 # description: "{{< k100/q-list >}} RとSQLの演習問題一覧です。"
 slug: 'q-list'
@@ -122,39 +122,26 @@ cover:
   };
 
   // ページ読み込み時に localStorage から読み取る
-  let savedOrder = localStorage.getItem('order');
-  let savedEdition = localStorage.getItem('edition');
+  const savedOrder = localStorage.getItem('order');
+  const savedEdition = localStorage.getItem('edition');
 
-  // localStorage に値がない場合、デフォルトを設定
-  let defaultOrder = document.querySelector('input[name="order-toggle"]:checked')?.value;
-  let defaultEdition = document.querySelector('input[name="edition-toggle"]:checked')?.value;
+  let isValidOrder = false;
+  let isValidEdition = false;
 
-  // localStorage の値を設定
-  if (!savedOrder && defaultOrder) {
-    savedOrder = defaultOrder;
-    localStorage.setItem('order', savedOrder);
-  } else if (!savedOrder) {
-    localStorage.removeItem('order'); // 不要な値を削除
+  if (savedOrder) {
+    const orderRadio = document.querySelector(`input[name="order-toggle"][value="${savedOrder}"]`);
+    if (orderRadio) {
+      orderRadio.checked = true;
+      isValidOrder = true;
+    }
   }
 
-  if (!savedEdition && defaultEdition) {
-    savedEdition = defaultEdition;
-    localStorage.setItem('edition', savedEdition);
-  } else if (!savedEdition) {
-    localStorage.removeItem('edition'); // 不要な値を削除
-  }
-
-  // ローカルストレージの値を適用（存在する場合のみ）
-  const orderRadio = document.querySelector(`input[name="order-toggle"][value="${savedOrder}"]`);
-  const editionRadio = document.querySelector(`input[name="edition-toggle"][value="${savedEdition}"]`);
-
-  // ローカルストレージの値が正しければラジオボタンにチェックを入れる
-  if (orderRadio) {
-    orderRadio.checked = true;
-  }
-
-  if (editionRadio) {
-    editionRadio.checked = true;
+  if (savedEdition) {
+    const editionRadio = document.querySelector(`input[name="edition-toggle"][value="${savedEdition}"]`);
+    if (editionRadio) {
+      editionRadio.checked = true;
+      isValidEdition = true;
+    }
   }
 
   // イベントリスナーを設定
@@ -162,7 +149,9 @@ cover:
     radio.addEventListener('change', updateList);
   });
 
-  // 初回のリスト表示を確実に行う
-  updateList();
+  // localStorage の値が正しい場合のみ updateList() を実行
+  if (isValidOrder && isValidEdition) {
+    updateList();
+  }
 });
 </script>
