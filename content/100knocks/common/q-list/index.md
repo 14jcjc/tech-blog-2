@@ -28,25 +28,32 @@ cover:
 
 <div class="list-toggle">
   <div class="row">
-    <label for="all">
-      <input type="radio" id="all" name="edition-toggle" value="all" checked> 全編
+    <label>
+      <input type="radio" name="edition-toggle" value="all" checked>
+      <span>全編</span>
     </label>
-    <label for="standard">
-      <input type="radio" id="standard" name="edition-toggle" value="standard"> 標準編
+    <label>
+      <input type="radio" name="edition-toggle" value="standard">
+      <span>標準編</span>
     </label>
-    <label for="advanced">
-      <input type="radio" id="advanced" name="edition-toggle" value="advanced"> 発展編
+    <label>
+      <input type="radio" name="edition-toggle" value="advanced">
+      <span>発展編</span>
     </label>
   </div>
+
   <div class="row">
-    <label for="id">
-      <input type="radio" id="id" name="order-toggle" value="id" checked> 番号順
+    <label>
+      <input type="radio" name="order-toggle" value="id" checked>
+      <span>番号順</span>
     </label>
-    <label for="difficulty-desc">
-      <input type="radio" id="difficulty-desc" name="order-toggle" value="difficulty-desc"> 難易度降順
+    <label>
+      <input type="radio" name="order-toggle" value="difficulty-desc">
+      <span>難易度降順</span>
     </label>
-    <label for="difficulty-asc">
-      <input type="radio" id="difficulty-asc" name="order-toggle" value="difficulty-asc"> 難易度昇順
+    <label>
+      <input type="radio" name="order-toggle" value="difficulty-asc">
+      <span>難易度昇順</span>
     </label>
   </div>
 </div>

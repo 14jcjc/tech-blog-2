@@ -10,6 +10,8 @@ enableRobotsTXT: false
 services:
   googleAnalytics:
     ID: G-GLB0HGKER4
+  # disqus:
+  #   shortname: your-disqus-shortname
   instagram:
     disableInlineCSS: true
   twitter:

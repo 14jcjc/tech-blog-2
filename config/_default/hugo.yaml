@@ -63,6 +63,8 @@ outputs:
 services:
   # googleAnalytics:
   #   ID: UA-999-99
+  # disqus:
+  #   shortname: your-disqus-shortname
   instagram:
     disableInlineCSS: true
   twitter:
