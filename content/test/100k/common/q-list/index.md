@@ -25,6 +25,7 @@ cover:
 ---
 
 <font color="#F0B007">★</font>は難易度です。
+{{< k100/site/edition "s" >}}は概要を掲載してます。
 
 <div class="list-toggle">
   <div class="row">
@@ -34,11 +35,11 @@ cover:
     </label>
     <label>
       <input type="radio" name="edition-toggle" value="standard">
-      <span>標準編</span>
+      <span>{{< k100/site/edition "s" >}}</span>
     </label>
     <label>
       <input type="radio" name="edition-toggle" value="advanced">
-      <span>発展編</span>
+      <span>{{< k100/site/edition "a" >}}</span>
     </label>
   </div>
 
@@ -61,7 +62,18 @@ cover:
 <!-- 全9パターンのリスト（最初はデフォルト以外を非表示にしておく） -->
 <div id="list-id-all" class="question-list" style="display:block;">
   <div class="edition-title">全編（番号順）</div>
+
+  1. {{< k100/site/edition "a" >}}
+  
+  {{< k100/q-list ed="advanced" root="../.." sortkey="id" order="asc" >}}
+
+  2. {{< k100/site/edition "s" >}}
+  
+  {{< k100/q-list ed="standard" root="../.." sortkey="id" order="asc" >}}
+
+  {{% comment %}}
   {{< k100/q-list ed="standard,advanced" root="../.." sortkey="id" order="asc" >}}
+  {{% /comment %}}
 </div>
 
 <div id="list-difficulty-desc-all" class="question-list" style="display:none;">
@@ -75,32 +87,32 @@ cover:
 </div>
 
 <div id="list-id-standard" class="question-list" style="display:none;">
-  <div class="edition-title">標準編（番号順）</div>
+  <div class="edition-title">{{< k100/site/edition "s" >}}（番号順）</div>
   {{< k100/q-list ed="standard" root="../.." sortkey="id" order="asc" >}}
 </div>
 
 <div id="list-difficulty-desc-standard" class="question-list" style="display:none;">
-  <div class="edition-title">標準編（難易度降順）</div>
+  <div class="edition-title">{{< k100/site/edition "s" >}}（難易度降順）</div>
   {{< k100/q-list ed="standard" root="../.." sortkey="difficulty" order="desc" >}}
 </div>
 
 <div id="list-difficulty-asc-standard" class="question-list" style="display:none;">
-  <div class="edition-title">標準編（難易度昇順）</div>
+  <div class="edition-title">{{< k100/site/edition "s" >}}（難易度昇順）</div>
   {{< k100/q-list ed="standard" root="../.." sortkey="difficulty" order="asc" >}}
 </div>
 
 <div id="list-id-advanced" class="question-list" style="display:none;">
-  <div class="edition-title">発展編（番号順）</div>
+  <div class="edition-title">{{< k100/site/edition "a" >}}（番号順）</div>
   {{< k100/q-list ed="advanced" root="../.." sortkey="id" order="asc" >}}
 </div>
 
 <div id="list-difficulty-desc-advanced" class="question-list" style="display:none;">
-  <div class="edition-title">発展編（難易度降順）</div>
+  <div class="edition-title">{{< k100/site/edition "a" >}}（難易度降順）</div>
   {{< k100/q-list ed="advanced" root="../.." sortkey="difficulty" order="desc" >}}
 </div>
 
 <div id="list-difficulty-asc-advanced" class="question-list" style="display:none;">
-  <div class="edition-title">発展編（難易度昇順）</div>
+  <div class="edition-title">{{< k100/site/edition "a" >}}（難易度昇順）</div>
   {{< k100/q-list ed="advanced" root="../.." sortkey="difficulty" order="asc" >}}
 </div>
 

@@ -164,7 +164,9 @@ D. 記事: データサイエンス100本ノック＋α - Tips
 - データサイエンス100本ノック～構造化データ加工編ガイドブック レビュー
 - データサイエンス100本ノック＋α - 概要・導入
 
-演習問題に入る前に予備知識として、データベース・バックエンド処理に関する便利な機能について紹介します。
+演習問題に入る前に予備知識として、データベース・バックエンド処理に関する便利なノウハウについて紹介します。
+演習問題で活用できる必要最小限のものに限定してます。
+ここで紹介するサンプルコードは、環境構築後でしたら全て実行することができます。
 
 ## R によるデータベース・バックエンド処理
 
@@ -248,7 +250,7 @@ GROUP BY product_cd
 ORDER BY total_sales DESC
 ```
 
-オプションで出力形式を変えることができる。
+引数で出力形式を変えることができる。
 
 ```
 db_result %>% my_show_query(cte = F)
@@ -297,7 +299,7 @@ d = q %>% my_select(con) # con はデータベース接続オブジェクト
 d
 ```
 
-結果は、以下のようにデータフレーム (デフォルトで tibble クラス) となります。
+結果は、以下のようにデータフレーム (デフォルトで tibble) となります。
 
 ```
 # A tibble: 7,061 × 2
@@ -313,7 +315,7 @@ d
 ...
 ```
 
-##### convert_tibble オプション
+##### convert_tibble 引数
 
 convert_tibble = F で data.frame クラスのデータフレームを返すこともできます。
 (あまり使わないとは思いますが。)
@@ -324,7 +326,7 @@ q %>%
 #> [1] "data.frame"
 ```
 
-##### プレースホルダー (params オプション)
+##### プレースホルダー (params 引数)
 
 次のように、プレースホルダー (?) を用いてのクエリも実行できます。
 
@@ -359,7 +361,7 @@ q %>% my_select(con, params = list(20190123))
 #### my_sql_render()
 
 sql_render() のラッパーです。
-用法については後述しますが、sql_render() が出力するSQLクエリは、次のようにテーブル名やカラム名の識別子が
+用途については後述<<リンク>>しますが、sql_render() が出力するSQLクエリは、次のようにテーブル名やカラム名の識別子が
 バッククォート (`) で囲まれます。
 
 ```
@@ -378,7 +380,7 @@ GROUP BY `product_cd`
 ORDER BY `total_sales` DESC
 ```
 
-これはこれで推奨された安全な記法なのでよいのですが、通常は囲まないし読みずらいと思われるため、my_sql_render() はデフォルトでバッククォート (`) を消去してます。
+これはこれで推奨された安全な記法なのでよいのですが、通常は囲まないし読みずらいと思われるため、my_sql_render() はデフォルトでバッククォート (`) を消去します。
 
 ```
 db_result %>% my_sql_render(con = simulate_mysql())
@@ -418,7 +420,7 @@ GROUP BY "product_cd"
 ORDER BY "total_sales" DESC
 ```
 
-また、cte などのオプションを指定しやすくしてます。以下の2つは等価です。
+また、cte などの引数を指定しやすくしてます。例えば、以下の2つは等価です。
 
 ```
 # sql_render
@@ -440,13 +442,39 @@ MySQLでシミュレーション:
 
 ```
 db_result %>% my_sql_render(con = simulate_mysql())
-db_result %>% my_sql_render(con = simulate_postgres())
-db_result %>% my_sql_render(con = simulate_snowflake())
 ```
 
-対応しているデータベース一覧は << こちら >> で確認できます。
+出力: 
+```
+<SQL> WITH q01 AS (
+  SELECT receipt.*
+  FROM receipt
+  WHERE (sales_ymd >= 20180101)
+)
+SELECT product_cd, SUM(amount) AS total_sales
+FROM q01
+GROUP BY product_cd
+ORDER BY total_sales DESC
+```
+
+PostgreSQL、Snowflake などでは次のように使います。
+
+```
+db_result %>% my_sql_render(con = simulate_postgres())
+db_result %>% my_sql_render(con = simulate_snowflake())
+db_result %>% my_sql_render(con = simulate_redshift())
+db_result %>% my_sql_render(con = simulate_oracle())
+db_result %>% my_sql_render(con = simulate_mssql())
+```
+
+対応しているデータベース一覧は以下のページで確認できます。
+https://dbplyr.tidyverse.org/reference/index.html#built-in-database-backends
 
 ### sql()
+
+sql() は他の項目でも登場してますが、ここでは、データ操作を dplyr の構文では書けない場合の回避策を紹介します。
+
+
 
 
 ### tbl()
