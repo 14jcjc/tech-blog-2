@@ -1,15 +1,14 @@
 ---
 # title: '『データサイエンス100本ノック～構造化データ加工編ガイドブック』レビュー'
-title: サイト作成Tips - include
-# draft: true
+title: サイト作成Tips - xxx
+draft: true
 # date: '2024-12-29T01:20:27+09:00'
 # weight: 11
-draft: false
-date: '2021-04-01T00:20:27+09:00'
+date: '2021-05-01T00:20:27+09:00'
 weight: 1000
-slug: 'site-tips'
+slug: 'xxx-1'
 # summary: 'これはsummaryです (include).'
-description: "This is description."
+description: "This is xxx."
 hideSummary: false
 hideFooter: false
 # ShowToc: false
@@ -61,6 +60,5 @@ cover:
 
 ---
 
-**/test/100k/site-tips/index.md を include** ⬇️
+xxxxxxxxxxxxxxxx.
 
-{{% include "/test/100k/common/site-tips/index.md" %}}

@@ -22,11 +22,14 @@ services:
 #   https://github.com/adityatelange/hugo-PaperMod/issues/1585
 permalinks:
   page:
-    100knocks: /ds-100knocks-dp/:sections[1:]/:slug/
+    # 100knocks: /ds-100knocks-dp/:sections[1:]/:slug/
+    100knocks: /ds100knocks-alpha/:slug/
     # aaa: /aaa/:year/:month/:slug/
     # xxx: /xxx/:slug
   section:
-    100knocks: /ds-100knocks-dp/:sections[1:]/
+    # 100knocks: /ds100knocks-alpha/:sections[1:]/
+    100knocks: /ds100knocks-alpha/:sections[last]/
+    # 100knocks: /ds100knocks-alpha/
     # aaa: /aaa/:year/:month/
     # xxx: /xxx/:sections[1:]/
 
@@ -42,7 +45,8 @@ params:
   profileMode:
     buttons:
       - name: "データサイエンス100本ノック＋α"
-        url: ds-100knocks-dp
+        # url: ds-100knocks-dp
+        url: ds100knocks-alpha
       # - name: XXX
       #   url: xxx
       - name: Archives
@@ -53,7 +57,8 @@ params:
 menus:
   main:
     - name: "[R+SQL] 演習問題"
-      url: "ds-100knocks-dp/common/q-list"
+      # url: "ds-100knocks-dp/common/q-list"
+      url: "ds100knocks-alpha/q-list"
       weight: 10
     - name: レビュー
       url: "categories/%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/"

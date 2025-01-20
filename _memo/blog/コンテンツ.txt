@@ -223,7 +223,7 @@ db_receipt %>%
 
 #### my_show_query()
 
-show_query() のラッパー。
+SQLクエリを生成する show_query() のラッパー。
 
 ```
 db_receipt %>% 
@@ -250,7 +250,7 @@ GROUP BY product_cd
 ORDER BY total_sales DESC
 ```
 
-引数で出力形式を変えることができる。
+引数でSQLクエリの形式を変えることができる。
 
 ```
 db_result %>% my_show_query(cte = F)
@@ -434,6 +434,74 @@ db_result %>%
   my_sql_render(cte = T, use_star = F, qualify_all_columns = F)
 ```
 
+
+
+### sql()
+
+sql() は他の項目でも登場してますが、ここでは、DBクエリ操作を dplyr の構文では書けない場合の回避策を紹介します。
+
+
+
+tbl() を使うと、前半でSQLクエリをの結果をテーブル参照として取得し、それを用いてデータ操作を続けることができます。
+これを説明するブログ記事を書いて。
+
+### tbl()
+
+tbl() を使うことで、SQLクエリの結果をテーブルとして参照し、R の dplyr で操作を継続できる。
+
+```
+q = sql("
+SELECT sales_ymd, product_cd, amount
+FROM receipt
+WHERE (sales_ymd >= 20180101)
+"
+)
+query = tbl(con, q)
+query
+```
+
+```
+# Source:   SQL [?? x 3]
+# Database: DuckDB v1.1.3-dev165 [root@Darwin 24.1.0:R 4.4.2/.../DB/100knocks.duckdb]
+  sales_ymd product_cd amount
+      <int> <chr>       <dbl>
+1  20181103 P070305012    158
+2  20181118 P070701017     81
+3  20190205 P050301001     25
+4  20180821 P060102007     90
+5  20190605 P050102002    138
+6  20181205 P080101005     30
+7  20190922 P070501004    128
+...
+```
+
+```
+query %>% 
+  group_by(product_cd) %>% 
+  summarise(total_sales = sum(amount)) %>% 
+  arrange(desc(total_sales)) -> 
+  db_result
+db_result
+```
+
+```
+# Source:     SQL [?? x 2]
+# Database:   DuckDB v1.1.3-dev165 [root@Darwin 24.1.0:R 4.4.2/.../DB/100knocks.duckdb]
+# Ordered by: desc(total_sales)
+  product_cd total_sales
+  <chr>            <dbl>
+1 P071401001     1233100
+2 P071401002      429000
+3 P071401003      371800
+4 P060303001      346320
+5 P071401012      305800
+6 P071401014      277200
+...
+```
+
+
+
+
 ### 他のDBでのSQLクエリを確認する方法
 
 my_sql_render() または sql_render() を使用します。
@@ -457,7 +525,7 @@ GROUP BY product_cd
 ORDER BY total_sales DESC
 ```
 
-PostgreSQL、Snowflake などでは次のように使います。
+PostgreSQL、Snowflake などでは次のように記述します。
 
 ```
 db_result %>% my_sql_render(con = simulate_postgres())
@@ -470,55 +538,7 @@ db_result %>% my_sql_render(con = simulate_mssql())
 対応しているデータベース一覧は以下のページで確認できます。
 https://dbplyr.tidyverse.org/reference/index.html#built-in-database-backends
 
-### sql()
-
-sql() は他の項目でも登場してますが、ここでは、データ操作を dplyr の構文では書けない場合の回避策を紹介します。
 
 
-
-
-### tbl()
-
-q = sql("
-SELECT sales_ymd, product_cd, amount
-FROM receipt
-WHERE (sales_ymd >= 20180101)
-"
-)
-query = tbl(con, q)
-query
-
-# Source:   SQL [?? x 3]
-# Database: DuckDB v1.1.3-dev165 [root@Darwin 24.1.0:R 4.4.2/.../DB/100knocks.duckdb]
-  sales_ymd product_cd amount
-      <int> <chr>       <dbl>
-1  20181103 P070305012    158
-2  20181118 P070701017     81
-3  20190205 P050301001     25
-4  20180821 P060102007     90
-5  20190605 P050102002    138
-6  20181205 P080101005     30
-7  20190922 P070501004    128
-...
-
-query %>% 
-  group_by(product_cd) %>% 
-  summarise(total_sales = sum(amount)) %>% 
-  arrange(desc(total_sales)) -> 
-  db_result
-db_result
-
-# Source:     SQL [?? x 2]
-# Database:   DuckDB v1.1.3-dev165 [root@Darwin 24.1.0:R 4.4.2/.../DB/100knocks.duckdb]
-# Ordered by: desc(total_sales)
-  product_cd total_sales
-  <chr>            <dbl>
-1 P071401001     1233100
-2 P071401002      429000
-3 P071401003      371800
-4 P060303001      346320
-5 P071401012      305800
-6 P071401014      277200
-...
 
 -------------------------------------------------------------------------------

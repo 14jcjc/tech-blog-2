@@ -318,7 +318,8 @@ taxonomies:
 menu:
   main:
     - name: "[R+SQL] 演習問題"
-      url: "test/100k/common/q-list"
+      # url: "test/100k/common/q-list"
+      url: "test/100k/base/q-list"
       weight: 10
     - name: レビュー
       url: "categories/%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/"
