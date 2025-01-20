@@ -1,8 +1,8 @@
 ---
-title: Test
-# draft: false
-draft: true
+title: "Test"
 date: 2024-12-17T00:10:40+09:00
+draft: true
+# draft: false
 # weight: 1
 # categories: ["DS-100本ノック＋α (標準編) "]
 summary: "Test - 基本情報"

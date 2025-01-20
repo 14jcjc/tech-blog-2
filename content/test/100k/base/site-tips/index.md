@@ -1,18 +1,14 @@
 ---
-# title: '『データサイエンス100本ノック～構造化データ加工編ガイドブック』レビュー'
-title: サイト作成Tips
-# draft: true
-date: '2024-12-29T01:20:27+09:00'
+title: "サイト作成Tips"
+draft: true
+date: 2024-12-29T01:20:27+09:00
 weight: 11
-draft: false
-# date: '2021-04-01T00:20:27+09:00'
-# weight: 1000
-slug: 'site-tips'
+slug: "site-tips"
 # summary: 'これはsummaryです。'
 description: "This is description."
 # hideSummary: true
-hideFooter: false
-# ShowToc: false
+# hideFooter: false
+ShowToc: true
 UseHugoToc: true
 TocOpen: true
 
@@ -20,12 +16,8 @@ TocOpen: true
 #   show: true
 #   limit: 7 # 関連コンテンツを最大 N件まで表示 (default: 5)
 
-categories: 
-  - "レビュー"
-  - "DS-100本ノック"
-tags: 
-  - R
-  - SQL
+categories: ["Test"]
+tags: ["test", "site-tips"]
 # tags_weight: 1
 params:
   question:
@@ -55,8 +47,8 @@ cover:
 ---
 
 このブロックは summary です。  
-<!\--more\--> までがリスト表示で出力されます.
-summary: の設定より優先度が高いです. 
+<!\--more\--> までがリスト表示で出力されます。
+summary: の設定より優先度が高いです。
 
 <!--more-->
 
@@ -145,7 +137,7 @@ Alerts スタイルの参考サイト →
 
 <div style="text-align: center;">
   <i class="fa-solid fa-circle-info fa-3x" style="color: #0000FF;"></i>
-  <h4 style="margin-top: 0.25em;">infomation</h4>
+  <div style="margin-top: 0.25em;">infomation</div>
   <p>スタイル設定</p>
 </div>
 

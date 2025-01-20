@@ -1,8 +1,8 @@
 ---
 title: "セクションURLのテスト向けページ - xxx"
 slug: "xxx-1"
-draft: true
 date: 2021-05-01T00:20:27+09:00
+draft: true
 weight: 1005
 summary: "これはsummaryです."
 description: "This is description about xxx."

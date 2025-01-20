@@ -6,7 +6,7 @@ draft: true
 # draft: false
 weight: 1000
 summary: "これはsummaryです (include)."
-description: "This is description."
+description: "This is description. (include)"
 categories: ["Test"]
 tags: ["test", "site-tips"]
 # tags_weight: 1
