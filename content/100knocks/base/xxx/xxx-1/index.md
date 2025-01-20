@@ -50,15 +50,10 @@ cover:
 #     appendFilePath: true # to append file path to Edit link
 ---
 
-## include .md ファイル
-
-- `{{%/* include "..." */%}}`
-
-レンダリングされたショートコードにさらに処理が必要であることを Hugo に伝える。
+セクションのURLのテスト向けページ。
 
 <!--more-->
 
 ---
 
 xxxxxxxxxxxxxxxx.
-
