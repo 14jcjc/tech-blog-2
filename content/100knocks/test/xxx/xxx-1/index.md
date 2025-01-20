@@ -1,31 +1,13 @@
 ---
-# title: '『データサイエンス100本ノック～構造化データ加工編ガイドブック』レビュー'
-title: サイト作成Tips - xxx
+title: "セクションURLのテスト向けページ - xxx"
+slug: "xxx-1"
 draft: true
-# date: '2024-12-29T01:20:27+09:00'
-# weight: 11
-date: '2021-05-01T00:20:27+09:00'
-weight: 1000
-slug: 'xxx-1'
-# summary: 'これはsummaryです (include).'
-description: "This is xxx."
-hideSummary: false
-hideFooter: false
-# ShowToc: false
-UseHugoToc: true
-TocOpen: true
-
-# related:
-#   show: true
-#   limit: 7 # 関連コンテンツを最大 N件まで表示 (default: 5)
-
-categories: 
-  - "レビュー"
-  - "DS-100本ノック"
-tags: 
-  - R
-  - SQL
-# tags_weight: 1
+date: 2021-05-01T00:20:27+09:00
+weight: 1005
+summary: "これはsummaryです."
+description: "This is description about xxx."
+categories: ["Test"]
+tags: ["test", "セクションURL"]
 params:
   testparam: "これは params.testparam."
   testparam2: 

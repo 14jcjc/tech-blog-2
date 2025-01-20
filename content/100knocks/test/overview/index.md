@@ -1,18 +1,14 @@
 ---
-title: '[R+SQL] データサイエンス100本ノック＋α - 概要'
-# draft: true
-# date: '2024-12-29T20:31:23+09:00'
-# weight: 2
-draft: false
-date: '2021-04-01T02:20:27+09:00'
-weight: 1010
-description: 'This is First Post.'
-slug: 'overview'
-TocOpen: true
-categories: ["DS-100本ノック"]
-tags: 
-  - R
-  - SQL
+title: "[R+SQL] データサイエンス100本ノック＋α - 概要"
+slug: "overview"
+date: 2021-04-02T00:31:23+09:00
+draft: true
+weight: 1150
+description: "This is description."
+# summary: ""
+categories: ["Test"]
+tags: ["test"]
+
 cover:
   # image: "images/papermod-cover.png" #< /static
   image: "images/100knocks/cover-100k-standard.png" #< /static
@@ -20,12 +16,7 @@ cover:
   hiddenInList: false
   hiddenInSingle: false # hide on single page
   # hidden: true
-disableHLJS: false
-disableShare: false
-hideSummary: false
-searchHidden: false
-ShowReadingTime: true
-ShowWordCount: true
+
 # cover:
 #     image: "<image path/url>" # image path/url
 #     alt: "<alt text>" # alt text

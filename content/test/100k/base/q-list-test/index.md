@@ -1,14 +1,11 @@
 ---
-title: '[R+SQL] データサイエンス100本ノック＋α - 演習問題一覧'
-# draft: false
-# date: '2025-01-11T00:01:20+09:00'
+title: "[R+SQL] データサイエンス100本ノック＋α - 演習問題一覧 (test)"
+slug: "q-list-test"
+date: 2021-05-03T00:10:20+09:00
 draft: true
-date: '2024-12-30T00:00:20+09:00'
 weight: 12
 # description: "{{< k100/q-list >}} RとSQLの演習問題一覧です。"
-slug: 'q-list'
-ShowToc: false
-TocOpen: false
+
 categories: ["DS-100本ノック"]
 tags: 
   - R
@@ -22,6 +19,8 @@ cover:
   hiddenInList: false
   hiddenInSingle: false # hide on single page
   # hidden: true
+ShowToc: false
+TocOpen: false
 ---
 
 <font color="#F0B007">★</font>は難易度です。

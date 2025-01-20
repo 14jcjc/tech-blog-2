@@ -27,9 +27,9 @@ params:
       - name: XXX
         # url: xxx
         url: test/xxx
-      - name: Archives
-        url: archives
       - name: Tags
         url: tags
+      - name: Archives
+        url: archives
       - name: Github
         url: "https://github.com/14katsumix/100knocks-dp"

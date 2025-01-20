@@ -1,13 +1,12 @@
 ---
-title: 'データサイエンス100本ノック＋α'
-date: '2025-01-04T23:23:23+09:00'
-# type: "section"
+title: "[R+SQL] データサイエンス100本ノック＋α"
+url: "ds100knocks-alpha"
+date: 2025-01-04T03:23:23+09:00
 draft: false
 # draft: true
-url: ds100knocks-alpha
+# summary: '[R+SQL] データサイエンス100本ノック＋α 関連の投稿です。'
+# description: '[R+SQL] データサイエンス100本ノック＋α 関連の投稿です。'
 # categories: ["100本ノック＋α"]
-summary: '[R+SQL] データサイエンス100本ノック＋α 関連の投稿です。'
-description: '[R+SQL] データサイエンス100本ノック＋α 関連の投稿です。'
 keywords: 
   - "データサイエンス100本ノック"
   - "データサイエンスブログ"
@@ -48,14 +47,7 @@ keywords:
   - "SQL Processing"
 ---
 
-- 100knocks/_index.md
-
-- フロントマターで以下を設定:  
-  url: ds100knocks-alpha
-
-- 『📘 データサイエンス100本ノック（構造化データ加工編）』をベースにした問題解説やオリジナル問題です。
-
-<!-- - Rコード実行環境のセットアップ・プログラムは[GitHubリポジトリ](https://github.com/14katsumix/100knocks-dp)に公開してます。 -->
+- 『📘 {{< product-link id="ds100kdp" platform="amazon" >}}』をベースにしたサンプルコード付きの解説やオリジナル問題です。
 
 - Rコード実行環境のセットアップ・プログラムを 
 {{< href-target-blank url="https://github.com/14katsumix/100knocks-dp" text="GitHubリポジトリ" >}} 

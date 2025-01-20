@@ -43,16 +43,18 @@ params:
 
   # profile-mode
   profileMode:
+    enabled: false # needs to be explicitly set
+    # enabled: true # needs to be explicitly set
     buttons:
       - name: "データサイエンス100本ノック＋α"
         # url: ds-100knocks-dp
         url: ds100knocks-alpha
-      # - name: XXX
-      #   url: xxx
-      - name: Archives
-        url: archives
+      - name: "[R+SQL] 演習問題一覧"
+        url: "ds100knocks-alpha/q-list"
       - name: Tags
         url: tags
+      # - name: Archives
+      #   url: archives
 
 menus:
   main:
@@ -61,7 +63,8 @@ menus:
       url: "ds100knocks-alpha/q-list"
       weight: 10
     - name: レビュー
-      url: "categories/%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/"
+      # url: "categories/%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/"
+      url: "ds100knocks-alpha/book-review/"
       weight: 15
     - name: Tags
     # - name: タグ

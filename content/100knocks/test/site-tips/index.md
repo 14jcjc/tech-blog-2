@@ -1,31 +1,14 @@
 ---
-# title: '『データサイエンス100本ノック～構造化データ加工編ガイドブック』レビュー'
-title: サイト作成Tips - include
-# draft: true
-# date: '2024-12-29T01:20:27+09:00'
-# weight: 11
-draft: false
-date: '2021-04-01T00:20:27+09:00'
+title: "サイト作成Tips - include"
+slug: "site-tips"
+date: 2021-04-01T00:20:27+09:00
+draft: true
+# draft: false
 weight: 1000
-slug: 'site-tips'
-# summary: 'これはsummaryです (include).'
+summary: "これはsummaryです (include)."
 description: "This is description."
-hideSummary: false
-hideFooter: false
-# ShowToc: false
-UseHugoToc: true
-TocOpen: true
-
-# related:
-#   show: true
-#   limit: 7 # 関連コンテンツを最大 N件まで表示 (default: 5)
-
-categories: 
-  - "レビュー"
-  - "DS-100本ノック"
-tags: 
-  - R
-  - SQL
+categories: ["Test"]
+tags: ["test", "site-tips"]
 # tags_weight: 1
 params:
   testparam: "これは params.testparam."
@@ -49,6 +32,16 @@ cover:
 #     URL: "https://github.com/<path_to_repo>/content"
 #     Text: "Suggest Changes" # edit text
 #     appendFilePath: true # to append file path to Edit link
+# hideSummary: false
+# hideFooter: false
+# ShowToc: false
+# UseHugoToc: true
+# TocOpen: true
+
+# related:
+#   show: true
+#   limit: 7 # 関連コンテンツを最大 N件まで表示 (default: 5)
+
 ---
 
 ## include .md ファイル
