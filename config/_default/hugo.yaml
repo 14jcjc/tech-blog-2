@@ -1,4 +1,4 @@
-baseURL: "https://14jcjc.github.io/tech-blog/"
+baseURL: "https://14jcjc.github.io/tech-blog-2/"
 title: katsuのブログ
 # copyright: '&copy; katsu · [Privacy Policy]({{< ref "privacy" >}})'
 pagination:
@@ -422,6 +422,7 @@ markup:
 
   tableOfContents:
     ordered: false
+    # ordered: true
     endLevel: 3
     startLevel: 2
   goldmark:

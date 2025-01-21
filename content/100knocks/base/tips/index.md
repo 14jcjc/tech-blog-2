@@ -301,8 +301,6 @@ db_result %>%
   my_sql_render(cte = T, use_star = F, qualify_all_columns = F)
 ```
 
-
-
 ### sql()
 
 sql() は他の項目でも登場してますが、ここでは、DBクエリ操作を dplyr の構文では書けない場合の回避策を紹介します。
@@ -404,4 +402,3 @@ db_result %>% my_sql_render(con = simulate_mssql())
 
 対応しているデータベース一覧は以下のページで確認できます。
 https://dbplyr.tidyverse.org/reference/index.html#built-in-database-backends
-

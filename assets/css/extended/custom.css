@@ -267,6 +267,22 @@ h1.post-title.entry-hint-parent {
   font-size: calc(var(--base-font-size) * 1.75);
 }
 
+/* h2 に番号を付ける */
+
+/* 記事ごとにカウンターをリセット */
+/* .post-content {
+  counter-reset: h2-counter;
+} */
+
+/* h2 ごとにカウントアップ */
+/* .post-content h2 {
+  counter-increment: h2-counter;
+} */
+
+/* .post-content h2::before {
+  content: counter(h2-counter) ". ";
+} */
+
 /* post contents の H2 に border を引く */
 .post-content h2 {
   /* font-size: 28px; */
