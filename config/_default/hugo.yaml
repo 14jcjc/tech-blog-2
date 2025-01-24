@@ -149,9 +149,10 @@ params:
   disableThemeToggle: false
   ShowReadingTime: false
 
+  disableShare: false
   ShowShareButtons: true
   # To customize which share buttons to be enabled on page: 
-  # ShareButtons: [“x”, "linkedin"] #> 効かない
+  # ShareButtons: [“x”, "linkedin"]
   
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
